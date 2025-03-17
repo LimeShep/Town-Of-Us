@@ -102,6 +102,21 @@ namespace TownOfUs
             return selectedRole;
         }
 
+        public static void addRoles(Type role) {
+            for (int i = 0; i < 50; i++) {
+                CrewmateInvestigativeRoles.Add((role, 100, true));
+                CrewmateKillingRoles.Add((role, 100, true));
+                CrewmateProtectiveRoles.Add((role, 100, true));
+                CrewmateSupportRoles.Add((role, 100, true));
+                ImpostorConcealingRoles.Add((role, 100, true));
+                ImpostorKillingRoles.Add((role, 100, true));
+                ImpostorSupportRoles.Add((role, 100, true));
+                NeutralBenignRoles.Add((role, 100, true));
+                NeutralKillingRoles.Add((role, 100, true));
+                NeutralEvilRoles.Add((role, 100, true));
+            }
+        }
+
         private static void SortModifiers(this List<(Type, int)> roles, int max)
         {
             var newList = roles.Where(x => x.Item2 == 100).ToList();
@@ -1626,7 +1641,7 @@ namespace TownOfUs
                 if (CustomGameOptions.SeerOn > 0)
                     CrewmateInvestigativeRoles.Add((typeof(Seer), CustomGameOptions.SeerOn, false || CustomGameOptions.UniqueRoles));
 
-                if (CustomGameOptions.SpyOn > 0)
+                if (CustomGameOptions.SpyOn > 0 && GameOptionsManager.Instance.currentNormalGameOptions.MapId != 5)
                     CrewmateInvestigativeRoles.Add((typeof(Spy), CustomGameOptions.SpyOn, false || CustomGameOptions.UniqueRoles));
 
                 if (CustomGameOptions.SnitchOn > 0)
@@ -1772,7 +1787,7 @@ namespace TownOfUs
                     ImpostorKillingRoles.Add((typeof(Scavenger), CustomGameOptions.ScavengerOn, false || CustomGameOptions.UniqueRoles));
                 #endregion
                 #region Crewmate Modifiers
-                if (Check(CustomGameOptions.TorchOn))
+                if (Check(CustomGameOptions.TorchOn) && GameOptionsManager.Instance.currentNormalGameOptions.MapId != 5)
                     CrewmateModifiers.Add((typeof(Torch), CustomGameOptions.TorchOn));
 
                 if (Check(CustomGameOptions.DiseasedOn))
@@ -1840,24 +1855,21 @@ namespace TownOfUs
 
                 AfterRoles: {
                     if (CustomGameOptions.SyzyfowyAmong) {
-                        for (int i = 0; i < 30; i++)
-                        {
-                            CrewmateInvestigativeRoles.Add((typeof(Glitch), 100, true));
-                            CrewmateKillingRoles.Add((typeof(Glitch), 100, true));
-                            CrewmateProtectiveRoles.Add((typeof(Glitch), 100, true));
-                            CrewmateSupportRoles.Add((typeof(Glitch), 100, true));
-                            ImpostorConcealingRoles.Add((typeof(Glitch), 100, true));
-                            ImpostorKillingRoles.Add((typeof(Glitch), 100, true));
-                            ImpostorSupportRoles.Add((typeof(Glitch), 100, true));
-                            NeutralBenignRoles.Add((typeof(Glitch), 100, true));
-                            NeutralKillingRoles.Add((typeof(Glitch), 100, true));
-                            NeutralEvilRoles.Add((typeof(Glitch), 100, true));
-                        }
-                        System.Console.WriteLine("AFTER ROLES WORKED SUCCESSFULLY");
+                        if (CustomGameOptions.GlitchOn == 100)  addRoles(typeof(Glitch));
+                        if (CustomGameOptions.JuggernautOn == 100)  addRoles(typeof(Juggernaut));
+                        if (CustomGameOptions.WerewolfOn == 100)  addRoles(typeof(Werewolf));
+                        if (CustomGameOptions.GrenadierOn == 100)  addRoles(typeof(Grenadier));
+                        if (CustomGameOptions.BomberOn == 100)  addRoles(typeof(Bomber));
+                        if (CustomGameOptions.EscapistOn == 100)  addRoles(typeof(Escapist));
+                        if (CustomGameOptions.MinerOn == 100)  addRoles(typeof(Miner));
+                        if (CustomGameOptions.MorphlingOn == 100)  addRoles(typeof(Morphling));
+                        if (CustomGameOptions.SwooperOn == 100)  addRoles(typeof(Swooper));
+                        if (CustomGameOptions.WarlockOn == 100)  addRoles(typeof(Swooper));
                     }
                 }
 
                 GenEachRole(infected.ToList());
+                
             }
         }
     }

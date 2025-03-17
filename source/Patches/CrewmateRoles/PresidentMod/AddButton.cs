@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using HarmonyLib;
 using Reactor.Utilities.Extensions;
 using TownOfUs.Modifiers.AssassinMod;
 using TownOfUs.CrewmateRoles.VigilanteMod;
@@ -13,7 +12,6 @@ using TownOfUs.NeutralRoles.DoomsayerMod;
 
 namespace TownOfUs.CrewmateRoles.PresidentMod
 {
-    [HarmonyPatch(typeof(MeetingHud), nameof(MeetingHud.Start))]
     public class AddRevealButton
     {
         public static Sprite RevealSprite => TownOfUs.RevealSprite;
@@ -80,7 +78,7 @@ namespace TownOfUs.CrewmateRoles.PresidentMod
             }
         }
 
-        public static void Postfix(MeetingHud __instance)
+        public static void AddPresidentButtons(MeetingHud __instance)
         {
             foreach (var role in Role.GetRoles(RoleEnum.President))
             {

@@ -30,7 +30,7 @@ namespace TownOfUs
     public class TownOfUs : BasePlugin
     {
         public const string Id = "com.slushiegoose.townofus";
-        public const string VersionString = "6.2.0";
+        public const string VersionString = "6.2.1";
         public static System.Version Version = System.Version.Parse(VersionString);
         public const string VersionTag = "<color=#ff33fc></color>";
 
@@ -135,7 +135,7 @@ namespace TownOfUs
         public override void Load()
         {
             RuntimeLocation = Path.GetDirectoryName(Assembly.GetAssembly(typeof(TownOfUs)).Location);
-            ReactorCredits.Register<TownOfUs>(ReactorCredits.AlwaysShow);
+            //ReactorCredits.Register<TownOfUs>(ReactorCredits.AlwaysShow);
             System.Console.WriteLine("000.000.000.000/000000000000000000");
             System.Console.WriteLine(Constants.GetBroadcastVersion());
 
