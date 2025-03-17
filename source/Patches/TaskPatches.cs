@@ -36,6 +36,13 @@ namespace TownOfUs
                             if (playerInfo.Tasks.ToArray()[j].Complete) __instance.CompletedTasks++;
                         }
                     }
+                    if (CustomGameOptions.SyzyfowyAmong) {
+                        for (var j = 0; j < playerInfo.Tasks.Count; j++)
+                        {
+                            __instance.TotalTasks++;
+                            if (playerInfo.Tasks.ToArray()[j].Complete) __instance.CompletedTasks++;
+                        }
+                    }
                 }
 
                 return false;

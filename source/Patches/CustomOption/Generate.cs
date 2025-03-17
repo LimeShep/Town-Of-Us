@@ -147,6 +147,7 @@ namespace TownOfUs.CustomOption
 
         public static CustomHeaderOption RoleListSettings;
         public static CustomToggleOption UniqueRoles;
+        public static CustomToggleOption SyzyfowyAmong;
         public static CustomStringOption Slot1;
         public static CustomStringOption Slot2;
         public static CustomStringOption Slot3;
@@ -736,6 +737,7 @@ namespace TownOfUs.CustomOption
             RoleListSettings =
                 new CustomHeaderOption(num++, MultiMenu.main, "Role List Settings");
             UniqueRoles = new CustomToggleOption(num++, MultiMenu.main, "All Roles Are Unique", true);
+            SyzyfowyAmong = new CustomToggleOption(num++, MultiMenu.main, "Totalny Chaos.", false);
             Slot1 = new CustomStringOption(num++, MultiMenu.main, "Slot 1", new[] { "<color=#66FFFFFF>Crew</color> Investigative",
                 "<color=#66FFFFFF>Crew</color> Killing", "<color=#66FFFFFF>Crew</color> Protective", "<color=#66FFFFFF>Crew</color> Support",
                 "Common <color=#66FFFFFF>Crew</color>", "Random <color=#66FFFFFF>Crew</color>", "<color=#999999FF>Neutral</color> Benign",

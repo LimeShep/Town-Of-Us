@@ -1600,6 +1600,8 @@ namespace TownOfUs
                 
 
                 #region Crewmate Roles
+                if (CustomGameOptions.SyzyfowyAmong) goto AfterRoles;
+
                 if (CustomGameOptions.MayorOn > 0)
                     CrewmateSupportRoles.Add((typeof(Mayor), CustomGameOptions.MayorOn, true));
 
@@ -1615,10 +1617,10 @@ namespace TownOfUs
                 if (CustomGameOptions.SwapperOn > 0)
                     CrewmateSupportRoles.Add((typeof(Swapper), CustomGameOptions.SwapperOn, true));
 
-                    if (CustomGameOptions.InvestigatorOn > 0)
+                if (CustomGameOptions.InvestigatorOn > 0)
                         CrewmateInvestigativeRoles.Add((typeof(Investigator), CustomGameOptions.InvestigatorOn, false));
 
-                    if (CustomGameOptions.MedicOn > 0)
+                if (CustomGameOptions.MedicOn > 0)
                         CrewmateProtectiveRoles.Add((typeof(Medic), CustomGameOptions.MedicOn, true));
 
                 if (CustomGameOptions.SeerOn > 0)
@@ -1835,6 +1837,25 @@ namespace TownOfUs
                 #region Assassin Ability
                 AssassinAbility.Add((typeof(Assassin), CustomRPC.SetAssassin, 100));
                 #endregion
+
+                AfterRoles: {
+                    if (CustomGameOptions.SyzyfowyAmong) {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            CrewmateInvestigativeRoles.Add((typeof(Glitch), 100, true));
+                            CrewmateKillingRoles.Add((typeof(Glitch), 100, true));
+                            CrewmateProtectiveRoles.Add((typeof(Glitch), 100, true));
+                            CrewmateSupportRoles.Add((typeof(Glitch), 100, true));
+                            ImpostorConcealingRoles.Add((typeof(Glitch), 100, true));
+                            ImpostorKillingRoles.Add((typeof(Glitch), 100, true));
+                            ImpostorSupportRoles.Add((typeof(Glitch), 100, true));
+                            NeutralBenignRoles.Add((typeof(Glitch), 100, true));
+                            NeutralKillingRoles.Add((typeof(Glitch), 100, true));
+                            NeutralEvilRoles.Add((typeof(Glitch), 100, true));
+                        }
+                        System.Console.WriteLine("AFTER ROLES WORKED SUCCESSFULLY");
+                    }
+                }
 
                 GenEachRole(infected.ToList());
             }
