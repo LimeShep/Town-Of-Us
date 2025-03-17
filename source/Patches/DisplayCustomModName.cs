@@ -7,7 +7,7 @@ namespace TownOfUs {
     {
         public static void Postfix(PingTracker __instance)
         {
-            __instance.text.text += "<line-height=50%><indent=25%>\n<size=70%><color=#D6B878FF>Syzyfowy Town of Us</color> <color=#00FF00FF>" + TownOfUs.VersionString + "</color>" + TownOfUs.VersionTag + "</indent>";
+            __instance.text.text += "<line-height=50%><indent=25%>\n<size=70%><align=center><color=#D6B878FF>Syzyfowy Town of Us</color><color=#00FF00FF>6.2.2</color></align></indent>";
         }
     }
     /*[HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
