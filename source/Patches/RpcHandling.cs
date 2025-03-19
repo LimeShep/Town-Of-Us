@@ -1628,15 +1628,18 @@ namespace TownOfUs
 
                 if (CustomGameOptions.EngineerOn > 0)
                     CrewmateSupportRoles.Add((typeof(Engineer), CustomGameOptions.EngineerOn, false || CustomGameOptions.UniqueRoles));
+                
+                if (CustomGameOptions.TimeLordOn > 0)
+                    CrewmateSupportRoles.Add((typeof(TimeLord), CustomGameOptions.TimeLordOn, false || CustomGameOptions.UniqueRoles));
 
                 if (CustomGameOptions.SwapperOn > 0)
                     CrewmateSupportRoles.Add((typeof(Swapper), CustomGameOptions.SwapperOn, true));
 
                 if (CustomGameOptions.InvestigatorOn > 0)
-                        CrewmateInvestigativeRoles.Add((typeof(Investigator), CustomGameOptions.InvestigatorOn, false));
+                    CrewmateInvestigativeRoles.Add((typeof(Investigator), CustomGameOptions.InvestigatorOn, false || CustomGameOptions.UniqueRoles));
 
                 if (CustomGameOptions.MedicOn > 0)
-                        CrewmateProtectiveRoles.Add((typeof(Medic), CustomGameOptions.MedicOn, true));
+                    CrewmateProtectiveRoles.Add((typeof(Medic), CustomGameOptions.MedicOn, true));
 
                 if (CustomGameOptions.SeerOn > 0)
                     CrewmateInvestigativeRoles.Add((typeof(Seer), CustomGameOptions.SeerOn, false || CustomGameOptions.UniqueRoles));
@@ -1708,11 +1711,11 @@ namespace TownOfUs
                 if (CustomGameOptions.AmnesiacOn > 0)
                     NeutralBenignRoles.Add((typeof(Amnesiac), CustomGameOptions.AmnesiacOn, false || CustomGameOptions.UniqueRoles));
 
-                    if (CustomGameOptions.ShifterOn > 0)
-                        NeutralBenignRoles.Add((typeof(Shifter), CustomGameOptions.ShifterOn, false));
+                if (CustomGameOptions.ShifterOn > 0)
+                    NeutralBenignRoles.Add((typeof(Shifter), CustomGameOptions.ShifterOn, false || CustomGameOptions.UniqueRoles));
 
-                    if (CustomGameOptions.ExecutionerOn > 0)
-                        NeutralEvilRoles.Add((typeof(Executioner), CustomGameOptions.ExecutionerOn, false));
+                if (CustomGameOptions.ExecutionerOn > 0)
+                    NeutralEvilRoles.Add((typeof(Executioner), CustomGameOptions.ExecutionerOn, false));
 
                 if (CustomGameOptions.DoomsayerOn > 0)
                     NeutralEvilRoles.Add((typeof(Doomsayer), CustomGameOptions.DoomsayerOn, false || CustomGameOptions.UniqueRoles));
@@ -1750,11 +1753,11 @@ namespace TownOfUs
                 if (CustomGameOptions.MorphlingOn > 0)
                     ImpostorConcealingRoles.Add((typeof(Morphling), CustomGameOptions.MorphlingOn, false || CustomGameOptions.UniqueRoles));
 
-                    if (CustomGameOptions.CamouflagerOn > 0)
-                        ImpostorSupportRoles.Add((typeof(Camouflager), CustomGameOptions.CamouflagerOn, false));
+                if (CustomGameOptions.CamouflagerOn > 0)
+                    ImpostorSupportRoles.Add((typeof(Camouflager), CustomGameOptions.CamouflagerOn, true));
 
-                    if (CustomGameOptions.BlackmailerOn > 0)
-                        ImpostorSupportRoles.Add((typeof(Blackmailer), CustomGameOptions.BlackmailerOn, true));
+                if (CustomGameOptions.BlackmailerOn > 0)
+                    ImpostorSupportRoles.Add((typeof(Blackmailer), CustomGameOptions.BlackmailerOn, true));
 
                 if (CustomGameOptions.MinerOn > 0)
                     ImpostorSupportRoles.Add((typeof(Miner), CustomGameOptions.MinerOn, false || CustomGameOptions.UniqueRoles));

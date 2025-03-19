@@ -17,6 +17,7 @@ namespace TownOfUs
                 orderby o.displayOrder descending, o.name
                 select o).ToArray();
             __result = array;
+            
             return false;
         }
     }
