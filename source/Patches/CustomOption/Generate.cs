@@ -1,4 +1,6 @@
 using System;
+using Rewired.UI.ControlMapper;
+using TownOfUs.NeutralRoles.DoomsayerMod;
 
 namespace TownOfUs.CustomOption
 {
@@ -186,6 +188,7 @@ namespace TownOfUs.CustomOption
         public static CustomStringOption WhoShifts;
         public static CustomStringOption ShiftedBecomes;
         public static CustomToggleOption ShifterCrewmate;
+        public static CustomToggleOption ShifterShiftsModifiers;
 
         public static CustomHeaderOption Hunter;
         public static CustomNumberOption HunterKillCd;
@@ -445,6 +448,8 @@ namespace TownOfUs.CustomOption
         public static CustomToggleOption DoomsayerGuessNeutralEvil;
         public static CustomToggleOption DoomsayerGuessNeutralKilling;
         public static CustomToggleOption DoomsayerGuessImpostors;
+        public static CustomToggleOption DoomsayerAfterVoting;
+        public static CustomNumberOption DoomsayerGuessesToWin;
         public static CustomToggleOption DoomsayerCantObserve;
 
         public static CustomHeaderOption Vampire;
@@ -627,7 +632,7 @@ namespace TownOfUs.CustomOption
                 PercentFormat);
 
             NeutralEvilRoles = new CustomHeaderOption(num++, MultiMenu.neutral, "Neutral Evil Roles");
-            DoomsayerOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#00FF80FF>Doomsayer</color>", 0f, 0f, 100f, 10f,
+            DoomsayerOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#00FF80FF>Foreteller</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             ExecutionerOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#8C4005FF>Executioner</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
@@ -647,7 +652,7 @@ namespace TownOfUs.CustomOption
                 PercentFormat);
             GlitchOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#00FF00FF>The Glitch</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
-            VampireOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#262626FF>Vampire</color>", 0f, 0f, 100f, 10f,
+            VampireOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#387becFF>Jackal</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             WerewolfOn = new CustomNumberOption(num++, MultiMenu.neutral, "<color=#A86629FF>Werewolf</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
@@ -1183,6 +1188,8 @@ namespace TownOfUs.CustomOption
                 MultiMenu.neutral, "Shifted Becomes", new[] { "Shifter", "Crewmate" });
             ShifterCrewmate =
                 new CustomToggleOption(num++, MultiMenu.neutral, "Shifter Wins With Crew", false);
+            ShifterShiftsModifiers =
+                new CustomToggleOption(num++, MultiMenu.neutral, "Shifter can shift modifiers", false);
             GuardianAngel =
                 new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#B3FFFFFF>Guardian Angel</color>");
             ProtectCd =
@@ -1216,14 +1223,16 @@ namespace TownOfUs.CustomOption
             MaxVests =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Maximum Number Of Vests", 5, 1, 15, 1);
 
-            Doomsayer = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#00FF80FF>Doomsayer</color>");
+            Doomsayer = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#00FF80FF>Foreteller</color>");
             ObserveCooldown =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Observe Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
-            DoomsayerGuessNeutralBenign = new CustomToggleOption(num++, MultiMenu.neutral, "Doomsayer Can Guess Neutral Benign Roles", false);
-            DoomsayerGuessNeutralEvil = new CustomToggleOption(num++, MultiMenu.neutral, "Doomsayer Can Guess Neutral Evil Roles", false);
-            DoomsayerGuessNeutralKilling = new CustomToggleOption(num++, MultiMenu.neutral, "Doomsayer Can Guess Neutral Killing Roles", false);
-            DoomsayerGuessImpostors = new CustomToggleOption(num++, MultiMenu.neutral, "Doomsayer Can Guess Impostor Roles", false);
-            DoomsayerCantObserve = new CustomToggleOption(num++, MultiMenu.neutral, "Doomsayer Can't Observe", false);
+            DoomsayerGuessNeutralBenign = new CustomToggleOption(num++, MultiMenu.neutral, "Foreteller Can Guess Neutral Benign Roles", false);
+            DoomsayerGuessNeutralEvil = new CustomToggleOption(num++, MultiMenu.neutral, "Foreteller Can Guess Neutral Evil Roles", false);
+            DoomsayerGuessNeutralKilling = new CustomToggleOption(num++, MultiMenu.neutral, "Foreteller Can Guess Neutral Killing Roles", false);
+            DoomsayerGuessImpostors = new CustomToggleOption(num++, MultiMenu.neutral, "Foreteller Can Guess Impostor Roles", false);
+            DoomsayerAfterVoting = new CustomToggleOption(num++, MultiMenu.neutral, "Foreteller Can Guess After Voting", false);
+            DoomsayerGuessesToWin = new CustomNumberOption(num++, MultiMenu.neutral, "Number Of Foreteller Kills To Win", 3, 1, 5, 1);
+            DoomsayerCantObserve = new CustomToggleOption(num++, MultiMenu.neutral, "(Experienced) Foreteller can't observe", false);
 
             Executioner =
                 new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#8C4005FF>Executioner</color>");
@@ -1299,15 +1308,15 @@ namespace TownOfUs.CustomOption
             GlitchVent =
                 new CustomToggleOption(num++, MultiMenu.neutral, "Glitch Can Vent", false);
 
-            Vampire = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#262626FF>Vampire</color>");
+            Vampire = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#387becFF>Jackal</color>");
             BiteCooldown =
-                new CustomNumberOption(num++, MultiMenu.neutral, "Vampire Bite Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
+                new CustomNumberOption(num++, MultiMenu.neutral, "Jackal Bite Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
             VampImpVision =
-                new CustomToggleOption(num++, MultiMenu.neutral, "Vampires Have Impostor Vision", false);
+                new CustomToggleOption(num++, MultiMenu.neutral, "Jackal and Sidekick Have Impostor Vision", false);
             VampVent =
-                new CustomToggleOption(num++, MultiMenu.neutral, "Vampires Can Vent", false);
+                new CustomToggleOption(num++, MultiMenu.neutral, "Jackal and Sidekick Can Vent", false);
             NewVampCanAssassin =
-                new CustomToggleOption(num++, MultiMenu.neutral, "New Vampire Can Assassinate", false);
+                new CustomToggleOption(num++, MultiMenu.neutral, "Sidekick Can Assassinate", false);
             MaxVampiresPerGame =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Maximum Vampires Per Game", 2, 2, 5, 1);
             CanBiteNeutralBenign =

@@ -186,7 +186,6 @@ namespace TownOfUs.CrewmateRoles.DeputyMod
                 {
                     var doomsayer = Role.GetRole<Doomsayer>(PlayerControl.LocalPlayer);
                     ShowHideButtonsDoom.HideButtonsDoom(doomsayer);
-                    ShowHideButtonsDoom.HideTextDoom(doomsayer);
                 }
 
                 if (player.Is(RoleEnum.Deputy))

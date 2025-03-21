@@ -47,7 +47,10 @@ namespace TownOfUs.Roles
             }
         }
 
-        public float TrackerTimer() {
+        public bool Tracked => TimeRemaining > 0f;
+
+        public float TrackerTimer()
+        {
             var utcNow = DateTime.UtcNow;
             var timeSpan = utcNow - LastTracked;
             var num = CustomGameOptions.TrackCd * 1000f;
@@ -56,18 +59,15 @@ namespace TownOfUs.Roles
             return (num - (float) timeSpan.TotalMilliseconds) / 1000f;
         }
 
-        public float TrackerDuration() {
-            var utcNow = DateTime.UtcNow;
-            var timeSpan = utcNow - LastStartedTracking;
-            var num = CustomGameOptions.TrackDuration * 1000f;
-            var flag2 = num - (float) timeSpan.TotalMilliseconds < 0f;
-            if (flag2) return 0;
-            return (num - (float) timeSpan.TotalMilliseconds) / 1000f;
-        }
         public void TrackPlayer(PlayerControl target) {
             if (!PlayerControl.LocalPlayer.Is(RoleEnum.Tracker)) return;
 
+            isTrackingPlayer = true;
             PlayerControl.LocalPlayer.StartPlayerTracking(target, target.GetDefaultOutfit().ColorId);
+        }
+
+        public void KeepTracking() {
+            TimeRemaining -= Time.deltaTime;
         }
 
         public void StopTrackingPlayer() {

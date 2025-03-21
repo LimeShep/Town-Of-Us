@@ -6,8 +6,13 @@ using Hazel;
 using TownOfUs.CrewmateRoles.MedicMod;
 using TownOfUs.Patches;
 using TownOfUs.Roles;
+using TownOfUs.Roles.Modifiers;
+using TownOfUs.CrewmateRoles.AltruistMod;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Reactor.Utilities.Extensions;
+using Reactor.Utilities;
+using AmongUs.GameOptions;
 
 namespace TownOfUs.CrewmateRoles.TimeLordMod
 {
@@ -65,6 +70,7 @@ namespace TownOfUs.CrewmateRoles.TimeLordMod
                 try
                 {
                     Minigame.Instance.Close();
+                    Minigame.Instance.Close();
                 }
                 catch
                 {
@@ -90,11 +96,7 @@ namespace TownOfUs.CrewmateRoles.TimeLordMod
                         PlayerControl.LocalPlayer.Collider.enabled = true;
                         PlayerControl.LocalPlayer.NetTransform.enabled = true;
 
-
-                        var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                            (byte) CustomRPC.FixAnimation, SendOption.Reliable, -1);
-                        writer.Write(PlayerControl.LocalPlayer.PlayerId);
-                        AmongUsClient.Instance.FinishRpcImmediately(writer);
+                        Utils.Rpc(CustomRPC.FixAnimation, PlayerControl.LocalPlayer.PlayerId);
                     }
 
 
@@ -114,15 +116,12 @@ namespace TownOfUs.CrewmateRoles.TimeLordMod
                         var player = PlayerControl.LocalPlayer;
 
                         ReviveBody(player);
-                        player.myTasks.RemoveAt(0);
+                        //player.myTasks.RemoveAt(0);
 
                         deadTime = 0;
                         isDead = false;
 
-                        var write = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                            (byte) CustomRPC.RewindRevive, SendOption.Reliable, -1);
-                        write.Write(PlayerControl.LocalPlayer.PlayerId);
-                        AmongUsClient.Instance.FinishRpcImmediately(write);
+                        Utils.Rpc(CustomRPC.RewindRevive, PlayerControl.LocalPlayer.PlayerId);
                     }
                 }
 
@@ -135,11 +134,56 @@ namespace TownOfUs.CrewmateRoles.TimeLordMod
             }
         }
 
-        public static void ReviveBody(PlayerControl player)
-        {
+        public static void ReviveBody(PlayerControl player) {
+
+            var revived = new List<PlayerControl>();
+            DeadBody deadbodynew = null;
+
+            foreach (DeadBody deadBody in GameObject.FindObjectsOfType<DeadBody>())
+            {
+                if (deadBody.ParentId == player.PlayerId) { deadbodynew = deadBody; deadBody.gameObject.Destroy(); }
+            }
+
             player.Revive();
+            if (player.Is(Faction.Impostors)) RoleManager.Instance.SetRole(player, RoleTypes.Impostor);
+            else RoleManager.Instance.SetRole(player, RoleTypes.Crewmate);
             Murder.KilledPlayers.Remove(
                 Murder.KilledPlayers.FirstOrDefault(x => x.PlayerId == player.PlayerId));
+            revived.Add(player);
+            player.transform.position = new Vector2(deadbodynew.TruePosition.x, deadbodynew.TruePosition.y + 0.3636f);
+
+            if (PlayerControl.LocalPlayer == player) PlayerControl.LocalPlayer.NetTransform.RpcSnapTo(new Vector2(deadbodynew.TruePosition.x, deadbodynew.TruePosition.y));
+
+            if (Patches.SubmergedCompatibility.isSubmerged() && PlayerControl.LocalPlayer.PlayerId == player.PlayerId)
+            {
+                Patches.SubmergedCompatibility.ChangeFloor(player.transform.position.y > -7);
+            }
+            if (player.IsLover() && CustomGameOptions.BothLoversDie)
+            {
+                var lover = Modifier.GetModifier<Lover>(player).OtherLover.Player;
+
+                lover.Revive();
+                if (lover.Is(Faction.Impostors)) RoleManager.Instance.SetRole(lover, RoleTypes.Impostor);
+                else RoleManager.Instance.SetRole(lover, RoleTypes.Crewmate);
+                Murder.KilledPlayers.Remove(
+                    Murder.KilledPlayers.FirstOrDefault(x => x.PlayerId == lover.PlayerId));
+
+                foreach (DeadBody deadBody in GameObject.FindObjectsOfType<DeadBody>())
+                {
+                    if (deadBody.ParentId == lover.PlayerId)
+                    {
+                        lover.transform.position = new Vector2(deadBody.TruePosition.x, deadBody.TruePosition.y + 0.3636f);
+                        if (PlayerControl.LocalPlayer == lover) PlayerControl.LocalPlayer.NetTransform.RpcSnapTo(new Vector2(deadBody.TruePosition.x, deadBody.TruePosition.y + 0.3636f));
+
+                        if (Patches.SubmergedCompatibility.isSubmerged() && PlayerControl.LocalPlayer.PlayerId == lover.PlayerId)
+                        {
+                            Patches.SubmergedCompatibility.ChangeFloor(lover.transform.position.y > -7);
+                        }
+                        deadBody.gameObject.Destroy();
+                    }
+                }
+            }
+
             var body = Object.FindObjectsOfType<DeadBody>()
                 .FirstOrDefault(b => b.ParentId == player.PlayerId);
 

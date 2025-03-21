@@ -85,7 +85,7 @@ namespace TownOfUs.CrewmateRoles.MayorMod
                 if (mayor.VoteBank < 0)
                     mayor.VoteBank = 0;
 
-                mayor.VoteBank++;
+                if (mayor.VoteBank < CustomGameOptions.MayorMaximumBank) mayor.VoteBank++;
                 mayor.SelfVote = false;
                 mayor.VotedOnce = false;
             }

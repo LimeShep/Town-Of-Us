@@ -206,32 +206,36 @@ namespace TownOfUs.NeutralRoles.ShifterMod
 
                 newRole = Role.GetRole(other);
                 newRole.Player = shifter;
+                newRole.AddToRoleHistory(newRole.RoleType);
+                Role otherrole = Role.GetRole(other);
 
                 if (role == RoleEnum.Snitch) CompleteTask.Postfix(shifter);
 
-                var modifier = Modifier.GetModifier(other);
-                var modifier2 = Modifier.GetModifier(shifter);
+                if (CustomGameOptions.ShifterShiftsModifiers) {
+                    var modifier = Modifier.GetModifier(other);
+                    var modifier2 = Modifier.GetModifier(shifter);
 
-                if (modifier != null && modifier2 != null)
-                {
-                    modifier.Player = shifter;
-                    modifier2.Player = other;
-                    Modifier.ModifierDictionary.Remove(other.PlayerId);
-                    Modifier.ModifierDictionary.Remove(shifter.PlayerId);
-                    Modifier.ModifierDictionary.Add(shifter.PlayerId, modifier);
-                    Modifier.ModifierDictionary.Add(other.PlayerId, modifier2);
-                }
-                else if (modifier2 != null)
-                {
-                    modifier2.Player = other;
-                    Modifier.ModifierDictionary.Remove(shifter.PlayerId);
-                    Modifier.ModifierDictionary.Add(other.PlayerId, modifier2);
-                }
-                else if (modifier != null)
-                {
-                    modifier.Player = shifter;
-                    Modifier.ModifierDictionary.Remove(other.PlayerId);
-                    Modifier.ModifierDictionary.Add(shifter.PlayerId, modifier);
+                    if (modifier != null && modifier2 != null)
+                    {
+                        modifier.Player = shifter;
+                        modifier2.Player = other;
+                        Modifier.ModifierDictionary.Remove(other.PlayerId);
+                        Modifier.ModifierDictionary.Remove(shifter.PlayerId);
+                        Modifier.ModifierDictionary.Add(shifter.PlayerId, modifier);
+                        Modifier.ModifierDictionary.Add(other.PlayerId, modifier2);
+                    }
+                    else if (modifier2 != null)
+                    {
+                        modifier2.Player = other;
+                        Modifier.ModifierDictionary.Remove(shifter.PlayerId);
+                        Modifier.ModifierDictionary.Add(other.PlayerId, modifier2);
+                    }
+                    else if (modifier != null)
+                    {
+                        modifier.Player = shifter;
+                        Modifier.ModifierDictionary.Remove(other.PlayerId);
+                        Modifier.ModifierDictionary.Add(shifter.PlayerId, modifier);
+                    }
                 }
 
 
@@ -260,10 +264,12 @@ namespace TownOfUs.NeutralRoles.ShifterMod
                     resetShifter = true;
                     shifterRole.Player = other;
                     Role.RoleDictionary.Add(other.PlayerId, shifterRole);
+                    shifterRole.AddToRoleHistory(shifterRole.RoleType);
                 }
                 else
                 {
-                    new Crewmate(other);
+                    Crewmate newplayerrole = new Crewmate(other);
+                    newplayerrole.AddToRoleHistory(newplayerrole.RoleType);
                 }
             }
             else

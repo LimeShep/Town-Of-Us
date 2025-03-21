@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using HarmonyLib;
 using Reactor.Utilities;
 using Reactor.Utilities.Extensions;
 using TMPro;
@@ -11,7 +11,8 @@ using Object = UnityEngine.Object;
 
 namespace TownOfUs.NeutralRoles.DoomsayerMod
 {
-    public class AddButtonDoom
+    [HarmonyPatch(typeof(MeetingHud), nameof(MeetingHud.Start))]
+    public class AddButton
     {
         private static Sprite CycleBackSprite => TownOfUs.CycleBackSprite;
         private static Sprite CycleForwardSprite => TownOfUs.CycleForwardSprite;
@@ -22,7 +23,6 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
         {
             if (voteArea.AmDead) return true;
             var player = Utils.PlayerById(voteArea.TargetPlayerId);
-            if (player.IsJailed()) return true;
             if (
                     player == null ||
                     player.Data.IsDead ||
@@ -143,40 +143,32 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
                 var currentGuess = role.Guesses[targetId];
                 if (currentGuess == "None") return;
 
-                role.NumberOfGuesses++;
-                var playersAlive = PlayerControl.AllPlayerControls.ToArray().Where(x => !x.Data.IsDead && !x.Data.Disconnected && !Role.GetRole(x).Criteria() && !x.IsJailed()).ToList().Count;
-
-                ShowHideButtonsDoom.HideSingle(role, targetId, false);
-                var nameText = Object.Instantiate(voteArea.NameText, voteArea.transform);
-                nameText.transform.localPosition -= new Vector3(0.2f, 0.3f, 0f);
-                nameText.transform.localScale *= 0.6f;
-                nameText.text = $"<color=#{role.SortedColorMapping[currentGuess].ToHtmlStringRGBA()}>{currentGuess}</color>";
-                role.RoleGuess[targetId] = nameText;
-
                 var playerRole = Role.GetRole(voteArea);
-                if (currentGuess != playerRole.Name) role.IncorrectGuesses++;
+                var playerModifier = Modifier.GetModifier(voteArea);
 
-                if ((role.NumberOfGuesses < 2 && playersAlive < 3) || (role.NumberOfGuesses < 3 && playersAlive > 2)) return;
+                var toDie = playerRole.Name == currentGuess ? playerRole.Player : role.Player;
 
-                ShowHideButtonsDoom.HideButtonsDoom(role);
-                if (role.IncorrectGuesses > 0) Coroutines.Start(Utils.FlashCoroutine(Color.red));
-                else
+                if (toDie == playerRole.Player)
                 {
-                    ShowHideButtonsDoom.HideTextDoom(role);
-                    var playerModifier = Modifier.GetModifier(voteArea);
-                    DoomsayerKill.RpcMurderPlayer(playerRole.Player, PlayerControl.LocalPlayer);
-                    if (playerRole.Player.IsLover() && CustomGameOptions.BothLoversDie)
+                    DoomsayerKill.RpcMurderPlayer(toDie, PlayerControl.LocalPlayer);
+                    ShowHideButtonsDoom.HideSingle(role, targetId, toDie == role.Player);
+                    if (toDie.IsLover() && CustomGameOptions.BothLoversDie)
                     {
                         var lover = ((Lover)playerModifier).OtherLover.Player;
                         if (!lover.Is(RoleEnum.Pestilence)) ShowHideButtonsDoom.HideSingle(role, lover.PlayerId, false);
                     }
+                }
+                else
+                {
+                    ShowHideButtonsDoom.HideButtonsDoom(role);
+                    Coroutines.Start(Utils.FlashCoroutine(Color.red));
                 }
             }
 
             return Listener;
         }
 
-        public static void AddDoomsayerButtons(MeetingHud __instance)
+        public static void Postfix(MeetingHud __instance)
         {
             foreach (var role in Role.GetRoles(RoleEnum.Doomsayer))
             {
@@ -187,12 +179,8 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
 
             if (PlayerControl.LocalPlayer.Data.IsDead) return;
             if (!PlayerControl.LocalPlayer.Is(RoleEnum.Doomsayer)) return;
-            if (PlayerControl.LocalPlayer.IsJailed()) return;
 
             var doomsayerRole = Role.GetRole<Doomsayer>(PlayerControl.LocalPlayer);
-            doomsayerRole.NumberOfGuesses = 0;
-            doomsayerRole.IncorrectGuesses = 0;
-            doomsayerRole.RoleGuess.Clear();
             foreach (var voteArea in __instance.playerStates)
             {
                 GenButton(doomsayerRole, voteArea);

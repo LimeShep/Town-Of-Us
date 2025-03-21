@@ -19,7 +19,7 @@ namespace TownOfUs.CrewmateRoles.AltruistMod
         public static Dictionary<PlayerControl, ArrowBehaviour> Revived = new();
         public static Sprite Sprite => TownOfUs.Arrow;
 
-        public static IEnumerator AltruistRevive(DeadBody target, Altruist role)
+        public static IEnumerator AltruistRevive(DeadBody target, Altruist role = null)
         {
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Lookout))
             {
@@ -30,11 +30,13 @@ namespace TownOfUs.CrewmateRoles.AltruistMod
                 }
             }
 
+            PlayerControl altruist = null;
+
             var parent = Utils.PlayerById(target.ParentId);
             var position = target.TruePosition;
-            var altruist = role.Player;
+            if (role != null) altruist = role.Player;
 
-            if (AmongUsClient.Instance.AmHost) Utils.RpcMurderPlayer(role.Player, role.Player);
+            if (AmongUsClient.Instance.AmHost && role != null) Utils.RpcMurderPlayer(role.Player, role.Player);
 
             if (CustomGameOptions.AltruistTargetBody)
                 if (target != null)

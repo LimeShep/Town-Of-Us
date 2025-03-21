@@ -144,9 +144,7 @@ namespace TownOfUs.Modifiers.AssassinMod
                 {
                     var doomsayer = Role.GetRole<Doomsayer>(PlayerControl.LocalPlayer);
                     ShowHideButtonsDoom.HideButtonsDoom(doomsayer);
-                    ShowHideButtonsDoom.HideTextDoom(doomsayer);
                 }
-
                 if (player.Is(RoleEnum.Deputy))
                 {
                     var dep = Role.GetRole<Deputy>(PlayerControl.LocalPlayer);

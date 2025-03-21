@@ -25,7 +25,7 @@ namespace TownOfUs.Roles
 
         public Doomsayer(PlayerControl player) : base(player)
         {
-            Name = "Doomsayer";
+            Name = "Foreteller";
             ImpostorText = () => "Guess People's Roles To Win!";
             TaskText = () => "Win by guessing player's roles\nFake Tasks:";
             Color = Patches.Colors.Doomsayer;
@@ -125,6 +125,7 @@ namespace TownOfUs.Roles
 
         public int NumberOfGuesses = 0;
         public int IncorrectGuesses = 0;
+        public int GuessedCorrectly = 0;
         public bool WonByGuessing = false;
 
         public List<string> PossibleGuesses => SortedColorMapping.Keys.ToList();

@@ -15,7 +15,6 @@ using TownOfUs.CrewmateRoles.SwapperMod;
 using TownOfUs.CrewmateRoles.VigilanteMod;
 using TownOfUs.ImpostorRoles.HypnotistMod;
 using TownOfUs.Modifiers.AssassinMod;
-using TownOfUs.NeutralRoles.DoomsayerMod;
 
 namespace TownOfUs.Patches
 {
@@ -193,16 +192,15 @@ namespace TownOfUs.Patches
 
             AddButtonDeputy.AddDepButtons(__instance);
             AddButtonImitator.AddImitatorButtons(__instance);
+            AddButton.AddSwapperButtons(__instance);
             TempJail.AddTempJail(__instance);
             AddJailButtons.AddJailorButtons(__instance);
             AddRevealButton.AddPresidentButtons(__instance);
             AddRevealButtonPolitician.AddPoliticianButtons(__instance);
             AddProsecute.AddProsecuteButton(__instance);
-            AddButton.AddSwapperButtons(__instance);
             AddButtonVigi.AddVigilanteButtons(__instance);
             AddHysteriaButton.AddHypnoButtons(__instance);
             AddButtonAssassin.AddAssassinButtons(__instance);
-            AddButtonDoom.AddDoomsayerButtons(__instance);
             return;
         }
     }

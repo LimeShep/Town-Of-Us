@@ -140,6 +140,7 @@ namespace TownOfUs
         public static ShiftEnum WhoShifts => (ShiftEnum)Generate.WhoShifts.Get();
         public static BecomeEnum ShiftedBecomes => (BecomeEnum)Generate.ShiftedBecomes.Get();
         public static bool ShifterCrewmate => Generate.ShifterCrewmate.Get();
+        public static bool ShifterShiftsModifiers => Generate.ShifterShiftsModifiers.Get();
         public static float FootprintSize => Generate.FootprintSize.Get();
         public static float FootprintInterval => Generate.FootprintInterval.Get();
         public static float FootprintDuration => Generate.FootprintDuration.Get();
@@ -323,6 +324,8 @@ namespace TownOfUs
         public static bool DoomsayerGuessNeutralEvil => Generate.DoomsayerGuessNeutralEvil.Get();
         public static bool DoomsayerGuessNeutralKilling => Generate.DoomsayerGuessNeutralKilling.Get();
         public static bool DoomsayerGuessImpostors => Generate.DoomsayerGuessImpostors.Get();
+        public static bool DoomsayerAfterVoting => Generate.DoomsayerAfterVoting.Get();
+        public static int DoomsayerGuessesToWin => (int)Generate.DoomsayerGuessesToWin.Get();
         public static float BiteCd => Generate.BiteCooldown.Get();
         public static bool VampImpVision => Generate.VampImpVision.Get();
         public static bool VampVent => Generate.VampVent.Get();
