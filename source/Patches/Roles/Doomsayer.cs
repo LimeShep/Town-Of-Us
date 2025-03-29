@@ -25,7 +25,7 @@ namespace TownOfUs.Roles
 
         public Doomsayer(PlayerControl player) : base(player)
         {
-            Name = "Foreteller";
+            Name = "Doomsayer";
             ImpostorText = () => "Guess People's Roles To Win!";
             TaskText = () => "Win by guessing player's roles\nFake Tasks:";
             Color = Patches.Colors.Doomsayer;
@@ -84,6 +84,7 @@ namespace TownOfUs.Roles
                 if (CustomGameOptions.VenererOn > 0) ColorMapping.Add("Venerer", Colors.Impostor);
                 if (CustomGameOptions.HypnotistOn > 0) ColorMapping.Add("Hypnotist", Colors.Impostor);
                 if (CustomGameOptions.ScavengerOn > 0) ColorMapping.Add("Scavenger", Colors.Impostor);
+                if (CustomGameOptions.PoisonerOn > 0) ColorMapping.Add("Poisoner", Colors.Impostor);
             }
 
             if (CustomGameOptions.DoomsayerGuessNeutralBenign)
@@ -96,16 +97,18 @@ namespace TownOfUs.Roles
             if (CustomGameOptions.DoomsayerGuessNeutralEvil)
             {
                 if (!CustomGameOptions.UniqueRoles) ColorMapping.Add("Doomsayer", Colors.Doomsayer);
+                if (CustomGameOptions.ForetellerOn > 0) ColorMapping.Add("Foreteller", Colors.Doomsayer);
                 if (CustomGameOptions.ExecutionerOn > 0) ColorMapping.Add("Executioner", Colors.Executioner);
                 if (CustomGameOptions.JesterOn > 0 || (CustomGameOptions.ExecutionerOn > 0 && CustomGameOptions.OnTargetDead == OnTargetDead.Jester) || (CustomGameOptions.GuardianAngelOn > 0 && CustomGameOptions.GaOnTargetDeath == BecomeOptions.Jester)) ColorMapping.Add("Jester", Colors.Jester);
                 if (CustomGameOptions.SoulCollectorOn > 0) ColorMapping.Add("Soul Collector", Colors.SoulCollector);
+                if (CustomGameOptions.SpeedrunnerOn > 0) ColorMapping.Add("Speedrunner", Colors.Speedrunner);
             }
             if (CustomGameOptions.DoomsayerGuessNeutralKilling)
             {
                 if (CustomGameOptions.ArsonistOn > 0) ColorMapping.Add("Arsonist", Colors.Arsonist);
                 if (CustomGameOptions.GlitchOn > 0) ColorMapping.Add("The Glitch", Colors.Glitch);
                 if (CustomGameOptions.PlaguebearerOn > 0) ColorMapping.Add("Plaguebearer", Colors.Plaguebearer);
-                if (CustomGameOptions.VampireOn > 0) ColorMapping.Add("Vampire", Colors.Vampire);
+                if (CustomGameOptions.JackalOn > 0) ColorMapping.Add("Jackal", Colors.Vampire);
                 if (CustomGameOptions.WerewolfOn > 0) ColorMapping.Add("Werewolf", Colors.Werewolf);
                 if (CustomGameOptions.JuggernautOn > 0) ColorMapping.Add("Juggernaut", Colors.Juggernaut);
             }
@@ -125,7 +128,6 @@ namespace TownOfUs.Roles
 
         public int NumberOfGuesses = 0;
         public int IncorrectGuesses = 0;
-        public int GuessedCorrectly = 0;
         public bool WonByGuessing = false;
 
         public List<string> PossibleGuesses => SortedColorMapping.Keys.ToList();

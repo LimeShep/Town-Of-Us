@@ -132,6 +132,7 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 case RoleEnum.Executioner:
                 case RoleEnum.Arsonist:
                 case RoleEnum.Amnesiac:
+                case RoleEnum.Shifter:
                 case RoleEnum.Glitch:
                 case RoleEnum.Juggernaut:
                 case RoleEnum.Survivor:
@@ -140,6 +141,7 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 case RoleEnum.Pestilence:
                 case RoleEnum.Werewolf:
                 case RoleEnum.Doomsayer:
+                case RoleEnum.Foreteller:
                 case RoleEnum.Vampire:
                 case RoleEnum.SoulCollector:
 
@@ -245,6 +247,20 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                     }
                 }
                 if (CustomGameOptions.AmneTurnImpAssassin) new Assassin(amnesiac);
+                if (amnesiac.Is(RoleEnum.Poisoner))
+                {
+                    if (PlayerControl.LocalPlayer == amnesiac)
+                    {
+                        var poisonerRole = Role.GetRole<Poisoner>(amnesiac);
+                        poisonerRole.LastPoisoned = DateTime.UtcNow;
+                        DestroyableSingleton<HudManager>.Instance.KillButton.graphic.enabled = false;
+                    }
+                    else if (PlayerControl.LocalPlayer == other)
+                    {
+                        DestroyableSingleton<HudManager>.Instance.KillButton.enabled = true;
+                        DestroyableSingleton<HudManager>.Instance.KillButton.graphic.enabled = true;
+                    }
+                }
             }
 
             if (role == RoleEnum.Snitch)
@@ -556,6 +572,13 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 var doomRole = Role.GetRole<Doomsayer>(amnesiac);
                 doomRole.LastObserved = DateTime.UtcNow;
                 doomRole.LastObservedPlayer = null;
+            }
+
+            else if (role == RoleEnum.Foreteller)
+            {
+                var foreRole = Role.GetRole<Foreteller>(amnesiac);
+                foreRole.LastObserved = DateTime.UtcNow;
+                foreRole.LastObservedPlayer = null;
             }
 
             else if (role == RoleEnum.Plaguebearer)

@@ -179,6 +179,7 @@ namespace TownOfUs.NeutralRoles.ShifterMod
                 case RoleEnum.Amnesiac:
                 case RoleEnum.Arsonist:
                 case RoleEnum.Doomsayer:
+                case RoleEnum.Foreteller:
                 case RoleEnum.Executioner:
                 case RoleEnum.Glitch:
                 case RoleEnum.GuardianAngel:

@@ -278,6 +278,11 @@ namespace TownOfUs.Patches
                         AddRoleMessage(RoleEnum.Doomsayer);
                         return false;
                     }
+                    else if (chatText.ToLower().StartsWith("/fore") || chatText.ToLower().StartsWith("/ fore"))
+                    {
+                        AddRoleMessage(RoleEnum.Foreteller);
+                        return false;
+                    }
                     else if (chatText.ToLower().StartsWith("/vamp") || chatText.ToLower().StartsWith("/ vamp"))
                     {
                         AddRoleMessage(RoleEnum.Vampire);
@@ -595,6 +600,8 @@ namespace TownOfUs.Patches
                     PlayerControl.LocalPlayer, "The Bomber is an impostor who can place bombs, these kill anyone in the area a short duration later.");
                 if (role == RoleEnum.Doomsayer) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(
                     PlayerControl.LocalPlayer, "The Doomsayer is a neutral evil role with the goal to guess 3 other player's roles simultaneously.");
+                if (role == RoleEnum.Foreteller) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(
+                    PlayerControl.LocalPlayer, "The Foreteller is a neutral evil role with the goal to guess 3 other player's roles.");
                 if (role == RoleEnum.Vampire) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer,
                     "The Vampire is a neutral killer with the goal to kill everyone. The first crewmate the original Vampire bites will turn into a Vampire, the rest will die.");
                 if (role == RoleEnum.Prosecutor) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(

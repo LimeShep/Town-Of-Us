@@ -105,7 +105,8 @@ namespace TownOfUs
         SetExtraVotes,
         Rewind,
         RewindRevive,
-        AddMayorVoteBank
-        
+        AddMayorVoteBank,
+        ForetellerKill,
+        Poison,
     }
 }

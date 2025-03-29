@@ -146,9 +146,9 @@ namespace TownOfUs
                 __instance.KillButton.graphic.sprite = Observe;
                 flag = true;
             }
-            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Vampire))
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller))
             {
-                __instance.KillButton.graphic.sprite = Bite;
+                __instance.KillButton.graphic.sprite = Observe;
                 flag = true;
             }
             else if (PlayerControl.LocalPlayer.Is(RoleEnum.Oracle))

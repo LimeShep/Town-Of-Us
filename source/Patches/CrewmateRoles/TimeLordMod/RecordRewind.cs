@@ -144,6 +144,12 @@ namespace TownOfUs.CrewmateRoles.TimeLordMod
                 if (deadBody.ParentId == player.PlayerId) { deadbodynew = deadBody; deadBody.gameObject.Destroy(); }
             }
 
+            foreach (var poisoner in Role.GetRoles(RoleEnum.Poisoner))
+            {
+                var poisonerRole = (Poisoner)poisoner;
+                if (poisonerRole.PoisonedPlayer == player) poisonerRole.PoisonedPlayer = poisonerRole.Player;
+            }
+
             player.Revive();
             if (player.Is(Faction.Impostors)) RoleManager.Instance.SetRole(player, RoleTypes.Impostor);
             else RoleManager.Instance.SetRole(player, RoleTypes.Crewmate);

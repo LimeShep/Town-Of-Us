@@ -13,6 +13,7 @@ using TownOfUs.Roles.Modifiers;
 using UnityEngine.UI;
 using TownOfUs.ImpostorRoles.BlackmailerMod;
 using Reactor.Utilities.Extensions;
+using TownOfUs.NeutralRoles.ForetellerMod;
 
 namespace TownOfUs.Patches
 {
@@ -117,6 +118,12 @@ namespace TownOfUs.Patches
                 {
                     var doom = Role.GetRole<Doomsayer>(PlayerControl.LocalPlayer);
                     ShowHideButtonsDoom.HideTarget(doom, voteArea.TargetPlayerId);
+                }
+
+                if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller) && !PlayerControl.LocalPlayer.Data.IsDead)
+                {
+                    var fore = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
+                    ShowHideButtonsFore.HideTarget(fore, voteArea.TargetPlayerId);
                 }
 
                 if (PlayerControl.LocalPlayer.Is(RoleEnum.Jailor) && !PlayerControl.LocalPlayer.Data.IsDead)

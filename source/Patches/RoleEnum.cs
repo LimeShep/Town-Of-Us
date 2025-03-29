@@ -6,10 +6,8 @@ namespace TownOfUs
         Jester,
         Engineer,
         Mayor,
-        President,
         Swapper,
         Investigator,
-        TimeLord,
         Medic,
         Seer,
         Executioner,
@@ -23,7 +21,6 @@ namespace TownOfUs
         Haunter,
         Veteran,
         Amnesiac,
-        Shifter,
         Juggernaut,
         Tracker,
         Transporter,
@@ -49,10 +46,8 @@ namespace TownOfUs
         SoulCollector,
         Lookout,
         Deputy,
-
         Miner,
         Swooper,
-        Camouflager,
         Morphling,
         Janitor,
         Undertaker,
@@ -65,11 +60,19 @@ namespace TownOfUs
         Venerer,
         Hypnotist,
         Scavenger,
+        
 
         Crewmate,
         Impostor,
 
-        None
+        None,
+        Poisoner,
+        Camouflager,
+        Foreteller,
+        Speedrunner,
+        President,
+        Shifter,
+        TimeLord,
     }
 
     public enum ModifierEnum

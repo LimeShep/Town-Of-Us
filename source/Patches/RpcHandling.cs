@@ -41,6 +41,7 @@ using TownOfUs.ImpostorRoles.BomberMod;
 using TownOfUs.CrewmateRoles.HunterMod;
 using Il2CppSystem.Linq;
 using TownOfUs.CrewmateRoles.DeputyMod;
+using TownOfUs.NeutralRoles.ForetellerMod;
 
 namespace TownOfUs
 {
@@ -1015,6 +1016,12 @@ namespace TownOfUs
                         DoomsayerKill.DoomKillCount(toDie3, doom);
                         DoomsayerKill.MurderPlayer(toDie3);
                         break;
+                    case CustomRPC.ForetellerKill:
+                        var toDie4 = Utils.PlayerById(reader.ReadByte());
+                        var fore = Utils.PlayerById(reader.ReadByte());
+                        ForetellerKill.DoomKillCount(toDie4, fore);
+                        ForetellerKill.MurderPlayer(toDie4);
+                        break;
                     case CustomRPC.SetMimic:
                         var glitchPlayer = Utils.PlayerById(reader.ReadByte());
                         var mimicPlayer = Utils.PlayerById(reader.ReadByte());
@@ -1066,6 +1073,12 @@ namespace TownOfUs
                     case CustomRPC.Blackmail:
                         var blackmailer = Role.GetRole<Blackmailer>(Utils.PlayerById(reader.ReadByte()));
                         blackmailer.Blackmailed = Utils.PlayerById(reader.ReadByte());
+                        break;
+                    case CustomRPC.Poison:
+                        var poisoner = Utils.PlayerById(reader.ReadByte());
+                        var poisoned = Utils.PlayerById(reader.ReadByte());
+                        var poisonerRole = Role.GetRole<Poisoner>(poisoner);
+                        poisonerRole.PoisonedPlayer = poisoned;
                         break;
                     case CustomRPC.Fortify:
                         switch (reader.ReadByte())
@@ -1716,7 +1729,13 @@ namespace TownOfUs
 
                 if (CustomGameOptions.ExecutionerOn > 0)
                     NeutralEvilRoles.Add((typeof(Executioner), CustomGameOptions.ExecutionerOn, false));
+                
+                if (CustomGameOptions.SpeedrunnerOn > 0)
+                    NeutralEvilRoles.Add((typeof(Speedrunner), CustomGameOptions.SpeedrunnerOn, false || CustomGameOptions.UniqueRoles));
 
+                if (CustomGameOptions.ForetellerOn > 0)
+                    NeutralEvilRoles.Add((typeof(Foreteller), CustomGameOptions.ForetellerOn, false || CustomGameOptions.UniqueRoles));
+                
                 if (CustomGameOptions.DoomsayerOn > 0)
                     NeutralEvilRoles.Add((typeof(Doomsayer), CustomGameOptions.DoomsayerOn, false || CustomGameOptions.UniqueRoles));
 
@@ -1743,8 +1762,8 @@ namespace TownOfUs
                 if (CustomGameOptions.WerewolfOn > 0)
                     NeutralKillingRoles.Add((typeof(Werewolf), CustomGameOptions.WerewolfOn, true));
 
-                if (CustomGameOptions.VampireOn > 0)
-                    NeutralKillingRoles.Add((typeof(Vampire), CustomGameOptions.VampireOn, true));
+                if (CustomGameOptions.JackalOn > 0)
+                    NeutralKillingRoles.Add((typeof(Vampire), CustomGameOptions.JackalOn, true));
                 #endregion
                 #region Impostor Roles
                 if (CustomGameOptions.UndertakerOn > 0)
@@ -1785,6 +1804,9 @@ namespace TownOfUs
 
                 if (CustomGameOptions.HypnotistOn > 0)
                     ImpostorSupportRoles.Add((typeof(Hypnotist), CustomGameOptions.HypnotistOn, true));
+
+                if (CustomGameOptions.PoisonerOn > 0)
+                    ImpostorSupportRoles.Add((typeof(Poisoner), CustomGameOptions.PoisonerOn, true));
 
                 if (CustomGameOptions.ScavengerOn > 0)
                     ImpostorKillingRoles.Add((typeof(Scavenger), CustomGameOptions.ScavengerOn, false || CustomGameOptions.UniqueRoles));
@@ -1867,7 +1889,7 @@ namespace TownOfUs
                         if (CustomGameOptions.MinerOn == 100)  addRoles(typeof(Miner));
                         if (CustomGameOptions.MorphlingOn == 100)  addRoles(typeof(Morphling));
                         if (CustomGameOptions.SwooperOn == 100)  addRoles(typeof(Swooper));
-                        if (CustomGameOptions.WarlockOn == 100)  addRoles(typeof(Swooper));
+                        if (CustomGameOptions.WarlockOn == 100)  addRoles(typeof(Warlock));
                     }
                 }
 

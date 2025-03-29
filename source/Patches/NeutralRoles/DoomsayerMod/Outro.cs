@@ -19,7 +19,7 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
             array[0].NameText().text = role.ColorString + array[0].NameText().text + "</color>";
             __instance.BackgroundBar.material.color = role.Color;
             var text = Object.Instantiate(__instance.WinText);
-            text.text = "Foreteller Wins!";
+            text.text = "Doomsayer Wins!";
             text.color = role.Color;
             var pos = __instance.WinText.transform.localPosition;
             pos.y = 1.5f;

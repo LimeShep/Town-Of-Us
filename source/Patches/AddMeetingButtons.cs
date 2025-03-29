@@ -14,6 +14,8 @@ using TownOfUs.CrewmateRoles.ProsecutorMod;
 using TownOfUs.CrewmateRoles.SwapperMod;
 using TownOfUs.CrewmateRoles.VigilanteMod;
 using TownOfUs.ImpostorRoles.HypnotistMod;
+using TownOfUs.NeutralRoles.DoomsayerMod;
+using TownOfUs.NeutralRoles.ForetellerMod;
 using TownOfUs.Modifiers.AssassinMod;
 
 namespace TownOfUs.Patches
@@ -201,6 +203,7 @@ namespace TownOfUs.Patches
             AddButtonVigi.AddVigilanteButtons(__instance);
             AddHysteriaButton.AddHypnoButtons(__instance);
             AddButtonAssassin.AddAssassinButtons(__instance);
+            AddButtonDoom.AddDoomsayerButtons(__instance);
             return;
         }
     }

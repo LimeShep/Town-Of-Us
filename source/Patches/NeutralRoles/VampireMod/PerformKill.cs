@@ -45,6 +45,7 @@ namespace TownOfUs.NeutralRoles.VampireMod
                 var interact = Utils.Interact(PlayerControl.LocalPlayer, role.ClosestPlayer);
                 if (interact[4] == true)
                 {
+                    role.madeASideKick = true;
                     Convert(role.ClosestPlayer);
                     Utils.Rpc(CustomRPC.Bite, role.ClosestPlayer.PlayerId);
                 }
@@ -240,6 +241,9 @@ namespace TownOfUs.NeutralRoles.VampireMod
             if (PlayerControl.LocalPlayer == newVamp)
             {
                 var role = new Vampire(PlayerControl.LocalPlayer);
+                role.isSidekick = true;
+                role.Name = "Sidekick";
+                role.TaskText = () => "Help your Jackal to win the game!";
                 role.CorrectKills = killsList.CorrectKills;
                 role.IncorrectKills = killsList.IncorrectKills;
                 role.CorrectAssassinKills = killsList.CorrectAssassinKills;
@@ -249,6 +253,9 @@ namespace TownOfUs.NeutralRoles.VampireMod
             else
             {
                 var role = new Vampire(newVamp);
+                role.isSidekick = true;
+                role.Name = "Sidekick";
+                role.TaskText = () => "Help your Jackal to win the game!";
                 role.CorrectKills = killsList.CorrectKills;
                 role.IncorrectKills = killsList.IncorrectKills;
                 role.CorrectAssassinKills = killsList.CorrectAssassinKills;

@@ -31,6 +31,7 @@ namespace TownOfUs
     {
         public const string Id = "com.slushiegoose.townofus";
         public const string VersionString = "5.2.1";
+        public const string CompilationString = "6.2.6";
         public static System.Version Version = System.Version.Parse(VersionString);
         public const string VersionTag = "<color=#ff33fc></color>";
 
@@ -43,6 +44,7 @@ namespace TownOfUs
         public static Sprite Shift;
         public static Sprite ShiftKill;
         public static Sprite NormalKill;
+        public static Sprite Sidekick;
         public static Sprite Footprint;
         public static Sprite Rewind;
         public static Sprite MedicSprite;
@@ -66,6 +68,8 @@ namespace TownOfUs
         public static Sprite AlertSprite;
         public static Sprite RememberSprite;
         public static Sprite TrackSprite;
+        public static Sprite PoisonSprite;
+        public static Sprite PoisonedSprite;
         public static Sprite PlantSprite;
         public static Sprite DetonateSprite;
         public static Sprite TransportSprite;
@@ -154,6 +158,7 @@ namespace TownOfUs
             Rewind = CreateSprite("TownOfUs.Resources.Rewind.png");
             ShiftKill = CreateSprite("TownOfUs.Resources.ShiftKill.png");
             NormalKill = CreateSprite("TownOfUs.Resources.NormalKill.png");
+            Sidekick = CreateSprite("TownOfUs.Resources.Sidekick.png");
             MedicSprite = CreateSprite("TownOfUs.Resources.Medic.png");
             SeerSprite = CreateSprite("TownOfUs.Resources.Seer.png");
             SampleSprite = CreateSprite("TownOfUs.Resources.Sample.png");
@@ -175,6 +180,8 @@ namespace TownOfUs
             AlertSprite = CreateSprite("TownOfUs.Resources.Alert.png");
             RememberSprite = CreateSprite("TownOfUs.Resources.Remember.png");
             TrackSprite = CreateSprite("TownOfUs.Resources.Track.png");
+            PoisonSprite = CreateSprite("TownOfUs.Resources.Poison.png");
+            PoisonedSprite = CreateSprite("TownOfUs.Resources.Poisoned.png");
             PlantSprite = CreateSprite("TownOfUs.Resources.Plant.png");
             DetonateSprite = CreateSprite("TownOfUs.Resources.Detonate.png");
             TransportSprite = CreateSprite("TownOfUs.Resources.Transport.png");

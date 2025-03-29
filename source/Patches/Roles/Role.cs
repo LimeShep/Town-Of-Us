@@ -13,6 +13,7 @@ using TownOfUs.Extensions;
 using AmongUs.GameOptions;
 using TownOfUs.ImpostorRoles.TraitorMod;
 using TownOfUs.ImpostorRoles.CamouflagerMod;
+using AmongUs.Data.Player;
 
 namespace TownOfUs.Roles
 {
@@ -203,6 +204,11 @@ namespace TownOfUs.Roles
                 var doomRole = (Doomsayer)doom;
                 if (doomRole.WonByGuessing && CustomGameOptions.NeutralEvilWinEndsGame) return;
             }
+            foreach (var fore in GetRoles(RoleEnum.Foreteller))
+            {
+                var foreRole = (Foreteller)fore;
+                if (foreRole.WonByGuessing && CustomGameOptions.NeutralEvilWinEndsGame) return;
+            }
             foreach (var sc in GetRoles(RoleEnum.SoulCollector))
             {
                 var scRole = (SoulCollector)sc;
@@ -331,7 +337,7 @@ namespace TownOfUs.Roles
 
             Player.nameText().transform.localPosition = new Vector3(0f, 0.15f, -0.5f);
 
-            return PlayerName + "\n" + Name;
+            return $"{PlayerName}\n<size=75%>{Name}";
         }
 
         public static bool operator ==(Role a, Role b)
@@ -421,6 +427,17 @@ namespace TownOfUs.Roles
 
             return null;
         }
+
+        public static Role GetRoleFromEnum(RoleEnum roleEnum) {
+            string roleName = roleEnum.ToString();
+            Type type = Type.GetType(roleName);
+
+            if (type != null && typeof(Role).IsAssignableFrom(type)) {
+                return (Role)Activator.CreateInstance(type);
+            }
+
+            else return null;
+        }
         
         public static T GetRole<T>(PlayerControl player) where T : Role
         {
@@ -494,7 +511,7 @@ namespace TownOfUs.Roles
                             __instance.__4__this.BackgroundBar.material.color = Color.white;
                             PlayerControl.LocalPlayer.Data.Role.IntroSound = GetIntroSound(RoleTypes.Shapeshifter);
                         }
-                        __instance.__4__this.RoleText.text = role.Name;
+                        __instance.__4__this.RoleText.text = role.Name.ToUpper();
                         __instance.__4__this.RoleText.color = role.Color;
                         __instance.__4__this.YouAreText.color = role.Color;
                         __instance.__4__this.RoleBlurbText.color = role.Color;
@@ -545,7 +562,7 @@ namespace TownOfUs.Roles
                             __instance.__4__this.BackgroundBar.material.color = Color.white;
                             PlayerControl.LocalPlayer.Data.Role.IntroSound = GetIntroSound(RoleTypes.Shapeshifter);
                         }
-                        __instance.__4__this.RoleText.text = role.Name;
+                        __instance.__4__this.RoleText.text = role.Name.ToUpper();
                         __instance.__4__this.RoleText.color = role.Color;
                         __instance.__4__this.YouAreText.color = role.Color;
                         __instance.__4__this.RoleBlurbText.color = role.Color;
@@ -615,7 +632,7 @@ namespace TownOfUs.Roles
                             __instance.__4__this.BackgroundBar.material.color = Color.white;
                             PlayerControl.LocalPlayer.Data.Role.IntroSound = GetIntroSound(RoleTypes.Shapeshifter);
                         }
-                        __instance.__4__this.RoleText.text = role.Name;
+                        __instance.__4__this.RoleText.text = role.Name.ToUpper();
                         __instance.__4__this.RoleText.color = role.Color;
                         __instance.__4__this.YouAreText.color = role.Color;
                         __instance.__4__this.RoleBlurbText.color = role.Color;
@@ -815,6 +832,12 @@ namespace TownOfUs.Roles
                 {
                     ((Medium)role).MediatedPlayers.Values.DestroyAll();
                     ((Medium)role).MediatedPlayers.Clear();
+                }
+                foreach (var role in AllRoles.Where(x => x.RoleType == RoleEnum.Speedrunner))
+                {
+                    ((Speedrunner)role).ImpArrows.DestroyAll();
+                    ((Speedrunner)role).AddedTasks = false;
+                    ((Speedrunner)role).FinishedAllTasks = false;
                 }
                 foreach (var role in AllRoles.Where(x => x.RoleType == RoleEnum.Mystic))
                 {

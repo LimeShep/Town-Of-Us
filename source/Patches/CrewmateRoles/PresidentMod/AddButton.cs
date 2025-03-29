@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 using TownOfUs.NeutralRoles.DoomsayerMod;
+using TownOfUs.NeutralRoles.ForetellerMod;
 
 namespace TownOfUs.CrewmateRoles.PresidentMod
 {
@@ -65,6 +66,17 @@ namespace TownOfUs.CrewmateRoles.PresidentMod
                 ShowHideButtonsDoom.HideTarget(doomsayer, voteArea.TargetPlayerId);
                 voteArea.NameText.transform.localPosition = new Vector3(0.3384f, 0.0311f, -0.1f);
                 foreach (var (targetId, guessText) in doomsayer.RoleGuess)
+                {
+                    if (!guessText.isActiveAndEnabled || voteArea.TargetPlayerId != targetId) continue;
+                    guessText.gameObject.SetActive(false);
+                }
+            }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller))
+            {
+                var fore = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
+                ShowHideButtonsFore.HideTarget(fore, voteArea.TargetPlayerId);
+                voteArea.NameText.transform.localPosition = new Vector3(0.3384f, 0.0311f, -0.1f);
+                foreach (var (targetId, guessText) in fore.RoleGuess)
                 {
                     if (!guessText.isActiveAndEnabled || voteArea.TargetPlayerId != targetId) continue;
                     guessText.gameObject.SetActive(false);

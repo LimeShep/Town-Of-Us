@@ -74,6 +74,12 @@ namespace TownOfUs.CrewmateRoles.AltruistMod
                 if (deadBody.ParentId == altruist.PlayerId) deadBody.gameObject.Destroy();
             }
 
+            foreach (var poisoner in Role.GetRoles(RoleEnum.Poisoner))
+            {
+                var poisonerRole = (Poisoner)poisoner;
+                if (poisonerRole.PoisonedPlayer == player) poisonerRole.PoisonedPlayer = poisonerRole.Player;
+            }
+
             player.Revive();
             if (player.Is(Faction.Impostors)) RoleManager.Instance.SetRole(player, RoleTypes.Impostor);
             else RoleManager.Instance.SetRole(player, RoleTypes.Crewmate);

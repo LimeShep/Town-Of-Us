@@ -28,6 +28,7 @@ using TownOfUs.NeutralRoles.SoulCollectorMod;
 using static TownOfUs.Roles.Glitch;
 using TownOfUs.Patches.NeutralRoles;
 using Il2CppSystem.Linq;
+using UnityEngine.UIElements;
 
 namespace TownOfUs
 {
@@ -683,6 +684,75 @@ namespace TownOfUs
         {
             MurderPlayer(killer, target, false);
             Rpc(CustomRPC.BypassMultiKill, killer.PlayerId, target.PlayerId);
+        }
+
+        private static List<int> getTaskIndex(
+        NormalPlayerTask[] tasks)
+        {
+            List<int> index = new List<int>(tasks.Length);
+            for (int i = 0; i < tasks.Length; ++i)
+            {
+                index.Add(tasks[i].Index);
+            }
+
+            return index;
+        }
+
+        public static int GetRandomCommonTaskId()
+        {
+            if (ShipStatus.Instance == null) { return byte.MaxValue; }
+
+            List<int> taskIndex = getTaskIndex(
+                ShipStatus.Instance.CommonTasks);
+
+            System.Random rand = new System.Random();
+            int index = rand.Next(taskIndex.Count);
+
+            return taskIndex[index];
+        }
+
+        public static int GetRandomShortTask()
+        {
+            if (ShipStatus.Instance == null) { return byte.MaxValue; }
+
+            List<int> taskIndex = getTaskIndex(
+                ShipStatus.Instance.ShortTasks);
+
+            System.Random rand = new System.Random();
+            int index = rand.Next(taskIndex.Count);
+
+            return taskIndex[index];
+        }
+
+        public static int GetRandomLongTask()
+        {
+            if (ShipStatus.Instance == null) { return byte.MaxValue; }
+
+            List<int> taskIndex = getTaskIndex(
+                ShipStatus.Instance.LongTasks);
+
+            System.Random rand = new System.Random();
+            int index = rand.Next(taskIndex.Count);
+
+            return taskIndex[index];
+        }
+
+        public static void SetTask(NetworkedPlayerInfo playerInfo, int taskIndex)
+        {
+            NormalPlayerTask task = ShipStatus.Instance.GetTaskById((byte)taskIndex);
+
+            PlayerControl player = playerInfo.Object;
+
+            int index = playerInfo.Tasks.Count;
+            playerInfo.Tasks.Add(new ((byte)taskIndex, (uint)index));
+            playerInfo.Tasks[index].Id = (uint)index;
+
+            task.Id = (uint)index;
+            task.Owner = player;
+            task.Initialize();
+
+            player.myTasks.Add(task);
+            //player.SetDirtyBit(1U << (int)player.PlayerId);
         }
 
         public static void MurderPlayer(PlayerControl killer, PlayerControl target, bool jumpToBody)
@@ -1508,6 +1578,12 @@ namespace TownOfUs
                 doom.LastObserved = DateTime.UtcNow;
                 doom.LastObservedPlayer = null;
             }
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller))
+            {
+                var fore = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
+                fore.LastObserved = DateTime.UtcNow;
+                fore.LastObservedPlayer = null;
+            }
             if (PlayerControl.LocalPlayer.Is(RoleEnum.SoulCollector))
             {
                 var sc = Role.GetRole<SoulCollector>(PlayerControl.LocalPlayer);
@@ -1579,6 +1655,11 @@ namespace TownOfUs
                 morphling.LastMorphed = DateTime.UtcNow;
                 morphling.MorphButton.graphic.sprite = TownOfUs.SampleSprite;
                 morphling.SampledPlayer = null;
+            }
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Poisoner))
+            {
+                var poisoner = Role.GetRole<Poisoner>(PlayerControl.LocalPlayer);
+                poisoner.LastPoisoned = DateTime.UtcNow;
             }
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Swooper))
             {

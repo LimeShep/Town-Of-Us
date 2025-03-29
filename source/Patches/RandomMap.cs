@@ -146,7 +146,7 @@ namespace TownOfUs
             Generate.DragCooldown.Set((float)Generate.DragCooldown.Value + change, false);
             Generate.EscapeCooldown.Set((float)Generate.EscapeCooldown.Value + change, false);
             Generate.JuggKillCooldown.Set((float)Generate.JuggKillCooldown.Value + change, false);
-            Generate.ObserveCooldown.Set((float)Generate.ObserveCooldown.Value + change, false);
+            Generate.ForetellerObserveCooldown.Set((float)Generate.ForetellerObserveCooldown.Value + change, false);
             Generate.BiteCooldown.Set((float)Generate.BiteCooldown.Value + change, false);
             Generate.ConfessCooldown.Set((float)Generate.ConfessCooldown.Value + change, false);
             Generate.ChargeUpDuration.Set((float)Generate.ChargeUpDuration.Value + change, false);

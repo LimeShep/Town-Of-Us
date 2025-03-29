@@ -8,6 +8,8 @@ namespace TownOfUs.Roles
 {
     public class Vampire : Role
     {
+        public bool isSidekick = false;
+        public bool madeASideKick = false;
         public Vampire(PlayerControl player) : base(player)
         {
             Name = "Jackal";

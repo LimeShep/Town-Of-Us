@@ -33,6 +33,11 @@ namespace TownOfUs
                 var doom = (Doomsayer)role;
                 losers.Add(doom.Player.GetDefaultOutfit().ColorId);
             }
+            foreach (var role in Role.GetRoles(RoleEnum.Foreteller))
+            {
+                var fore = (Foreteller)role;
+                losers.Add(fore.Player.GetDefaultOutfit().ColorId);
+            }
             foreach (var role in Role.GetRoles(RoleEnum.Executioner))
             {
                 var exe = (Executioner)role;
@@ -42,6 +47,11 @@ namespace TownOfUs
             {
                 var jest = (Jester)role;
                 losers.Add(jest.Player.GetDefaultOutfit().ColorId);
+            }
+            foreach (var role in Role.GetRoles(RoleEnum.Speedrunner))
+            {
+                var speed = (Speedrunner)role;
+                losers.Add(speed.Player.GetDefaultOutfit().ColorId);
             }
             foreach (var role in Role.GetRoles(RoleEnum.Phantom))
             {
@@ -145,6 +155,18 @@ namespace TownOfUs
                             return;
                         }
                     }
+                    else if (type == RoleEnum.Speedrunner)
+                    {
+                        var speed = (Speedrunner)role;
+                        if (speed.FinishedAllTasks)
+                        {
+                            EndGameResult.CachedWinners = new List<CachedPlayerData>();
+                            var speedData = new CachedPlayerData(speed.Player.Data);
+                            if (PlayerControl.LocalPlayer != speed.Player) speedData.IsYou = false;
+                            EndGameResult.CachedWinners.Add(speedData);
+                            return;
+                        }
+                    }
                     else if (type == RoleEnum.Doomsayer)
                     {
                         var doom = (Doomsayer)role;
@@ -154,6 +176,18 @@ namespace TownOfUs
                             var doomData = new CachedPlayerData(doom.Player.Data);
                             if (PlayerControl.LocalPlayer != doom.Player) doomData.IsYou = false;
                             EndGameResult.CachedWinners.Add(doomData);
+                            return;
+                        }
+                    }
+                    else if (type == RoleEnum.Foreteller)
+                    {
+                        var fore = (Foreteller)role;
+                        if (fore.WonByGuessing)
+                        {
+                            EndGameResult.CachedWinners = new List<CachedPlayerData>();
+                            var foreData = new CachedPlayerData(fore.Player.Data);
+                            if (PlayerControl.LocalPlayer != fore.Player) foreData.IsYou = false;
+                            EndGameResult.CachedWinners.Add(foreData);
                             return;
                         }
                     }

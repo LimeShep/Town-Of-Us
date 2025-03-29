@@ -197,6 +197,13 @@ namespace TownOfUs.Patches
                 doomsayer.LastObserved = doomsayer.LastObserved.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.ObserveCooldown);
             }
 
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller))
+            {
+                var foreteller = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
+                foreteller.LastObserved = DateTime.UtcNow;
+                foreteller.LastObserved = foreteller.LastObserved.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.ForetellerObserveCooldown);
+            }
+
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Executioner))
             {
                 var exe = Role.GetRole<Executioner>(PlayerControl.LocalPlayer);

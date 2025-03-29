@@ -41,27 +41,12 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
             MurderPlayer(voteArea, player, checkLover, showKillAnim);
         }
         public static void DoomKillCount(PlayerControl player, PlayerControl doomsayer)
-
         {
-
             var doom = Role.GetRole<Doomsayer>(doomsayer);
-
             doom.CorrectAssassinKills += 1;
-
-            doom.GuessedCorrectly += 1;
-
-            if (doom.GuessedCorrectly == CustomGameOptions.DoomsayerGuessesToWin)
-
-            {
-
-                doom.WonByGuessing = true;
-
-                if (!CustomGameOptions.NeutralEvilWinEndsGame) MurderPlayer(doom.Player, true, false);
-
-            }
-
+            doom.WonByGuessing = true;
+            if (!CustomGameOptions.NeutralEvilWinEndsGame) MurderPlayer(doom.Player, true, false);
         }
-
         public static void MurderPlayer(
             PlayerVoteArea voteArea,
             PlayerControl player,
@@ -160,6 +145,7 @@ namespace TownOfUs.NeutralRoles.DoomsayerMod
                 {
                     var doomsayer = Role.GetRole<Doomsayer>(PlayerControl.LocalPlayer);
                     ShowHideButtonsDoom.HideButtonsDoom(doomsayer);
+                    ShowHideButtonsDoom.HideTextDoom(doomsayer);
                 }
 
                 if (player.Is(RoleEnum.Deputy))
