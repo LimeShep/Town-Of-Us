@@ -18,7 +18,7 @@ namespace TownOfUs.NeutralRoles.VampireMod
 
             var role = Role.GetRole<Vampire>(PlayerControl.LocalPlayer);
 
-            if (!role.madeASideKick || !role.isSidekick) biteButton.graphic.sprite = TownOfUs.Sidekick;
+            if (!role.madeASideKick || role.isSidekick) biteButton.graphic.sprite = TownOfUs.Sidekick;
             else biteButton.graphic.sprite = __instance.KillButton.graphic.sprite;
 
             biteButton.gameObject.SetActive((__instance.UseButton.isActiveAndEnabled || __instance.PetButton.isActiveAndEnabled)
