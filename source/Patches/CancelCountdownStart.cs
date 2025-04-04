@@ -40,6 +40,9 @@ namespace TownOfUs.Patches
                 __instance.ResetStartState();
             }));
             CancelStartButton.gameObject.SetActive(false);
+            System.Console.WriteLine("SHOWN");
+            //CreateDraftButtons.CreateButtons(__instance);
+            //CreateDraftButtons.ShowButtons(true);
         }
 
         [HarmonyPatch(typeof(GameStartManager), nameof(GameStartManager.Update))]

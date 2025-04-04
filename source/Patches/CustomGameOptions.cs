@@ -389,6 +389,12 @@ namespace TownOfUs
         public static DisableSkipButtonMeetings SkipButtonDisable => (DisableSkipButtonMeetings)Generate.SkipButtonDisable.Get();
         public static bool UniqueRoles => Generate.UniqueRoles.Get();
         public static bool SyzyfowyAmong => Generate.SyzyfowyAmong.Get();
+        public static bool DraftEnabled => Generate.DraftEnabled.Get();
+        public static bool RandomButtonEnabled => Generate.RandomButtonEnabled.Get();
+        public static bool RandomBasesOffChoices => Generate.RandomBasesOffChoices.Get();
+        public static float PickTime => Generate.PickTime.Get();
+        public static int ButtonAmount => (int)Generate.ButtonAmount.Get();
+
         public static RoleOptions Slot1 => (RoleOptions)Generate.Slot1.Get();
         public static RoleOptions Slot2 => (RoleOptions)Generate.Slot2.Get();
         public static RoleOptions Slot3 => (RoleOptions)Generate.Slot3.Get();

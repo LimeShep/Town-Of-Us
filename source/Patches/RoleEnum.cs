@@ -66,6 +66,7 @@ namespace TownOfUs
         Impostor,
 
         None,
+        
         Poisoner,
         Camouflager,
         Foreteller,

@@ -24,7 +24,7 @@ namespace TownOfUs
             //Check if there's a ToU update
             ModUpdater.LaunchUpdater();
 
-            var data = GetVersioning().FirstOrDefault(x => x.ModVersion.Equals(TownOfUs.VersionString));
+            var data = GetVersioning().FirstOrDefault(x => x.ModVersion.Equals(TownOfUs.CompilationString));
             if (data != null)
             {
                 var RequiredVersions = data.InternalVersions;
@@ -41,9 +41,9 @@ namespace TownOfUs
                     ModUpdater.InfoPopup = UnityEngine.Object.Instantiate(man.TwitchPopup);
                     ModUpdater.InfoPopup.TextAreaTMP.fontSize *= 0.68f;
                     ModUpdater.InfoPopup.TextAreaTMP.enableAutoSizing = true;
-                    ModUpdater.InfoPopup.Show(info);
-                    ModUpdater.InfoPopup.StartCoroutine(Effects.Lerp(0.01f, new Action<float>((p) => { ModUpdater.setPopupText(info); })));
-                    ModUpdater.InvalidAUVersion = true;
+                    //ModUpdater.InfoPopup.Show(info);
+                    //ModUpdater.InfoPopup.StartCoroutine(Effects.Lerp(0.01f, new Action<float>((p) => { ModUpdater.setPopupText(info); })));
+                    //ModUpdater.InvalidAUVersion = true;
 
                     return;
                 }
@@ -247,7 +247,7 @@ namespace TownOfUs
                 Version ver = Version.Parse(tagname.Replace("v", ""));
                 if (updateType == "TOU")
                 { //Check TOU version
-                    diff = TownOfUs.Version.CompareTo(ver);
+                    diff = TownOfUs.Compilation.CompareTo(ver);
                     if (diff < 0)
                     { // TOU update required
                         HasTOUUpdate = true;
