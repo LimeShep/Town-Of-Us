@@ -131,6 +131,13 @@ namespace TownOfUs.Patches
                 hypnotist.LastHypnotised = hypnotist.LastHypnotised.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.HypnotiseCd);
             }
 
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Disorienter))
+            {
+                var disorienter = Role.GetRole<Disorienter>(PlayerControl.LocalPlayer);
+                disorienter.LastDisoriented = DateTime.UtcNow;
+                disorienter.LastDisoriented = disorienter.LastDisoriented.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.DisorientCd);
+            }
+
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Escapist))
             {
                 var escapist = Role.GetRole<Escapist>(PlayerControl.LocalPlayer);
@@ -202,6 +209,13 @@ namespace TownOfUs.Patches
                 var foreteller = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
                 foreteller.LastObserved = DateTime.UtcNow;
                 foreteller.LastObserved = foreteller.LastObserved.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.ForetellerObserveCooldown);
+            }
+
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Evoker))
+            {
+                var evoker = Role.GetRole<Evoker>(PlayerControl.LocalPlayer);
+                evoker.LastBlinded = DateTime.UtcNow;
+                evoker.LastBlinded = evoker.LastBlinded.AddSeconds(CustomGameOptions.InitialCooldowns - CustomGameOptions.EvokerCooldown);
             }
 
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Executioner))

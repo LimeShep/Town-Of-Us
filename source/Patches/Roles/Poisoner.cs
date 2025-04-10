@@ -54,7 +54,7 @@ namespace TownOfUs.Roles
         {
             if (!PoisonedPlayer.Is(RoleEnum.Pestilence))
             {
-                Utils.RpcMurderPlayer(PoisonedPlayer, PoisonedPlayer);
+                Utils.RpcMultiMurderPlayer(Player, PoisonedPlayer);
                 if (!PoisonedPlayer.Data.IsDead) SoundManager.Instance.PlaySound(PlayerControl.LocalPlayer.KillSfx, false, 0.5f);
             }
             PoisonedPlayer = null;

@@ -3,6 +3,9 @@ using Object = UnityEngine.Object;
 using Reactor.Utilities.Extensions;
 using UnityEngine;
 using TownOfUs.Patches;
+using TownOfUs.Roles;
+using TownOfUs.NeutralRoles.ShifterMod;
+using Hazel;
 
 namespace TownOfUs
 {
@@ -25,6 +28,24 @@ namespace TownOfUs
             {
                 if (cam?.gameObject.name == "UI Camera")
                     cam.orthographicSize = 3f;
+            }
+
+            foreach (var player in PlayerControl.AllPlayerControls) {
+                if (player.Is(RoleEnum.Shifter)) {
+                    var role = Role.GetRole<Shifter>(player);
+                    if (role.Used && CustomGameOptions.ShiftHappensOnMeeting && role.otherPlayer != null) {
+                        var shiftedPlayer = role.otherPlayer;
+                        role.otherPlayer = null;
+                        
+                        var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
+                            (byte) CustomRPC.Shift, SendOption.Reliable, -1);
+                        writer.Write(PlayerControl.LocalPlayer.PlayerId);
+                        writer.Write(shiftedPlayer.PlayerId);
+                        AmongUsClient.Instance.FinishRpcImmediately(writer);
+
+                        PerformKillButton.Shift(role, shiftedPlayer);
+                    }
+                }
             }
 
             ResolutionManager.ResolutionChanged.Invoke((float)Screen.width / Screen.height, Screen.width, Screen.height, Screen.fullScreen);

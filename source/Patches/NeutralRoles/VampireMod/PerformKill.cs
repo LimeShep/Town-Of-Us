@@ -17,10 +17,18 @@ namespace TownOfUs.NeutralRoles.VampireMod
     {
         public static bool Prefix(KillButton __instance)
         {
-            if (__instance != DestroyableSingleton<HudManager>.Instance.KillButton) return true;
             var flag = PlayerControl.LocalPlayer.Is(RoleEnum.Vampire);
             if (!flag) return true;
             var role = Role.GetRole<Vampire>(PlayerControl.LocalPlayer);
+            
+            if (__instance == role.LightButton && role.LightTimer() == 0f && __instance.enabled) {
+                ShipStatus.Instance.RpcUpdateSystem(SystemTypes.Sabotage, (byte)SystemTypes.Electrical);
+                role.LastLight = DateTime.UtcNow;
+                return false;
+            }
+            
+            if (__instance != DestroyableSingleton<HudManager>.Instance.KillButton) return true;
+
             if (!PlayerControl.LocalPlayer.CanMove || role.ClosestPlayer == null) return false;
             var flag2 = role.BiteTimer() == 0f;
             if (!flag2) return false;

@@ -6,15 +6,19 @@ namespace TownOfUs.Roles
 {
     public class Shifter : Role
     {
+        public bool Used = false;
+        public PlayerControl otherPlayer;
         public Shifter(PlayerControl player) : base(player)
         {
             Name = "Shifter";
             ImpostorText = () => "Shift around different roles";
-            TaskText = () => "Steal other people's roles.\nFake Tasks:";
+            TaskText = () => "Steal other people's roles.";
             Color = Patches.Colors.Shifter;
             RoleType = RoleEnum.Shifter;
             Faction = Faction.NeutralBenign;
             AddToRoleHistory(RoleType);
+            Used = false;
+            otherPlayer = null;
         }
 
         public PlayerControl ClosestPlayer;

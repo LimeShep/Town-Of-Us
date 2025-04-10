@@ -104,6 +104,7 @@ namespace TownOfUs.CustomOption
 
         public static CustomHeaderOption GlobalModifiers;
         public static CustomNumberOption ButtonBarryOn;
+        public static CustomNumberOption DrunkOn;
         public static CustomNumberOption FlashOn;
         public static CustomNumberOption GiantOn;
         public static CustomNumberOption LoversOn;
@@ -205,6 +206,32 @@ namespace TownOfUs.CustomOption
         public static CustomStringOption ShiftedBecomes;
         public static CustomToggleOption ShifterCrewmate;
         public static CustomToggleOption ShifterShiftsModifiers;
+        public static CustomToggleOption ShiftHappensOnMeeting;
+
+        public static CustomHeaderOption Evoker;
+        public static CustomNumberOption EvokerOn;
+        public static CustomNumberOption EvokerCooldown;
+        public static CustomNumberOption EvokerDuration;
+
+        public static CustomHeaderOption Conserver;
+        public static CustomNumberOption ConserverOn;
+        public static CustomToggleOption AllSeeSealedVents;
+
+        public static CustomHeaderOption Security;
+        public static CustomNumberOption SecurityOn;
+        public static CustomNumberOption CamAmount;
+
+        public static CustomHeaderOption Detonator;
+        public static CustomNumberOption DetonatorOn;
+        public static CustomNumberOption DetonatorPlantCooldown;
+        public static CustomNumberOption DetonatorDetonateCooldown;
+        public static CustomNumberOption DetonatorMaxKillsInDetonation;
+        public static CustomNumberOption DetonatorRadius;
+
+        public static CustomHeaderOption Disorienter;
+        public static CustomNumberOption DisorienterOn;
+        public static CustomNumberOption DisorientCooldown;
+        public static CustomNumberOption DisorientTime;
 
         public static CustomHeaderOption Hunter;
         public static CustomNumberOption HunterKillCd;
@@ -250,6 +277,7 @@ namespace TownOfUs.CustomOption
         public static CustomHeaderOption Poisoner;
         public static CustomNumberOption PoisonCooldown;
         public static CustomNumberOption PoisonDuration;
+        public static CustomToggleOption PoisonerCanKill;
         public static CustomToggleOption PoisonerVent;
 
         public static CustomHeaderOption Spy;
@@ -483,6 +511,7 @@ namespace TownOfUs.CustomOption
 
         public static CustomHeaderOption Jackal;
         public static CustomNumberOption BiteCooldown;
+        public static CustomNumberOption LightCooldown;
         public static CustomToggleOption VampImpVision;
         public static CustomToggleOption VampVent;
         public static CustomToggleOption NewVampCanAssassin;
@@ -587,7 +616,7 @@ namespace TownOfUs.CustomOption
 
         public static void GenerateAll()
         {
-            var num = 0;
+            //var num = 0;
 
             //CrewInvestigativeRoles = new CustomHeaderOption((int)SettingsEnum.CrewInvestigativeRoles, MultiMenu.crewmate, "Crewmate Investigative Roles");
             //CrewKillingRoles = new CustomHeaderOption((int)SettingsEnum.CrewKillingRoles, MultiMenu.crewmate, "Crewmate Killing Roles"); 
@@ -627,6 +656,10 @@ namespace TownOfUs.CustomOption
             EngineerOn = new CustomNumberOption((int)SettingsEnum.EngineerOn, MultiMenu.crewmate, "<color=#FFA60AFF>Engineer</color>", 0f, 0f, 100f, 10f, PercentFormat);
             MaxFixes = new CustomNumberOption((int)SettingsEnum.MaxFixes, MultiMenu.crewmate, "Maximum Number Of Fixes", 5, 1, 15, 1);
 
+            Conserver = new CustomHeaderOption((int)SettingsEnum.Conserver, MultiMenu.crewmate, "<color=#FF8000FF><b>Conserver</b></color>");
+            ConserverOn = new CustomNumberOption((int)SettingsEnum.ConserverOn, MultiMenu.crewmate, "<color=#FF8000FF>Conserver</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            AllSeeSealedVents = new CustomToggleOption((int)SettingsEnum.AllSeeSealedVents, MultiMenu.crewmate, "All people see sealed vents", false);
+
             Swapper = new CustomHeaderOption((int)SettingsEnum.Swapper, MultiMenu.crewmate, "<color=#66E666FF><b>Swapper</b></color>");
             SwapperOn = new CustomNumberOption((int)SettingsEnum.SwapperOn, MultiMenu.crewmate, "<color=#66E666FF>Swapper</color>", 0f, 0f, 100f, 10f, PercentFormat);
             SwapperButton = new CustomToggleOption((int)SettingsEnum.SwapperButton, MultiMenu.crewmate, "Swapper Can Button", true);
@@ -646,6 +679,9 @@ namespace TownOfUs.CustomOption
             AnonymousFootPrint = new CustomToggleOption((int)SettingsEnum.AnonymousFootPrint, MultiMenu.crewmate, "Anonymous Footprint", false);
             VentFootprintVisible = new CustomToggleOption((int)SettingsEnum.VentFootprintVisible, MultiMenu.crewmate, "Footprint Vent Visible", false);
 
+            Security = new CustomHeaderOption((int)SettingsEnum.Security, MultiMenu.crewmate, "<color=#CCFFFFFF><b>Security</b></color>");
+            SecurityOn = new CustomNumberOption((int)SettingsEnum.SecurityOn, MultiMenu.crewmate, "<color=#CCFFFFFF>Security</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            CamAmount = new CustomNumberOption((int)SettingsEnum.CamAmount, MultiMenu.crewmate, "How many Cams can Security place", 3, 1, 5, 1);
             
             Tracker = new CustomHeaderOption((int)SettingsEnum.Tracker, MultiMenu.crewmate, "<color=#009900FF><b>Tracker</b></color>");
             TrackerOn = new CustomNumberOption((int)SettingsEnum.TrackerOn, MultiMenu.crewmate, "<color=#009900FF>Tracker</color>", 0f, 0f, 100f, 10f, PercentFormat);
@@ -720,6 +756,11 @@ namespace TownOfUs.CustomOption
             ShowMediatePlayer = new CustomToggleOption((int)SettingsEnum.ShowMediatePlayer, MultiMenu.crewmate, "Reveal Appearance Of Mediate Target", true);
             ShowMediumToDead = new CustomToggleOption((int)SettingsEnum.ShowMediumToDead, MultiMenu.crewmate, "Reveal The Medium To The Mediate Target", true);
             DeadRevealed = new CustomStringOption((int)SettingsEnum.DeadRevealed, MultiMenu.crewmate, "Who Is Revealed With Mediate", new[] { "Oldest Dead", "Newest Dead", "All Dead" });
+
+            Evoker = new CustomHeaderOption((int)SettingsEnum.Evoker, MultiMenu.crewmate, "<color=#000080FF><b>Evoker</b></color>");
+            EvokerOn = new CustomNumberOption((int)SettingsEnum.EvokerOn, MultiMenu.crewmate, "<color=#000080FF>Evoker</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            EvokerCooldown = new CustomNumberOption((int)SettingsEnum.EvokerCooldown, MultiMenu.crewmate, "Blind Cooldown", 40f, 20f, 60f, 5f, CooldownFormat);
+            EvokerDuration = new CustomNumberOption((int)SettingsEnum.EvokerDuration, MultiMenu.crewmate, "Blindness duration", 20f, 10f, 35f, 2.5f, CooldownFormat);
 
             Jailor = new CustomHeaderOption((int)SettingsEnum.Jailor, MultiMenu.crewmate, "<color=#A6A6A6FF><b>Jailor</b></color>");
             JailorOn = new CustomNumberOption((int)SettingsEnum.JailorOn, MultiMenu.crewmate, "<color=#A6A6A6FF>Jailor</color>", 0f, 0f, 100f, 10f, PercentFormat);
@@ -822,8 +863,9 @@ namespace TownOfUs.CustomOption
             ShifterOn = new CustomNumberOption((int)SettingsEnum.ShifterOn, MultiMenu.neutral, "<color=#999999FF>Shifter</color>", 0f, 0f, 100f, 10f, PercentFormat);
             ShifterCd = new CustomNumberOption((int)SettingsEnum.ShifterCd, MultiMenu.neutral, "Shifter Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
             WhoShifts = new CustomStringOption((int)SettingsEnum.WhoShifts, MultiMenu.neutral, "Who Can Shifter Shift On", new[] { "No Impostors", "Crewmates" });
-            ShiftedBecomes = new CustomStringOption((int)SettingsEnum.ShiftedBecomes, MultiMenu.neutral, "Shifted Becomes", new[] { "Shifter", "Crewmate" });
+            ShiftedBecomes = new CustomStringOption((int)SettingsEnum.ShiftedBecomes, MultiMenu.neutral, "Shifted Becomes", new[] { "Shifter", "Crewmate", "Amnesiac" });
             ShifterCrewmate = new CustomToggleOption((int)SettingsEnum.ShifterCrewmate, MultiMenu.neutral, "Shifter Wins With Crew", false);
+            ShiftHappensOnMeeting = new CustomToggleOption((int)SettingsEnum.ShiftHappensOnMeeting, MultiMenu.neutral, "Shift happens on a meeting", false);
             ShifterShiftsModifiers = new CustomToggleOption((int)SettingsEnum.ShifterShiftsModifiers, MultiMenu.neutral, "Shifter can shift modifiers", false);
 
             Amnesiac = new CustomHeaderOption((int)SettingsEnum.Amnesiac, MultiMenu.neutral, "<color=#80B2FFFF><b>Amnesiac</b></color>");
@@ -869,7 +911,8 @@ namespace TownOfUs.CustomOption
 
             Jackal = new CustomHeaderOption((int)SettingsEnum.Jackal, MultiMenu.neutral, "<color=#387becFF><b>Jackal</b></color>");
             JackalOn = new CustomNumberOption((int)SettingsEnum.JackalOn, MultiMenu.neutral, "<color=#387becFF>Jackal</color>", 0f, 0f, 100f, 10f, PercentFormat);
-            BiteCooldown = new CustomNumberOption((int)SettingsEnum.BiteCooldown, MultiMenu.neutral, "Jackal Bite Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
+            BiteCooldown = new CustomNumberOption((int)SettingsEnum.BiteCooldown, MultiMenu.neutral, "Jackal Kill Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
+            LightCooldown = new CustomNumberOption((int)SettingsEnum.LightCooldown, MultiMenu.neutral, "Light Sabotage Cooldown", 35f, 10f, 60f, 5f, CooldownFormat);
             VampImpVision = new CustomToggleOption((int)SettingsEnum.VampImpVision, MultiMenu.neutral, "Jackal and Sidekick Have Impostor Vision", false);
             VampVent = new CustomToggleOption((int)SettingsEnum.VampVent, MultiMenu.neutral, "Jackal and Sidekick Can Vent", false);
             NewVampCanAssassin = new CustomToggleOption((int)SettingsEnum.NewVampCanAssassin, MultiMenu.neutral, "Sidekick Can Assassinate", false);
@@ -877,7 +920,7 @@ namespace TownOfUs.CustomOption
             CanBiteNeutralBenign = new CustomToggleOption((int)SettingsEnum.CanBiteNeutralBenign, MultiMenu.neutral, "Can Convert Neutral Benign Roles", false);
             CanBiteNeutralEvil = new CustomToggleOption((int)SettingsEnum.CanBiteNeutralEvil, MultiMenu.neutral, "Can Convert Neutral Evil Roles", false);
             CanBiteImpostors = new CustomToggleOption((int)SettingsEnum.CanBiteImpostors, MultiMenu.neutral, "Can Convert Impostors", false);
-
+            
             Werewolf = new CustomHeaderOption((int)SettingsEnum.Werewolf, MultiMenu.neutral, "<color=#A86629FF><b>Werewolf</b></color>");
             WerewolfOn = new CustomNumberOption((int)SettingsEnum.WerewolfOn, MultiMenu.neutral, "<color=#A86629FF>Werewolf</color>", 0f, 0f, 100f, 10f, PercentFormat);
             RampageCooldown = new CustomNumberOption((int)SettingsEnum.RampageCooldown, MultiMenu.neutral, "Rampage Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
@@ -929,6 +972,13 @@ namespace TownOfUs.CustomOption
             DetonateRadius = new CustomNumberOption((int)SettingsEnum.DetonateRadius, MultiMenu.imposter, "Detonate Radius", 0.25f, 0.05f, 1f, 0.05f, MultiplierFormat);
             BomberVent = new CustomToggleOption((int)SettingsEnum.BomberVent, MultiMenu.imposter, "Bomber Can Vent", false);
             AllImpsSeeBomb = new CustomToggleOption((int)SettingsEnum.AllImpsSeeBomb, MultiMenu.imposter, "All Impostors See Bomb", false);
+
+            Detonator = new CustomHeaderOption((int)SettingsEnum.Detonator, MultiMenu.imposter, "<color=#FF0000FF><b>Detonator</b></color>");
+            DetonatorOn = new CustomNumberOption((int)SettingsEnum.DetonatorOn, MultiMenu.imposter, "<color=#FF0000FF>Detonator</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            DetonatorPlantCooldown = new CustomNumberOption((int)SettingsEnum.DetonatorPlantCooldown, MultiMenu.imposter, "Plant Cooldown", 30f, 1f, 120f, 1f, CooldownFormat);
+            DetonatorDetonateCooldown = new CustomNumberOption((int)SettingsEnum.DetonatorDetonateCooldown, MultiMenu.imposter, "Detonate Cooldown", 10f, 1f, 120f, 1f, CooldownFormat);
+            DetonatorMaxKillsInDetonation = new CustomNumberOption((int)SettingsEnum.DetonatorMaxKillsInDetonation, MultiMenu.imposter, "Max Kills In Detonation", 5, 1, 15, 1);
+            DetonatorRadius = new CustomNumberOption((int)SettingsEnum.DetonatorRadius, MultiMenu.imposter, "Detonate Radius", 0.25f, 0.05f, 1f, 0.05f, MultiplierFormat);
             
             Grenadier = new CustomHeaderOption((int)SettingsEnum.Grenadier, MultiMenu.imposter, "<color=#FF0000FF><b>Grenadier</b></color>");
             GrenadierOn = new CustomNumberOption((int)SettingsEnum.GrenadierOn, MultiMenu.imposter, "<color=#FF0000FF>Grenadier</color>", 0f, 0f, 100f, 10f, PercentFormat);
@@ -940,6 +990,11 @@ namespace TownOfUs.CustomOption
             
             Janitor = new CustomHeaderOption((int)SettingsEnum.Janitor, MultiMenu.imposter, "<color=#FF0000FF><b>Janitor</b></color>");
             JanitorOn = new CustomNumberOption((int)SettingsEnum.JanitorOn, MultiMenu.imposter, "<color=#FF0000FF>Janitor</color>", 0f, 0f, 100f, 10f, PercentFormat);
+
+            Disorienter = new CustomHeaderOption((int)SettingsEnum.Disorienter, MultiMenu.imposter, "<color=#FF0000FF><b>Disorienter</b></color>");
+            DisorienterOn = new CustomNumberOption((int)SettingsEnum.DisorienterOn, MultiMenu.imposter, "<color=#FF0000FF>Disorienter</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            DisorientCooldown = new CustomNumberOption((int)SettingsEnum.DisorientCooldown, MultiMenu.imposter, "Initial Disorient Cooldown", 10f, 1f, 15f, 1f, CooldownFormat);
+            DisorientTime = new CustomNumberOption((int)SettingsEnum.DisorientTime, MultiMenu.imposter, "Time Of Disorient", 30f, 10f, 60f, 1f, CooldownFormat);
 
             Blackmailer = new CustomHeaderOption((int)SettingsEnum.Blackmailer, MultiMenu.imposter, "<color=#FF0000FF><b>Blackmailer<b></color>");
             BlackmailerOn = new CustomNumberOption((int)SettingsEnum.BlackmailerOn, MultiMenu.imposter, "<color=#FF0000FF>Blackmailer</color>", 0f, 0f, 100f, 10f, PercentFormat);
@@ -975,6 +1030,7 @@ namespace TownOfUs.CustomOption
             PoisonerOn = new CustomNumberOption((int)SettingsEnum.PoisonerOn, MultiMenu.imposter, "<color=#FF0000FF>Poisoner</color>", 0f, 0f, 100f, 10f, PercentFormat);
             PoisonCooldown = new CustomNumberOption((int)SettingsEnum.PoisonCooldown, MultiMenu.imposter, "Poison Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
             PoisonDuration = new CustomNumberOption((int)SettingsEnum.PoisonDuration, MultiMenu.imposter, "Poison Kill Delay", 5f, 1f, 15f, 1f, CooldownFormat);
+            PoisonerCanKill = new CustomToggleOption((int)SettingsEnum.PoisonerCanKill, MultiMenu.imposter, "Poisoner Has Kill Button", true);
             PoisonerVent = new CustomToggleOption((int)SettingsEnum.PoisonerVent, MultiMenu.imposter, "Poisoner Can Vent", false);
             
             Swooper = new CustomHeaderOption((int)SettingsEnum.Swooper, MultiMenu.imposter, "<color=#FF0000FF><b>Swooper</b></color>");
@@ -1024,6 +1080,7 @@ namespace TownOfUs.CustomOption
 
             GlobalModifiers = new CustomHeaderOption((int)SettingsEnum.GlobalModifiers, MultiMenu.modifiers, "Global Modifiers");
             ButtonBarryOn = new CustomNumberOption((int)SettingsEnum.ButtonBarryOn, MultiMenu.modifiers, "<color=#E600FFFF>Button Barry</color>", 0f, 0f, 100f, 10f, PercentFormat);
+            DrunkOn = new CustomNumberOption((int)SettingsEnum.DrunkOn, MultiMenu.modifiers, "<color=#758000FF>Drunk</color>", 0f, 0f, 100f, 10f, PercentFormat);
             FlashOn = new CustomNumberOption((int)SettingsEnum.FlashOn, MultiMenu.modifiers, "<color=#FF8080FF>Flash</color>", 0f, 0f, 100f, 10f, PercentFormat);
             GiantOn = new CustomNumberOption((int)SettingsEnum.GiantOn, MultiMenu.modifiers, "<color=#FFB34DFF>Giant</color>", 0f, 0f, 100f, 10f, PercentFormat);
             LoversOn = new CustomNumberOption((int)SettingsEnum.LoversOn, MultiMenu.modifiers, "<color=#FF66CCFF>Lovers</color>", 0f, 0f, 100f, 10f, PercentFormat);

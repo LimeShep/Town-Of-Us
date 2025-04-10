@@ -122,6 +122,9 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 case RoleEnum.Jailor:
                 case RoleEnum.Lookout:
                 case RoleEnum.Deputy:
+                case RoleEnum.Conserver:
+                case RoleEnum.Security:
+                case RoleEnum.Evoker:
 
                     rememberImp = false;
                     rememberNeut = false;

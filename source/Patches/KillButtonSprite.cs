@@ -45,8 +45,10 @@ namespace TownOfUs
         private static Sprite Collect => TownOfUs.CollectSprite;
         private static Sprite Watch => TownOfUs.WatchSprite;
         private static Sprite Camp => TownOfUs.CampSprite;
+        private static Sprite Seal => TownOfUs.Seal;
+        private static Sprite Cam => TownOfUs.Camera;
 
-        private static Sprite Kill;
+        public static Sprite Kill;
 
 
         public static void Postfix(HudManager __instance)
@@ -185,6 +187,27 @@ namespace TownOfUs
             {
                 __instance.KillButton.graphic.sprite = Camp;
                 flag = true;
+            }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Conserver))
+            {
+                __instance.KillButton.graphic.sprite = Seal;
+                flag = true;
+            }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Security))
+            {
+                __instance.KillButton.graphic.sprite = Cam;
+                flag = true;
+            }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Spy))
+            {
+                __instance.KillButton.graphic.sprite = TownOfUs.Admin;
+                __instance.KillButton.buttonLabelText.text = "Admin";
+                __instance.KillButton.buttonLabelText.color = Color.green;
+                __instance.KillButton.buttonLabelText.gameObject.SetActive(true);
+                flag = true;
+            }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Evoker)) {
+                __instance.KillButton.graphic.sprite = TownOfUs.FlashSprite;
             }
             else
             {

@@ -117,6 +117,10 @@ namespace TownOfUs.CrewmateRoles.ImitatorMod
             else if (imitatorRole == RoleEnum.Veteran) new Veteran(ImitatingPlayer);
             else if (imitatorRole == RoleEnum.Vigilante) new Vigilante(ImitatingPlayer);
             else if (imitatorRole == RoleEnum.Altruist) new Altruist(ImitatingPlayer);
+            else if (imitatorRole == RoleEnum.Conserver) new Conserver(ImitatingPlayer);
+            else if (imitatorRole == RoleEnum.Evoker) new Evoker(ImitatingPlayer);
+            else if (imitatorRole == RoleEnum.Security) new Roles.Security(ImitatingPlayer);
+            else if (imitatorRole == RoleEnum.Mayor) new Mayor(ImitatingPlayer);
             else if (imitatorRole == RoleEnum.Medic)
             {
                 var medic = new Medic(ImitatingPlayer);
@@ -145,7 +149,7 @@ namespace TownOfUs.CrewmateRoles.ImitatorMod
             else if (imitatorRole == RoleEnum.Transporter) new Transporter(ImitatingPlayer);
 
             var newRole = Role.GetRole(ImitatingPlayer);
-            if (imitatorRole != RoleEnum.Mayor || !CustomGameOptions.ImitatorCanBecomePresident) newRole.RemoveFromRoleHistory(newRole.RoleType);
+            if (imitatorRole != RoleEnum.President || !CustomGameOptions.ImitatorCanBecomePresident) newRole.RemoveFromRoleHistory(newRole.RoleType);
             else ImitatingPlayer = null;
             newRole.Kills = killsList.Kills;
             newRole.CorrectKills = killsList.CorrectKills;

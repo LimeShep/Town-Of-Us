@@ -5,6 +5,7 @@ using UnityEngine;
 using AmongUs.GameOptions;
 using TownOfUs.Patches;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace TownOfUs
 {
@@ -90,7 +91,13 @@ namespace TownOfUs
                 couldUse = false;
             }
 
-            canUse = couldUse;
+
+            if (RpcHandling.isSealed(__instance)) {
+                canUse = false;
+                couldUse = false;
+            } else {
+                canUse = couldUse;
+            }
 
             if (canUse)
             {

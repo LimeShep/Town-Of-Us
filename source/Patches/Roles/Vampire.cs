@@ -3,6 +3,7 @@ using System.Linq;
 using Il2CppSystem.Collections.Generic;
 using TownOfUs.Extensions;
 using TownOfUs.Roles.Modifiers;
+using UnityEngine;
 
 namespace TownOfUs.Roles
 {
@@ -10,6 +11,7 @@ namespace TownOfUs.Roles
     {
         public bool isSidekick = false;
         public bool madeASideKick = false;
+        public Sprite KillSprite;
         public Vampire(PlayerControl player) : base(player)
         {
             Name = "Jackal";
@@ -17,6 +19,7 @@ namespace TownOfUs.Roles
             TaskText = () => "Kill all of the other players\nFake Tasks:";
             Color = Patches.Colors.Vampire;
             LastBit = DateTime.UtcNow;
+            LastLight = DateTime.UtcNow;
             RoleType = RoleEnum.Vampire;
             Faction = Faction.NeutralKilling;
             AddToRoleHistory(RoleType);
@@ -24,12 +27,35 @@ namespace TownOfUs.Roles
 
         public PlayerControl ClosestPlayer;
         public DateTime LastBit { get; set; }
+        public DateTime LastLight { get; set; }
+        public KillButton _lightButton;
+
+        public KillButton LightButton
+        {
+            get => _lightButton;
+            set
+            {
+                _lightButton = value;
+                ExtraButtons.Clear();
+                ExtraButtons.Add(value);
+            }
+        }
 
         public float BiteTimer()
         {
             var utcNow = DateTime.UtcNow;
             var timeSpan = utcNow - LastBit;
             var num = CustomGameOptions.BiteCd * 1000f;
+            var flag2 = num - (float) timeSpan.TotalMilliseconds < 0f;
+            if (flag2) return 0;
+            return (num - (float) timeSpan.TotalMilliseconds) / 1000f;
+        }
+
+        public float LightTimer()
+        {
+            var utcNow = DateTime.UtcNow;
+            var timeSpan = utcNow - LastLight;
+            var num = CustomGameOptions.LightCd * 1000f;
             var flag2 = num - (float) timeSpan.TotalMilliseconds < 0f;
             if (flag2) return 0;
             return (num - (float) timeSpan.TotalMilliseconds) / 1000f;

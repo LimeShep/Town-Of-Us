@@ -22,9 +22,15 @@ namespace TownOfUs.CrewmateRoles.ProsecutorMod
             foreach (var role in Role.GetRoles(RoleEnum.Prosecutor))
             {
                 var pros = (Prosecutor)role;
+                System.Console.WriteLine("PROSECUTOR");
+                System.Console.WriteLine(pros.ProsecuteThisMeeting);
                 if (pros.ProsecuteThisMeeting)
                 {
                     var exiled = __instance.initData.networkedPlayer?.Object;
+                    System.Console.WriteLine(exiled != null);
+                    System.Console.WriteLine(exiled.Is(Faction.Crewmates));
+                    System.Console.WriteLine(!exiled.IsLover());
+                    System.Console.WriteLine(CustomGameOptions.ProsDiesOnIncorrectPros);
                     if (exiled != null && exiled.Is(Faction.Crewmates) && !exiled.IsLover() && CustomGameOptions.ProsDiesOnIncorrectPros)
                     {
                         KillButtonTarget.DontRevive = pros.Player.PlayerId;

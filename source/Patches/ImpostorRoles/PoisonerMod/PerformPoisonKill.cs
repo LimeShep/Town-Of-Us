@@ -16,6 +16,7 @@ namespace TownOfUs.ImpostorRoles.PoisonerMod
 
         public static bool Prefix(KillButton __instance)
         {
+            if (__instance == DestroyableSingleton<HudManager>.Instance.KillButton) return true;
             var flag = PlayerControl.LocalPlayer.Is(RoleEnum.Poisoner);
             if (!flag) return true;
             if (!PlayerControl.LocalPlayer.CanMove) return false;
@@ -26,6 +27,8 @@ namespace TownOfUs.ImpostorRoles.PoisonerMod
             if (!__instance.isActiveAndEnabled) return false;
             if (role.PoisonTimer() > 0) return false;
             if (role.Enabled == true) return false;
+
+            role.Player.SetKillTimer(GameOptionsManager.Instance.currentNormalGameOptions.KillCooldown);
             if (role.Player.inVent)
             {
                 role.PoisonButton.SetCoolDown(0.01f, 1f);

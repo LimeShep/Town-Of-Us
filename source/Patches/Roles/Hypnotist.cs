@@ -27,7 +27,7 @@ namespace TownOfUs.Roles
             Faction = Faction.Impostors;
             HysteriaActive = false;
         }
-        public GameObject HysteriaButton = new GameObject();
+        public GameObject HysteriaButton = new();
 
         public KillButton HypnotiseButton
         {

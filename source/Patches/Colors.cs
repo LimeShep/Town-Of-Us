@@ -37,6 +37,9 @@ namespace TownOfUs.Patches
         public readonly static Color Jailor = new Color(0.65f, 0.65f, 0.65f, 1f);
         public readonly static Color Lookout = new Color(0.2f, 1f, 0.4f, 1f);
         public readonly static Color Deputy = new Color(1f, 0.8f, 0f, 1f);
+        public readonly static Color Security = new Color(0.8f, 1f, 1f);
+        public readonly static Color Conserver = new Color(1f, 0.5f, 0f);
+        public readonly static Color Evoker = new Color(0f, 0f, 0.5f);
 
         // Neutral Colors
         public readonly static Color Jester = new Color(1f, 0.75f, 0.8f, 1f);
@@ -67,6 +70,7 @@ namespace TownOfUs.Patches
         public readonly static Color Diseased = Color.grey;
         public readonly static Color Torch = new Color(1f, 1f, 0.6f, 1f);
         public readonly static Color ButtonBarry = new Color(0.9f, 0f, 1f, 1f);
+        public readonly static Color Drunk = new Color(0.46f, 0.5f, 0f, 1f);
         public readonly static Color Flash = new Color(1f, 0.5f, 0.5f, 1f);
         public readonly static Color Giant = new Color(1f, 0.7f, 0.3f, 1f);
         public readonly static Color Lovers = new Color(1f, 0.4f, 0.8f, 1f);

@@ -568,6 +568,7 @@ namespace TownOfUs.CustomOption {
         PoisonerOn,
         PoisonCooldown,
         PoisonDuration,
+        PoisonerCanKill,
         PoisonerVent,
         
         DraftModeHeader,
@@ -580,6 +581,36 @@ namespace TownOfUs.CustomOption {
         SyzyfowyAmong,
         CommsDisableTasks,
         TrackDuration,
+
+        Evoker,
+        EvokerOn,
+        EvokerCooldown,
+        EvokerDuration,
+
+        Conserver,
+        ConserverOn,
+        AllSeeSealedVents,
+
+        Security,
+        SecurityOn,
+        CamAmount,
+
+        DrunkOn,
+
+        Disorienter,
+        DisorienterOn,
+        DisorientCooldown,
+        DisorientTime,
+
+        Detonator,
+        DetonatorOn,
+        DetonatorPlantCooldown,
+        DetonatorDetonateCooldown,
+        DetonatorMaxKillsInDetonation,
+        DetonatorRadius,
+
+        LightCooldown,
+        ShiftHappensOnMeeting
 
         #endregion
     }

@@ -31,7 +31,7 @@ namespace TownOfUs
     {
         public const string Id = "com.slushiegoose.townofus";
         public const string VersionString = "5.2.1";
-        public const string CompilationString = "6.2.8";
+        public const string CompilationString = "6.3.0";
         public static System.Version Version = System.Version.Parse(VersionString);
         public static System.Version Compilation = System.Version.Parse(CompilationString);
         public const string VersionTag = "<color=#ff33fc></color>";
@@ -86,6 +86,7 @@ namespace TownOfUs
         public static Sprite RampageSprite;
         public static Sprite TrapSprite;
         public static Sprite InspectSprite;
+        public static Sprite DisorientSprite;
         public static Sprite ExamineSprite;
         public static Sprite EscapeSprite;
         public static Sprite MarkSprite;
@@ -117,6 +118,11 @@ namespace TownOfUs
         public static Sprite WatchSprite;
         public static Sprite CampSprite;
         public static Sprite ShootSprite;
+        public static Sprite Seal;
+        public static Sprite VentSealed;
+        public static Sprite Camera;
+        public static Sprite Light;
+        public static Sprite Admin;
 
         public static Sprite ToUBanner;
         public static Sprite UpdateTOUButton;
@@ -126,6 +132,7 @@ namespace TownOfUs
         public static Sprite ZoomMinusButton;
         public static Sprite ZoomPlusActiveButton;
         public static Sprite ZoomMinusActiveButton;
+
 
         public static Vector3 ButtonPosition { get; private set; } = new Vector3(2.6f, 0.7f, -9f);
 
@@ -229,6 +236,12 @@ namespace TownOfUs
             WatchSprite = CreateSprite("TownOfUs.Resources.Watch.png");
             CampSprite = CreateSprite("TownOfUs.Resources.Camp.png");
             ShootSprite = CreateSprite("TownOfUs.Resources.Shoot.png");
+            Seal = CreateSprite("TownOfUs.Resources.Seal.png");
+            VentSealed = CreateSprite("TownOfUs.Resources.VentSealed.png");
+            DisorientSprite = CreateSprite("TownOfUs.Resources.Disorient.png");
+            Camera = CreateSprite("TownOfUs.Resources.Camera.png");
+            Light = CreateSprite("TownOfUs.Resources.Light.png");
+            Admin = CreateSprite("TownOfUs.Resources.Admin.png");
 
             ToUBanner = CreateSprite("TownOfUs.Resources.TownOfUsBanner.png");
             UpdateTOUButton = CreateSprite("TownOfUs.Resources.UpdateToUButton.png");
@@ -267,6 +280,25 @@ namespace TownOfUs
             SubmergedCompatibility.Initialize();
 
             ServerManager.DefaultRegions = new Il2CppReferenceArray<IRegionInfo>(new IRegionInfo[0]);
+        }
+
+        public static AudioClip CreateAudioClip(string resourceName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var audioStream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (audioStream == null)
+                {
+                    Debug.LogError($"Resource not found: {resourceName}");
+                    return null;
+                }
+
+                var audioData = Audio.ReadFully(audioStream);
+
+                var audioClip = Audio.WavUtility.ToAudioClip(audioData, resourceName);
+                audioClip.DontDestroy();
+                return audioClip;
+            }
         }
 
         public static Sprite CreateSprite(string name)

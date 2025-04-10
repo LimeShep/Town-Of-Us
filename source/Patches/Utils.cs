@@ -29,6 +29,7 @@ using static TownOfUs.Roles.Glitch;
 using TownOfUs.Patches.NeutralRoles;
 using Il2CppSystem.Linq;
 using UnityEngine.UIElements;
+using Rewired;
 
 namespace TownOfUs
 {
@@ -100,6 +101,18 @@ namespace TownOfUs
                     shadow.color = shadow.color.SetAlpha(1f);
             }
         }
+
+        public static void Evoke() {
+            if (!(PlayerControl.LocalPlayer.Is(Faction.Impostors) || PlayerControl.LocalPlayer.Is(Faction.NeutralKilling))) return;
+
+            if (PlayerControl.LocalPlayer.IsHypnotised()) return;
+                foreach (var player in PlayerControl.AllPlayerControls) {
+                    if (player.Data.IsDead || player.Data.Disconnected || player == PlayerControl.LocalPlayer) continue;
+                    if (player.GetCustomOutfitType() != CustomPlayerOutfitType.Camouflage &&
+                    player.GetCustomOutfitType() != CustomPlayerOutfitType.Swooper &&
+                    player.GetCustomOutfitType() != CustomPlayerOutfitType.PlayerNameOnly) player.SetOutfit(CustomPlayerOutfitType.Camouflage, PlayerControl.LocalPlayer.Data.DefaultOutfit);
+                }
+            }
 
         public static void GroupCamouflage()
         {
@@ -1578,11 +1591,14 @@ namespace TownOfUs
                 doom.LastObserved = DateTime.UtcNow;
                 doom.LastObservedPlayer = null;
             }
-            if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller))
-            {
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Foreteller)) {
                 var fore = Role.GetRole<Foreteller>(PlayerControl.LocalPlayer);
                 fore.LastObserved = DateTime.UtcNow;
                 fore.LastObservedPlayer = null;
+            }
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Evoker)) {
+                var evoker = Role.GetRole<Evoker>(PlayerControl.LocalPlayer);
+                evoker.LastBlinded = DateTime.UtcNow;
             }
             if (PlayerControl.LocalPlayer.Is(RoleEnum.SoulCollector))
             {
@@ -1618,6 +1634,15 @@ namespace TownOfUs
                 var blackmailer = (Blackmailer)role;
                 blackmailer.Blackmailed = null;
             }
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.Disorienter))
+            {
+                var disorienter = Role.GetRole<Disorienter>(PlayerControl.LocalPlayer);
+                disorienter.LastDisoriented = DateTime.UtcNow;
+                if (disorienter.Player.PlayerId == PlayerControl.LocalPlayer.PlayerId)
+                {
+                    disorienter.Disoriented?.myRend().material.SetFloat("_Outline", 0f);
+                }
+            }
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Hypnotist))
             {
                 var hypnotist = Role.GetRole<Hypnotist>(PlayerControl.LocalPlayer);
@@ -1632,6 +1657,21 @@ namespace TownOfUs
                     hypno.UnHysteria();
                     hypno.Hysteria();
                 }
+            }
+            foreach (var role in Role.GetRoles(RoleEnum.Evoker))
+            {
+                var evoker = (Evoker)role;
+                if ((PlayerControl.LocalPlayer.Data.IsDead || evoker.Player.Data.IsDead) && evoker.Active) evoker.Unevoke();
+                else if (evoker.Active && (PlayerControl.LocalPlayer.Is(Faction.Impostors) || PlayerControl.LocalPlayer.Is(Faction.NeutralKilling)))
+                {
+                    evoker.Unevoke();
+                    Utils.Evoke();
+                }
+            }
+            foreach (var role in Role.GetRoles(RoleEnum.Disorienter))
+            {
+                var disorienter = (Disorienter)role;
+                disorienter.Disoriented = null;
             }
             if (PlayerControl.LocalPlayer.Is(RoleEnum.Bomber))
             {

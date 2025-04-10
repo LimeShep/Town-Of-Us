@@ -27,7 +27,8 @@ namespace TownOfUs.NeutralRoles.ShifterMod
     public enum BecomeEnum
     {
         Shifter,
-        Crewmate
+        Crewmate,
+        Amnesiac
     }
 
     [HarmonyPatch(typeof(KillButton), nameof(KillButton.DoClick))]
@@ -66,13 +67,21 @@ namespace TownOfUs.NeutralRoles.ShifterMod
                 return false;
             }
 
-            var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                (byte) CustomRPC.Shift, SendOption.Reliable, -1);
-            writer.Write(PlayerControl.LocalPlayer.PlayerId);
-            writer.Write(playerId);
-            AmongUsClient.Instance.FinishRpcImmediately(writer);
+            if (!CustomGameOptions.ShiftHappensOnMeeting) {
+                var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
+                    (byte) CustomRPC.Shift, SendOption.Reliable, -1);
+                writer.Write(PlayerControl.LocalPlayer.PlayerId);
+                writer.Write(playerId);
+                AmongUsClient.Instance.FinishRpcImmediately(writer);
 
-            Shift(role, role.ClosestPlayer);
+                Shift(role, role.ClosestPlayer);
+            } else {
+                role.Used = true;
+                role.otherPlayer = role.ClosestPlayer;
+                role.LastShifted = DateTime.UtcNow;
+            }
+
+            
             return false;
         }
 
@@ -171,6 +180,9 @@ namespace TownOfUs.NeutralRoles.ShifterMod
                 case RoleEnum.Veteran:
                 case RoleEnum.Vigilante:
                 case RoleEnum.Warden:
+                case RoleEnum.Conserver:
+                case RoleEnum.Security:
+                case RoleEnum.Evoker:
                 case RoleEnum.Crewmate:
 
                     shift = true;
@@ -260,15 +272,16 @@ namespace TownOfUs.NeutralRoles.ShifterMod
                     }
                 }
 
-                if (CustomGameOptions.ShiftedBecomes == BecomeEnum.Shifter)
-                {
+                if (CustomGameOptions.ShiftedBecomes == BecomeEnum.Shifter) {
                     resetShifter = true;
                     shifterRole.Player = other;
                     Role.RoleDictionary.Add(other.PlayerId, shifterRole);
                     shifterRole.AddToRoleHistory(shifterRole.RoleType);
                 }
-                else
-                {
+                else if (CustomGameOptions.ShiftedBecomes == BecomeEnum.Amnesiac) {
+                    Amnesiac newplayerrole = new Amnesiac(other);
+                }
+                else {
                     Crewmate newplayerrole = new Crewmate(other);
                     newplayerrole.AddToRoleHistory(newplayerrole.RoleType);
                 }

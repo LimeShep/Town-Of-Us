@@ -66,6 +66,9 @@ namespace TownOfUs
         private static bool PhantomOn;
         private static bool HaunterOn;
         private static bool TraitorOn;
+        public static List<int> SealedVents = [];
+        public static List<SurvCamera> PlacedCams = [];
+        public static bool evoked = false;
 
         internal static bool Check(int probability)
         {
@@ -116,6 +119,11 @@ namespace TownOfUs
                 NeutralKillingRoles.Add((role, 100, true));
                 NeutralEvilRoles.Add((role, 100, true));
             }
+        }
+
+        public static bool isSealed(Vent vent) {
+            if (SealedVents.Contains(vent.Id)) return true;
+            else return false;
         }
 
         private static void SortModifiers(this List<(Type, int)> roles, int max)
@@ -834,6 +842,9 @@ namespace TownOfUs
                         Role.SurvOnlyWins = false;
                         Role.VampireWins = false;
                         RecordRewind.points.Clear();
+                        SealedVents = [];
+                        PlacedCams = [];
+                        evoked = false;
                         ExileControllerPatch.lastExiled = null;
                         PatchKillTimer.GameStarted = false;
                         StartImitate.ImitatingPlayer = null;
@@ -935,6 +946,32 @@ namespace TownOfUs
                         if (imitator2.Is(RoleEnum.Traitor)) break;
                         var imitatorRole2 = Role.GetRole<Imitator>(imitator2);
                         StartImitate.Imitate(imitatorRole2);
+                        break;
+                    case CustomRPC.Seal:
+                        readByte1 = reader.ReadByte(); // ventId
+                        Vent vent = ShipStatus.Instance.AllVents.FirstOrDefault((x) => x != null && x.Id == readByte1);
+                        if (vent == null) return;
+                        
+                        if ((!CustomGameOptions.AllSeeSealedVents && PlayerControl.LocalPlayer.Is(RoleEnum.Conserver)) || CustomGameOptions.AllSeeSealedVents) {
+                            PowerTools.SpriteAnim animator = vent.GetComponent<PowerTools.SpriteAnim>(); 
+                            
+                            vent.EnterVentAnim = vent.ExitVentAnim = null;
+                            Sprite newSprite = TownOfUs.VentSealed;
+                            SpriteRenderer rend = vent.myRend;
+                            /*if (Helpers.isFungle()) {
+                                newSprite = SecurityGuard.getFungleVentSealedSprite();
+                                rend = vent.transform.GetChild(3).GetComponent<SpriteRenderer>();
+                                animator = vent.transform.GetChild(3).GetComponent<PowerTools.SpriteAnim>();
+                            }*/
+                            animator?.Stop();
+                            rend.sprite = newSprite;
+                            //if (SubmergedCompatibility.isSubmerged() && vent.Id == 0) vent.myRend.sprite = SecurityGuard.getSubmergedCentralUpperSealedSprite();
+                            //if (SubmergedCompatibility.isSubmerged() && vent.Id == 14) vent.myRend.sprite = SecurityGuard.getSubmergedCentralLowerSealedSprite();
+                            rend.color = new Color(1f, 1f, 1f, 0.5f);
+                            vent.name = "FutureSealedVent_" + vent.name;
+                        }
+                        SealedVents.Add(vent.Id);
+                        VentilationSystem.Update(VentilationSystem.Operation.BootImpostors, vent.Id);
                         break;
                     case CustomRPC.Remember:
                         readByte1 = reader.ReadByte();
@@ -1139,6 +1176,12 @@ namespace TownOfUs
                                 break;
                         }
                         break;
+                    case CustomRPC.Evoke:
+                        var evoker = Utils.PlayerById(reader.ReadByte());
+                        var evokerRole = Role.GetRole<Evoker>(evoker);
+                        evokerRole.TimeRemaining = CustomGameOptions.EvokerDuration;
+                        Utils.Evoke();
+                        break;
                     case CustomRPC.Jail:
                         var jailor = Utils.PlayerById(reader.ReadByte());
                         var jailorRole = Role.GetRole<Jailor>(jailor);
@@ -1161,6 +1204,16 @@ namespace TownOfUs
                                 jailorRole.Jailed = null;
                                 break;
                         }
+                        break;
+                    case CustomRPC.Disorient:
+                        var disorienter = Role.GetRole<Disorienter>(Utils.PlayerById(reader.ReadByte()));
+                        disorienter.Disorient(Utils.PlayerById(reader.ReadByte()));
+                        break;
+                    case CustomRPC.DetonatorBombBeep:
+                        var detonator = Role.GetRole<Detonator>(Utils.PlayerById(reader.ReadByte()));
+                        var detonatorBombPlayer = Utils.PlayerById(reader.ReadByte());
+                        detonator.BombPlayer = detonatorBombPlayer;
+                        detonator.RpcPlant(detonatorBombPlayer);
                         break;
                     case CustomRPC.Confess:
                         var oracle = Role.GetRole<Oracle>(Utils.PlayerById(reader.ReadByte()));
@@ -1716,6 +1769,15 @@ namespace TownOfUs
 
                 if (CustomGameOptions.DeputyOn > 0)
                     CrewmateKillingRoles.Add((typeof(Deputy), CustomGameOptions.DeputyOn, false || CustomGameOptions.UniqueRoles));
+                
+                if (CustomGameOptions.SecurityOn > 0)
+                    CrewmateKillingRoles.Add((typeof(Roles.Security), CustomGameOptions.SecurityOn, true));
+                
+                if (CustomGameOptions.ConserverOn > 0)
+                    CrewmateKillingRoles.Add((typeof(Conserver), CustomGameOptions.ConserverOn, false || CustomGameOptions.UniqueRoles));
+                
+                if (CustomGameOptions.EvokerOn > 0)
+                    CrewmateKillingRoles.Add((typeof(Evoker), CustomGameOptions.EvokerOn, true));
                 #endregion
                 #region Neutral Roles
                 if (CustomGameOptions.JesterOn > 0)
@@ -1802,6 +1864,12 @@ namespace TownOfUs
                 if (CustomGameOptions.VenererOn > 0)
                     ImpostorConcealingRoles.Add((typeof(Venerer), CustomGameOptions.VenererOn, true));
 
+                if (CustomGameOptions.DetonatorOn > 0)
+                    ImpostorConcealingRoles.Add((typeof(Detonator), CustomGameOptions.DetonatorOn, true));
+
+                if (CustomGameOptions.DisorienterOn > 0)
+                    ImpostorConcealingRoles.Add((typeof(Disorienter), CustomGameOptions.DisorienterOn, true));
+
                 if (CustomGameOptions.HypnotistOn > 0)
                     ImpostorSupportRoles.Add((typeof(Hypnotist), CustomGameOptions.HypnotistOn, true));
 
@@ -1860,6 +1928,9 @@ namespace TownOfUs
 
                 if (Check(CustomGameOptions.MiniOn))
                     GlobalModifiers.Add((typeof(Mini), CustomGameOptions.MiniOn));
+
+                if (Check(CustomGameOptions.DrunkOn))
+                    GlobalModifiers.Add((typeof(Drunk), CustomGameOptions.DrunkOn));
                 #endregion
                 #region Impostor Modifiers
                 if (Check(CustomGameOptions.DisperserOn) && GameOptionsManager.Instance.currentNormalGameOptions.MapId < 4)

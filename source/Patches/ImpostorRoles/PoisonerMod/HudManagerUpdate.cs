@@ -32,7 +32,8 @@ namespace TownOfUs.ImpostorRoles.PoisonerMod
             role.PoisonButton.gameObject.SetActive((__instance.UseButton.isActiveAndEnabled || __instance.PetButton.isActiveAndEnabled)
                     && !MeetingHud.Instance && !PlayerControl.LocalPlayer.Data.IsDead
                     && AmongUsClient.Instance.GameState == InnerNet.InnerNetClient.GameStates.Started);
-            __instance.KillButton.Hide();
+            if (!CustomGameOptions.PoisonerCanKill && !PlayerControl.LocalPlayer.Data.IsDead && !MeetingHud.Instance) __instance.KillButton.Hide();
+            else if (CustomGameOptions.PoisonerCanKill && !PlayerControl.LocalPlayer.Data.IsDead && !MeetingHud.Instance) __instance.KillButton.Show();
             //if (!PlayerControl.LocalPlayer.Data.IsDead && !MeetingHud.Instance) role.PoisonButton.Show();
 
             //var position = __instance.KillButton.transform.localPosition;
@@ -49,7 +50,7 @@ namespace TownOfUs.ImpostorRoles.PoisonerMod
                 role.ClosestPlayer.myRend().material.SetColor("_OutlineColor", Palette.Purple);
             }
 
-            role.Player.SetKillTimer(1f);
+            //role.Player.SetKillTimer(1f);
             try
             {
                 if (role.Poisoned)

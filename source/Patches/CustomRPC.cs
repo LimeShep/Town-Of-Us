@@ -108,5 +108,9 @@ namespace TownOfUs
         AddMayorVoteBank,
         ForetellerKill,
         Poison,
+        Seal,
+        Disorient,
+        DetonatorBombBeep,
+        Evoke
     }
 }

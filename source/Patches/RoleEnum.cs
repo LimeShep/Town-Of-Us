@@ -5,7 +5,7 @@ namespace TownOfUs
         Sheriff,
         Jester,
         Engineer,
-        Mayor,
+        President,
         Swapper,
         Investigator,
         Medic,
@@ -71,9 +71,14 @@ namespace TownOfUs
         Camouflager,
         Foreteller,
         Speedrunner,
-        President,
+        Mayor,
         Shifter,
         TimeLord,
+        Security,
+        Conserver,
+        Evoker,
+        Disorienter,
+        Detonator
     }
 
     public enum ModifierEnum
@@ -97,7 +102,8 @@ namespace TownOfUs
         SixthSense,
         Shy,
         Mini,
-        Saboteur
+        Saboteur,
+        Drunk
     }
 
     public enum AbilityEnum

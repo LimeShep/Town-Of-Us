@@ -64,6 +64,9 @@ namespace TownOfUs.Roles
             if (CustomGameOptions.JailorOn > 0) ColorMapping.Add("Jailor", Colors.Jailor);
             if (CustomGameOptions.LookoutOn > 0) ColorMapping.Add("Lookout", Colors.Lookout);
             if (CustomGameOptions.DeputyOn > 0) ColorMapping.Add("Deputy", Colors.Deputy);
+            if (CustomGameOptions.SecurityOn > 0) ColorMapping.Add("Security", Colors.Security);
+            if (CustomGameOptions.ConserverOn > 0) ColorMapping.Add("Conserver", Colors.Conserver);
+            if (CustomGameOptions.EvokerOn > 0) ColorMapping.Add("Evoker", Colors.Evoker);
 
 
             if (CustomGameOptions.ForetellerGuessImpostors && !PlayerControl.LocalPlayer.Is(Faction.Impostors))

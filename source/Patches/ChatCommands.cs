@@ -1,4 +1,5 @@
 using HarmonyLib;
+using Rewired;
 using TownOfUs.Roles;
 using TownOfUs.Roles.Modifiers;
 
@@ -8,6 +9,8 @@ namespace TownOfUs.Patches
     public static class ChatCommands
     {
         public static bool JailorMessage = false;
+        public static bool LoverMessage = false;
+        public static bool ImpostorMessage = false;
 
         [HarmonyPatch(typeof(ChatController), nameof(ChatController.AddChat))]
         public static class PrivateJaileeChat
@@ -16,12 +19,31 @@ namespace TownOfUs.Patches
             {
                 if (sourcePlayer == PlayerControl.LocalPlayer)
                 {
-                    if (chatText.ToLower().StartsWith("/crew") || chatText.ToLower().StartsWith("/ crew"))
+                    /*if (chatText.ToLower().StartsWith("/chat") || chatText.ToLower().StartsWith("/ chat")) {
+                        if (chatText.ToLower().StartsWith("/chat")) chatText = chatText[5..];
+                        else if (chatText.ToLower().StartsWith("/chat ")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ chat")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ chat ")) chatText = chatText[7..];
+
+                        if ((chatText == "love" || chatText == "lover") && PlayerControl.LocalPlayer.Is(ModifierEnum.Lover)) {
+                            LoverMessage = true;
+                        } else if ((chatText == "imp" || chatText == "impostor") && PlayerControl.LocalPlayer.Is(Faction.Impostors)) {
+                            ImpostorMessage = true;
+                        } else if (((chatText == "jail" || chatText == "jailor" || chatText == "jailee") && PlayerControl.LocalPlayer.Is(RoleEnum.Jailor)) || PlayerControl.LocalPlayer.IsJailed()) {
+                            JailorMessage = true;
+                        } else {
+                            LoverMessage = false;
+                            ImpostorMessage = false;
+                            JailorMessage = false;
+                        }
+                        return false;
+                    }
+                    else */if (chatText.ToLower().StartsWith("/crew") || chatText.ToLower().StartsWith("/ crew"))
                     {
                         AddRoleMessage(RoleEnum.Crewmate);
                         return false;
                     }
-                    else if (chatText.ToLower().StartsWith("/imp") || chatText.ToLower().StartsWith("/ imp"))
+                    else if (chatText.ToLower().StartsWith("/impostor") || chatText.ToLower().StartsWith("/ impostor"))
                     {
                         AddRoleMessage(RoleEnum.Impostor);
                         return false;
@@ -354,7 +376,7 @@ namespace TownOfUs.Patches
                         AddModifierMessage(ModifierEnum.Lover);
                         return false;
                     }
-                    else if (chatText.ToLower().StartsWith("/lo") || chatText.ToLower().StartsWith("/ lo"))
+                    else if (chatText.ToLower().StartsWith("/look") || chatText.ToLower().StartsWith("/ look"))
                     {
                         AddRoleMessage(RoleEnum.Lookout);
                         return false;
@@ -488,6 +510,32 @@ namespace TownOfUs.Patches
                     }
                     else return false;
                 }
+                if ((chatText.ToLower().StartsWith("/love") || chatText.ToLower().StartsWith("/ love")) && sourcePlayer.Is(ModifierEnum.Lover) && MeetingHud.Instance)
+                {
+                    if (PlayerControl.LocalPlayer.Is(ModifierEnum.Lover))
+                    {
+                        if (chatText.ToLower().StartsWith("/love")) chatText = chatText[5..];
+                        else if (chatText.ToLower().StartsWith("/love ")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ love")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ love ")) chatText = chatText[7..];
+                        LoverMessage = true;
+                        return true;
+                    }
+                    else return false;
+                }
+                if ((chatText.ToLower().StartsWith("/imp") || chatText.ToLower().StartsWith("/ imp")) && sourcePlayer.Is(Faction.Impostors) && MeetingHud.Instance)
+                {
+                    if (PlayerControl.LocalPlayer.Is(Faction.Impostors))
+                    {
+                        if (chatText.ToLower().StartsWith("/imp")) chatText = chatText[5..];
+                        else if (chatText.ToLower().StartsWith("/imp ")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ imp")) chatText = chatText[6..];
+                        else if (chatText.ToLower().StartsWith("/ imp ")) chatText = chatText[7..];
+                        ImpostorMessage = true;
+                        return true;
+                    }
+                    else return false;
+                }
                 if (chatText.ToLower().StartsWith("/"))
                 {
                     if (sourcePlayer == PlayerControl.LocalPlayer) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, "Invalid Command.");
@@ -562,6 +610,8 @@ namespace TownOfUs.Patches
                     PlayerControl.LocalPlayer, "The Veteran is a crewmate who can alert to kill anyone who interacts with them.");
                 if (role == RoleEnum.Amnesiac) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(
                     PlayerControl.LocalPlayer, "The Amnesiac is a neutral benign role that needs to find a body in order to remember a new role.");
+                if (role == RoleEnum.Shifter) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(
+                    PlayerControl.LocalPlayer, "The Shifter can steal any person's role, they turn into a crewmate.");
                 if (role == RoleEnum.Juggernaut) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer,
                     "The Juggernaut is a neutral killer with the goal to kill everyone. Every kill they make reduces their kill cooldown.");
                 if (role == RoleEnum.Tracker) DestroyableSingleton<HudManager>.Instance.Chat.AddChat(
@@ -704,6 +754,26 @@ namespace TownOfUs.Patches
                         __instance.NameText.color = Colors.Jailor;
                         __instance.NameText.text = "Jailor";
                         JailorMessage = false;
+                    }
+                }
+
+                if (PlayerControl.LocalPlayer.Is(ModifierEnum.Lover) && MeetingHud.Instance)
+                {
+                    var lover = Modifier.GetModifier<Lover>(PlayerControl.LocalPlayer);
+                    if (LoverMessage) {
+                        __instance.NameText.color = lover.Color;
+                        __instance.NameText.text = "(Love Chat) " + playerName;
+                        LoverMessage = false;
+                    }
+                }
+
+                if (PlayerControl.LocalPlayer.Is(Faction.Impostors) && MeetingHud.Instance)
+                {
+                    var imp = Role.GetRole<Impostor>(PlayerControl.LocalPlayer);
+                    if (ImpostorMessage) {
+                        __instance.NameText.color = imp.Color;
+                        __instance.NameText.text = "(Impostor Chat) " + playerName;
+                        ImpostorMessage = false;
                     }
                 }
             }
