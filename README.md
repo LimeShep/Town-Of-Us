@@ -18,24 +18,24 @@ Dołącz do discorda [Discord](https://discord.gg/VUyBhVhKVy) jeśli zauważysz 
 | [Disorienter](#disorienter)  | [Deputy](#deputy)                 | [Foreteller](#foreteller)        | [Diseased](#diseased)        |
 | [Escapist](#escapist)        | [Detective](#detective)           | [Guardian Angel](#guardian-angel)| [Disperser](#disperser)      |
 | [Grenadier](#grenadier)      | [Engineer](#engineer)             | [Jester](#jester)                | [Double Shot](#double-shot)  |
-| [Hypnotist](#hypnotist)      | [Evoker](#evoker)                 | [Juggernaut](#juggernaut)        | [Flash](#flash)              |
-| [Janitor](#janitor)          | [Haunter](#haunter)               | [Mercenary](#mercenary)          | [Frosty](#frosty)            |
-| [Miner](#miner)              | [Hunter](#hunter)                 | [Phantom](#phantom)              | [Giant](#giant)              |
-| [Morphling](#morphling)      | [Imitator](#imitator)             | [Plaguebearer](#plaguebearer)    | [Immovable](#immovable)      |
-| [Poisoner](#poisoner)        | [Investigator](#investigator)     | [Shifter](#shifter)              | [Lovers](#lovers)            |
-| [Scavenger](#scavenger)      | [Jailor](#jailor)                 | [Soul Collector](#soul-collector)| [Mini](#mini)                |
-| [Swooper](#swooper)          | [Lookout](#lookout)               | [Speedrunner](#speedrunner)      | [Multitasker](#multitasker)  |
-| [Traitor](#traitor)          | [Mayor](#mayor)                   | [Survivor](#survivor)            | [Radar](#radar)              |
-| [Undertaker](#undertaker)    | [Medic](#medic)                   | [The Glitch](#the-glitch)        | [Saboteur](#saboteur)        |
-| [Venerer](#venerer)          | [Medium](#medium)                 | [Vampire](#vampire)              | [Satellite](#satellite)      |
-| [Warlock](#warlock)          | [Mystic](#mystic)                 | [Werewolf](#werewolf)            | [Shy](#shy)                  |
-|                              | [Oracle](#oracle)                 |                                  | [Sixth Sense](#sixth-sense)  |
-|                              | [Plumber](#plumber)               |                                  | [Sleuth](#sleuth)            |
-|                              | [Politician](#politician)         |                                  | [Taskmaster](#taskmaster)    |
-|                              | [Prosecutor](#prosecutor)         |                                  | [Tiebreaker](#tiebreaker)    |
-|                              | [Security](#security)             |                                  | [Torch](#torch)              |
-|                              | [Seer](#seer)                     |                                  | [Underdog](#underdog)        |
-|                              | [Sheriff](#sheriff)               |                                  |                              |
+| [Hypnotist](#hypnotist)      | [Evoker](#evoker)                 | [Juggernaut](#juggernaut)        | [Drunk](#drunk)              |
+| [Janitor](#janitor)          | [Haunter](#haunter)               | [Mercenary](#mercenary)          | [Flash](#flash)              |
+| [Miner](#miner)              | [Hunter](#hunter)                 | [Phantom](#phantom)              | [Frosty](#frosty)            |
+| [Morphling](#morphling)      | [Imitator](#imitator)             | [Plaguebearer](#plaguebearer)    | [Giant](#giant)              |
+| [Poisoner](#poisoner)        | [Investigator](#investigator)     | [Shifter](#shifter)              | [Immovable](#immovable)      |
+| [Scavenger](#scavenger)      | [Jailor](#jailor)                 | [Soul Collector](#soul-collector)| [Lovers](#lovers)            |
+| [Swooper](#swooper)          | [Lookout](#lookout)               | [Speedrunner](#speedrunner)      | [Mini](#mini)                |
+| [Traitor](#traitor)          | [Mayor](#mayor)                   | [Survivor](#survivor)            | [Multitasker](#multitasker)  |
+| [Undertaker](#undertaker)    | [Medic](#medic)                   | [The Glitch](#the-glitch)        | [Radar](#radar)              |
+| [Venerer](#venerer)          | [Medium](#medium)                 | [Vampire](#vampire)              | [Saboteur](#saboteur)        |
+| [Warlock](#warlock)          | [Mystic](#mystic)                 | [Werewolf](#werewolf)            | [Satellite](#satellite)      |
+|                              | [Oracle](#oracle)                 |                                  | [Shy](#shy)                  |
+|                              | [Plumber](#plumber)               |                                  | [Sixth Sense](#sixth-sense)  |
+|                              | [Politician](#politician)         |                                  | [Sleuth](#sleuth)            |
+|                              | [Prosecutor](#prosecutor)         |                                  | [Taskmaster](#taskmaster)    |
+|                              | [Security](#security)             |                                  | [Tiebreaker](#tiebreaker)    |
+|                              | [Seer](#seer)                     |                                  | [Torch](#torch)              |
+|                              | [Sheriff](#sheriff)               |                                  | [Underdog](#underdog)        |
 |                              | [Snitch](#snitch)                 |                                  |                              |
 |                              | [Spy](#spy)                       |                                  |                              |
 |                              | [Surgeon](#surgeon)               |                                  |                              |
