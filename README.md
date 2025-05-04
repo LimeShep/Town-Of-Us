@@ -7,7 +7,7 @@
 
 Mod do amonga który dodaje wiele ciekawych ról i modyfikatorów
 
-Dołącz do discorda [Discord](https://discord.gg/VUyBhVhKVy) jeśli zauważysz jakieś problemy z modem!
+Dołącz do [discorda](https://discord.gg/VUyBhVhKVy) jeśli zauważysz jakieś problemy z modem!
 
 | **Impostor Roles**           | **Crewmate Roles**                | **Neutral Roles**                | **Modifiers**                |
 |:----------------------------:|:---------------------------------:|:--------------------------------:|:----------------------------:|
