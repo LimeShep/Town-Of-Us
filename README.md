@@ -1,5 +1,7 @@
 ## *If an update isn't released that probably means that the current stable version still works for the new version of Among Us*
 
+## Grafiki by Oliweiro, Draft Image by Forfit
+
 ![LOGO](./Images/ikonka_syzyf_smaller.png)
 ![Roles](./Images/Roles.png)
 
