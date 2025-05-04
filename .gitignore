@@ -22,6 +22,8 @@ source/v2022.2.24s/**
 mono_crash.*
 
 # Build results
+[Aa]ssemblies/
+[Dd]otfuscated/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/

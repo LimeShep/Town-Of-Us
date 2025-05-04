@@ -1,48 +1,56 @@
-## *Note: This repository is an unofficial continuation of Town of Us due to the original repository being discontinued.*
-
 ## *If an update isn't released that probably means that the current stable version still works for the new version of Among Us*
 
-![LOGO](./Images/TOU-logo.png)
+![LOGO](./Images/ikonka-syzyf.png)
 ![Roles](./Images/Roles.png)
 
-An Among Us mod that adds a bunch of roles, modifiers and game settings
+Mod do amonga który dodaje wiele ciekawych ról i modyfikatorów
 
-Join our [Discord](https://discord.gg/ugyc4EVUYZ) if you have any problems or want to find people to play with!
+Dołącz do discorda [Discord](https://discord.gg/VUyBhVhKVy) jeśli zauważysz jakieś problemy z modem!
 
 | **Impostor Roles**           | **Crewmate Roles**                | **Neutral Roles**                | **Modifiers**                |
 |:----------------------------:|:---------------------------------:|:--------------------------------:|:----------------------------:|
-| [Blackmailer](#blackmailer)  | [Altruist](#altruist)             | [Amnesiac](#amnesiac)            | [Aftermath](#aftermath)      |
-| [Bomber](#bomber)            | [Aurial](#aurial)                 | [Arsonist](#arsonist)            | [Bait](#bait)                |
-| [Escapist](#escapist)        | [Deputy](#deputy)                 | [Doomsayer](#doomsayer)          | [Button Barry](#button-barry)|
-| [Grenadier](#grenadier)      | [Detective](#detective)           | [Executioner](#executioner)      | [Diseased](#diseased)        |
-| [Hypnotist](#hypnotist)      | [Engineer](#engineer)             | [Guardian Angel](#guardian-angel)| [Disperser](#disperser)      |
-| [Janitor](#janitor)          | [Haunter](#haunter)               | [Jester](#jester)                | [Double Shot](#double-shot)  |
-| [Miner](#miner)              | [Hunter](#hunter)                 | [Juggernaut](#juggernaut)        | [Flash](#flash)              |
-| [Morphling](#morphling)      | [Imitator](#imitator)             | [Phantom](#phantom)              | [Frosty](#frosty)            |
-| [Scavenger](#scavenger)      | [Investigator](#investigator)     | [Plaguebearer](#plaguebearer)    | [Giant](#giant)              |
-| [Swooper](#swooper)          | [Jailor](#jailor)                 | [Soul Collector](#soul-collector)| [Lovers](#lovers)            |
-| [Traitor](#traitor)          | [Lookout](#lookout)               | [Survivor](#survivor)            | [Mini](#mini)                |
-| [Undertaker](#undertaker)    | [Medic](#medic)                   | [The Glitch](#the-glitch)        | [Multitasker](#multitasker)  |
-| [Venerer](#venerer)          | [Medium](#medium)                 | [Vampire](#vampire)              | [Radar](#radar)              |
-| [Warlock](#warlock)          | [Mystic](#mystic)                 | [Werewolf](#werewolf)            | [Saboteur](#saboteur)        |
-|                              | [Oracle](#oracle)                 |                                  | [Shy](#shy)                  |
-|                              | [Politician](#politician)         |                                  | [Sixth Sense](#sixth-sense)  |
-|                              | [Prosecutor](#prosecutor)         |                                  | [Sleuth](#sleuth)            |
-|                              | [Seer](#seer)                     |                                  | [Tiebreaker](#tiebreaker)    |
-|                              | [Sheriff](#sheriff)               |                                  | [Torch](#torch)              |
-|                              | [Snitch](#snitch)                 |                                  | [Underdog](#underdog)        |
+| [Blackmailer](#blackmailer)  | [Aurial](#aurial)                 | [Arsonist](#arsonist)            | [Aftermath](#aftermath)      |
+| [Bomber](#bomber)            | [Altruist](#altruist)             | [Amnesiac](#amnesiac)            | [Bait](#bait)                |
+| [Camouflager](#camouflager)  | [Cleric](#cleric)                 | [Doomsayer](#doomsayer)          | [Button Barry](#button-barry)|
+| [Detonator](#detonator)      | [Conserver](#conserver)           | [Executioner](#executioner)      | [Celebrity](#celebrity)      |
+| [Disorienter](#disorienter)  | [Deputy](#deputy)                 | [Foreteller](#foreteller)        | [Diseased](#diseased)        |
+| [Escapist](#escapist)        | [Detective](#detective)           | [Guardian Angel](#guardian-angel)| [Disperser](#disperser)      |
+| [Grenadier](#grenadier)      | [Engineer](#engineer)             | [Jester](#jester)                | [Double Shot](#double-shot)  |
+| [Hypnotist](#hypnotist)      | [Evoker](#evoker)                 | [Juggernaut](#juggernaut)        | [Flash](#flash)              |
+| [Janitor](#janitor)          | [Haunter](#haunter)               | [Mercenary](#mercenary)          | [Frosty](#frosty)            |
+| [Miner](#miner)              | [Hunter](#hunter)                 | [Phantom](#phantom)              | [Giant](#giant)              |
+| [Morphling](#morphling)      | [Imitator](#imitator)             | [Plaguebearer](#plaguebearer)    | [Immovable](#immovable)      |
+| [Poisoner](#poisoner)        | [Investigator](#investigator)     | [Shifter](#shifter)              | [Lovers](#lovers)            |
+| [Scavenger](#scavenger)      | [Jailor](#jailor)                 | [Soul Collector](#soul-collector)| [Mini](#mini)                |
+| [Swooper](#swooper)          | [Lookout](#lookout)               | [Speedrunner](#speedrunner)      | [Multitasker](#multitasker)  |
+| [Traitor](#traitor)          | [Mayor](#mayor)                   | [Survivor](#survivor)            | [Radar](#radar)              |
+| [Undertaker](#undertaker)    | [Medic](#medic)                   | [The Glitch](#the-glitch)        | [Saboteur](#saboteur)        |
+| [Venerer](#venerer)          | [Medium](#medium)                 | [Vampire](#vampire)              | [Satellite](#satellite)      |
+| [Warlock](#warlock)          | [Mystic](#mystic)                 | [Werewolf](#werewolf)            | [Shy](#shy)                  |
+|                              | [Oracle](#oracle)                 |                                  | [Sixth Sense](#sixth-sense)  |
+|                              | [Plumber](#plumber)               |                                  | [Sleuth](#sleuth)            |
+|                              | [Politician](#politician)         |                                  | [Taskmaster](#taskmaster)    |
+|                              | [Prosecutor](#prosecutor)         |                                  | [Tiebreaker](#tiebreaker)    |
+|                              | [Security](#security)             |                                  | [Torch](#torch)              |
+|                              | [Seer](#seer)                     |                                  | [Underdog](#underdog)        |
+|                              | [Sheriff](#sheriff)               |                                  |                              |
+|                              | [Snitch](#snitch)                 |                                  |                              |
 |                              | [Spy](#spy)                       |                                  |                              |
+|                              | [Surgeon](#surgeon)               |                                  |                              |
 |                              | [Swapper](#swapper)               |                                  |                              |
+|                              | [Time Lord](#timelord)            |                                  |                              |
 |                              | [Tracker](#tracker)               |                                  |                              |
 |                              | [Trapper](#trapper)               |                                  |                              |
 |                              | [Transporter](#transporter)       |                                  |                              |
 |                              | [Veteran](#veteran)               |                                  |                              |
 |                              | [Vigilante](#vigilante)           |                                  |                              |
-|                              | [Warden](#warden)                 |                                  |                              |
+|                              | [Warden](#warden)   
 -----------------------
 # Releases
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2025.3.25 & 2025.3.31 | v6.4.3 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v6.4.3/Syzyfowy.ToU.6.4.3.zip) |
+| 2025.3.25 & 2025.3.31 | v6.4.2 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v6.4.2/Syzyfowy.ToU.6.4.2.zip) |
 | 2024.11.26.(s/e) **and above** | v5.2.0.1 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.2.0.1/TownOfUs-L-5.2.0.1-CM.zip) |
 | 2024.11.26.(s/e) **and above** | v5.1.2.2 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.1.2.2/TownOfUs-L-5.1.2.2-CM.zip) |
 | 2024.11.26.(s/e) **and above** | v5.1.2.1 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.1.2.1/TownOfUs-L-5.1.2.1-CM.zip) |
