@@ -1,6 +1,6 @@
 ## *If an update isn't released that probably means that the current stable version still works for the new version of Among Us*
 
-![LOGO](./Images/ikonka-syzyf.png)
+![LOGO](./Images/ikonka_syzyf.png)
 ![Roles](./Images/Roles.png)
 
 Mod do amonga który dodaje wiele ciekawych ról i modyfikatorów
