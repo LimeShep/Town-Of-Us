@@ -1,0 +1,138 @@
+{
+  "News": [
+    {
+      "Date": "2025-04-10T10:19:00Z",
+      "Number": "110001",
+      "ShortTitle": "Syzyf V6.3.0",
+      "SubTitle": "Pierwszy Content Update",
+      "Title": "Syzyfowy Town Of Us 6.3.0",
+      "Text": [
+        "\r<b> 6.3.0</b>",
+        "\n\n★ <link=https://cdn.discordapp.com/attachments/1350468295152898129/1363986379385864262/Syzyfowy_Town_Of_Us_6.3.0.dll?ex=6907210e&is=6905cf8e&hm=cae1e929d3cbd285b1ed08fbfe1903b089f574bcf1375fadd08b36f54a3a3e6f&>Discord Download</link> ★",
+        "\nUpdate notes:",
+        "\n> Nowa rola: Conserver",
+        "\n> Nowa rola: Security",
+        "\n> Nowa rola: Evoker",
+        "\n> Nowy impostor: Detonator",
+        "\n> Nowy impostor: Disorienter",
+        "\n> Nowy mod: Drunk",
+        "\n",
+        "\nMniejsze zmiany:",
+        "\n> Shifter moze sie przemienic w Amnezjaka",
+        "\n> Naprawiono przycisk Sidekick u Jackala",
+        "\n> Naprawiono bug z Prosecutorem",
+        "\n> Ludki Mayora na spotkaniu teraz sie normalnie pokazuja",
+        "\n> Spy teraz ma przycisk admin zawsze i wszedzie",
+        "\n> Jackal (ale nie sidekick) ma teraz przycisk Light czyli sabotaz swiatel",
+        "\n> Dodano chat impostorski (/imp wiadomosc) i loverski (/love wiadomosc)",
+        "\n> Od teraz pokazuje kto zabil jako poisoner, Oraz Poisoner ma normalny dzialajacy Kill"
+      ]
+    },
+    {
+      "Date": "2025-04-22T10:58:00Z",
+      "Number": "110002",
+      "ShortTitle": "Syzyf V6.4.0",
+      "SubTitle": "Draft Mode les go!",
+      "Title": "Syzyfowy Town Of Us 6.4.0",
+      "Text": [
+        "\r<b> 6.4.0</b>",
+        "\nDziala na wersjach: 2024.10.29, 2024.11.28",
+        "\n\n★ <link=https://cdn.discordapp.com/attachments/1350468295152898129/1364163504738799646/Syzyfowy_Town_Of_Us_6.4.0.dll?ex=69071d44&is=6905cbc4&hm=84482c04328072c295c4861850f5d494ba12f0c575f183affbd11ef2d0266b63&>Discord Download</link> ★",
+        "\nUpdate notes:",
+        "\n> Draft"
+      ]
+    },
+    {
+      "Date": "2025-05-15T07:35:00Z",
+      "Number": "110003",
+      "ShortTitle": "Syzyf V6.4.5",
+      "SubTitle": "Bugfixy i wincyj buguf",
+      "Title": "Syzyfowy Town Of Us 6.4.5",
+      "Text": [
+        "\r<b> 6.4.5</b>",
+        "\nDziala na wersjach: 2025.3.25 (V16), 2025.3.31 (V16.0.1)",
+        "\n\n★ <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.5/Syzyfowy.Town.Of.Us.6.4.5.dll>Github Universal Download</link> ★",
+        "\nUpdate notes:",
+        "\n> Naprawiono Loversow ogolnikowo",
+        "\n> Zmieniono calkowicie ikony przyciskow (~70%)",
+        "\n> Dodano polowiczny jezyk polski (w settings, Polish Lang/Experimental)"
+      ]
+    },
+    {
+      "Date": "2025-06-30T07:35:00Z",
+      "Number": "110004",
+      "ShortTitle": "Syzyf V7.0.0",
+      "SubTitle": "Drugi Content Update",
+      "Title": "Syzyfowy Town Of Us 7.0.0",
+      "Text": [
+        "\r<b> 7.0.0</b>",
+        "\nDziala na wersjach: 2025.5.20 (V16.0.5), 2025.6.10 (V16.1)",
+        "\n★ <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.c432.Desktop.dll>Github Universal Download</link> ★",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x32.zip>Steam/Itch ZIP Download</link> ◄",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x64.zip>Epic/Microsoft ZIP Download</link> ◄",
+        "\n\nUpdate notes:",
+        "\n> Nowe role inspirowane pomyslami graczy: **Elderly**, **Puppeteer**, **Noisemaker**, **Parasite**, **Pelican**, **Musketeer**, **Vulture**, **Sage**, **Gambler**, **Pirate**",
+        "\n> Dodatkowo: **Gardener**, **Bounty Hunter**, **Dictator**, oraz nowa impostorska zaloga - **Mafia**",
+        "\n> Zmieniono zachowanie Arsonisty - ma teraz licznik zduszonych osob",
+        "\n> Mystic+ - przenosne Vitalsy (dzialaja tylko na mapach, gdzie istnieja Vitalsy)",
+        "\n> Seer ma teraz opcje pokazywania konkretnych rol",
+        "\n> Investigator+ - moze widziec wiecej przez okreslony czas",
+        "\n> Security+ - staly dostep do kamer",
+        "\n> Evoker+ - widzi, kto jest oslepiony podczas Evoke'a",
+        "\n> Usunieto opcje Rewind Revive - Time Lord zawsze odradza ludzi",
+        "\n> Guziki drafta teraz zanikaja zamiast znikac",
+        "\n> Poprawiono role Amnesiac i Shiftera, Foretellera, Guessowanie, Shifter Wins With Crew, swiatla Jackala i dzialanie Camo-Commsow",
+        "\n> Phantom i Haunter moga otwierac drzwi dekontaminacyjne",
+        "\n> Speedrunner nie jest juz widoczny na meetingu",
+        "\n> Naprawiono bledy Detektywa - teraz poprawnie wskazuje osoby z miejsca zbrodni",
+        "\n> Zaktualizowano typy rol crewmatowskich (Crew Killing, Support itd.)",
+        "\n> Zreorganizowano przyciski - zamiast \"Elki\" maja teraz forme kwadratow",
+        "\n> Subsettingi z wartoscia 0% nie sa juz wyswietlane w menu",
+        "\n\nWielkie dzieki wam za pomysly, to dzieki wam ta wersja istnieje"
+        ]
+    },
+    {
+      "Date": "2025-07-17T19:18:00Z",
+      "Number": "110005",
+      "ShortTitle": "Syzyf V7.0.3",
+      "SubTitle": "Bugfixy i wincyj buguf",
+      "Title": "Syzyfowy Town Of Us 7.0.3",
+      "Text": [
+        "\r<b> 7.0.3</b>",
+        "\nDziala na wersjach: 2025.5.20 (V16.0.5), 2025.6.10 (V16.1)",
+        "\n★ <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-Experimental.c226.dll>Github Universal Download</link> ★",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-E.x32.zip>Steam/Itch ZIP Download</link> ◄",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-E.x64.zip>Epic/Microsoft ZIP Download</link> ◄",
+        "\n\nUpdate notes:",
+        "\n> Usunieto bugi, dodano nowe"
+        ]
+    },
+    {
+      "Date": "2025-09-28T08:45:00Z",
+      "Number": "110006",
+      "ShortTitle": "Syzyf V7.1.0",
+      "SubTitle": "Trzeci Content Update",
+      "Title": "Syzyfowy Town Of Us 7.1.0",
+      "Text": [
+        "\r<b> 7.1.0</b>",
+        "\nDziala na wersjach: 2025.9.9 (V17), 2025.9.9.1 (V17-UEP), 2025.10.14 (V17.0.1)",
+        "\n★ <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.c432.Desktop.dll>Github Universal Download</link> ★",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x32.zip>Steam/Itch ZIP Download</link> ◄",
+        "\n► <link=https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x64.zip>Epic/Microsoft ZIP Download</link> ◄",
+        "\n\nUpdate notes:",
+        "\n> Uproszczenie kodu w kwestii guzików (Nowy Syzyf 0.1.0)",
+        "\n> Poprawiono dużo bugów, dodano parę kolejnych",
+        "\n> Dodano powiadomienia z miry (aczkolwiek na razie mają je tylko dwie role)",
+        "\n> Poprawiono bug z draftem, aczkolwiek jeśli masz czarny ekran podczas drafta, podeślij mi logi.",
+        "\n> Dodano możliwość tworzenia lobby do 255 osób",
+        "\n> Dodano komendy /summary i /setname",
+        "\n> Nowa rola: Mirrorcaster",
+        "\n> Nowa rola: Serial Killer",
+        "\n> Nowa rola: Inquistor",
+        "\n> Nowa rola: Reaper (SC z Miry)",
+        "\n> Nowa rola: Ambassador",
+        "\n> Przywrócona rola: Assassin (ustalany oddzielnie od assasinów globalnych)"
+    ]
+    }
+  ]
+}
