@@ -49,812 +49,116 @@ Dołącz do [discorda](https://discord.gg/VUyBhVhKVy) jeśli zauważysz jakieś 
 |                              | [Warden](#warden)   
 -----------------------
 # Releases
-| Among Us - Version| Mod Version | Link |
-|----------|-------------|-----------------|
-| 2025.3.25 & 2025.3.31 | v6.4.3 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v6.4.3/Syzyfowy.ToU.6.4.3.zip) |
-| 2025.3.25 & 2025.3.31 | v6.4.2 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v6.4.2/Syzyfowy.ToU.6.4.2.zip) |
-| 2024.11.26.(s/e) **and above** | v5.2.0.1 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.2.0.1/TownOfUs-L-5.2.0.1-CM.zip) |
-| 2024.11.26.(s/e) **and above** | v5.1.2.2 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.1.2.2/TownOfUs-L-5.1.2.2-CM.zip) |
-| 2024.11.26.(s/e) **and above** | v5.1.2.1 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.1.2.1/TownOfUs-L-5.1.2.1-CM.zip) |
-| 2024.10.29s & 2024.10.29e | v5.1.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.2/ToU.v5.1.2.zip) |
-| 2024.9.4s & 2024.9.4e | v5.1.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.1/ToU.v5.1.1.zip) |
-| 2024.9.4s & 2024.9.4e | v5.1.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.0/ToU.v5.1.0.zip) |
-| 2024.3.5s & 2024.3.5e | v5.0.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.4/ToU.v5.0.4.zip) |
-| 2023.11.28s & 2023.11.28e | v5.0.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.3/ToU.v5.0.3.zip) |
-| 2023.7.12s & 2023.7.12e | v5.0.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.2/ToU.v5.0.2.zip) |
-| 2023.6.13s & 2023.6.13e | v5.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.1/ToU.v5.0.1.zip) |
-| 2023.6.13s & 2023.6.13e | v5.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.0/ToU.v5.0.0.zip) |
-| 2023.3.28s & 2023.3.28e | v4.0.6 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.6/ToU.v4.0.6.zip) |
-| 2023.3.28s & 2023.3.28e | v4.0.5 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.5/ToU.v4.0.5.zip) |
-| 2023.3.28s & 2023.3.28e | v4.0.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.4/ToU.v4.0.4.zip) |
-| 2023.2.28s & 2023.2.28e | v4.0.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.3/ToU.v4.0.3.zip) |
-| 2022.12.14s & 2022.12.14e | v4.0.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.2/ToU.v4.0.2.zip) |
-| 2022.12.14s & 2022.12.14e | v4.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.1/ToU.v4.0.1.zip) |
-| 2022.12.14s & 2022.12.14e | v4.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.0/ToU.v4.0.0.zip) |
-| 2022.10.25s & 2022.10.25e | v3.4.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.4.0/ToU.v3.4.0.zip) |
-| 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.2/ToU.v3.3.2.zip) |
-| 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.1/ToU.v3.3.1.zip) |
-| 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.0/ToU.v3.3.0.zip) |
-| 2022.6.21s & 2022.6.21e & 2022.7.12s & 2022.7.12e | v3.2.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.2.0/ToU.v3.2.0.zip) |
-| 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.1.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.1.0/ToU.v3.1.0.zip) |
-| 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.0.1/ToU.v3.0.1.zip) |
-| 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.0.0/ToU.v3.0.0.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.5 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.5/ToU.v2.6.5.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.4/ToU.v2.6.4.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.4/ToU.v2.6.4-2021.6.30.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.3/ToU.v2.6.3.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.3/ToU.v2.6.3-2021.6.30.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.2/ToU.v2.6.2.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.2/ToU.v2.6.2-2021.6.30.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.1/ToU.v2.6.1.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.1/ToU.v2.6.1.Old.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.0/ToU.v2.6.0.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.0/ToU.v2.6.0.Old.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.5.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.1/ToU.v2.5.1.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.5.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.0/ToU.v2.5.0.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.5.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.0/ToU.v2.5.0.Old.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.4.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.2/ToU.v2.4.2.zip) |
-| 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.4.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.1/ToU.v2.4.1.zip) |
-| 2021.11.9.5s & 2021.11.9.5e | v2.4.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.0/ToU.v2.4.0.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.4/ToU.v2.3.4.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.3/ToU.v2.3.3.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.2/ToU.v2.3.2.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.1/ToU.v2.3.1.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.0/ToU.v2.3.0.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.2.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.2.1/TOU_221.zip) |
-| 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.2.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.2.0/TOU_220.zip) |
-| 2021.6.15s & 2021.6.15e | v2.1.4 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.4/TOU_214.zip) |
-| 2021.6.15s & 2021.6.15e | v2.1.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.3/TownOfUs213_1.zip) |
-| 2021.6.15s & 2021.6.15e | v2.1.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.2/TownOfUs212_1.zip) |
-| 2021.6.15s & 2021.6.15e | v2.1.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.1/TownOfUs211_1.zip) |
-| 2021.5.10s | v2.0.4 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.4/TownOfUs-v2.0.4.zip) |
-| 2021.5.10s | v2.0.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.3/TownOfUs-v2.0.3.zip) |
-| 2021.4.12s & 2021.4.14s | v2.0.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.2/TownOfUs-v2.0.2.zip) |
-| 2021.4.12s | v2.0.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.1/TownOfUs-v2.0.1.zip) |
-| 2021.3.31.3s | v2.0.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.0/TownOfUs-v2.0.0.zip) |
-| 2021.3.5s | v1.2.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.2.0/TownOfUs-v1.2.0.zip) |
-| 2021.3.5s | v1.1.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.1.0/TownOfUs-v1.1.0-2021.3.5s.zip) |
-| 2020.12.19s | v1.1.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.1.0/TownOfUs-v1.1.0-2020.12.9s.zip) |
-| 2020.12.19s | v1.0.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.3/TownOfUs-v1.0.3.zip) |
-| 2020.12.19s | v1.0.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.2/TownOfUs-v1.0.2.zip) |
-| 2020.12.19s | v1.0.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.1/TownOfUs-v1.0.1.zip) |
-| 2020.12.19s | v1.0.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.0/TownOfUs-v1.0.0.zip) |
-
-# Szybki opis ról po polsku: (Polish desc)
-
-
-# CREWMATE (WSPÓLNICY)
-## MAYOR (Burmistrz)
-Podczas spotkania może albo: zagłosować kilkukrotnie, albo zachować swój głos by w następnej rundzie zagłosować więcej razy
-## SPY (Szpieg)
-Na admin panelu widzi wszystkich kolorowo
-## MEDIC (Medyk)
-Na początku gry może dać jednej osobie tarczę, jeśli ktoś spróbuje ją zabić to jego ekran mignie na zielono
-## SEER (Wróżbita)
-Co jakiś czas może odkryć rolę / stan jakiejś osoby, np. czy jest dobra czy zła
-## TRACKER (Podążacz)
-Może śledzić innych graczy podczas rundy
-## SNITCH (Kapuś)
-Po wykonaniu wszystkich zadań widzi kto jest mordercą, nie widzi roli neutralnych. Jeśli zostanie mu jedno zadanie, zabójcy dostają strzałkę kierującą na niego
-## SWAPPER (Zamieniacz)
-Podczas spotkania może zamienić głosy dwóch osób ze sobą
-## TIME LORD (Władca czasu)
-Raz na jakiś czas może cofnąć czas o 10 sekund i potencjalnie kogoś ożywić. Nie ma dostępu do Vitalsów.
-## SHERIFF (Szeryf)
-Może zabijać zabójców.
-## ENGINEER (Inżynier)
-Może ventować oraz naprawiać sabotaż w mgnieniu oka
-## DETECTIVE (Detektyw)
-Może analizować miejsce śmierci i potencjalnie znaleźć mordercę
-## INVESTIGATOR (Inspektor)
-Widzi ślady stóp graczy którzy przed chwilą tędy biegli
-## ALTRUIST (Altruista)
-Może wskrzesić zabitą osobę kosztem własnej śmierci
-## MYSTIC (Nadprzyrodzony)
-Dostaje alert kiedy ktoś umarł
-## VIGILLANTE (Przyjazny rewolwerowiec)
-Podczas spotkania może strzelić rolę zabójcy, jeśli trafi dobrze to zabójca ginie, jeśli nie to on sam ginie.
-## TRAPPER (Pułapkowiec)
-Kładzie pułapki na mapie, jeśli ktoś w nie wejdzie to będzie miał ujawnioną rolę na spotkaniu.
-## TRANSPORTER (Jeździec)
-Może zamienić miejscami dwie losowe osoby (oprócz tych w ventach).
-## MEDIUM (Mediator)
-Widzi duchy. Może medytować, jeśli ktoś **w tej rudzie zginął** to Medium będzie mógł się z duchem porozumiewać oraz go widzieć.
-## IMITATOR (Udawacz)
-Podczas każdego spotkania gracz może wybrać kogo umarłego chce udawać.
-## AURIAL (Naukowiec)
-Jeśli jakaś widoczna umiejętność zostanie wykonana, to będzie mógł widzieć gdzie ona została użyta
-## ORACLE (Spowiednik)
-Jeśli ktoś zginie to może powiedzieć jakie było jego przeznaczenie, Podczas każdego spotkania dostaje informację kto może być zły, Osoba spowiadana dostaje immunitet na wygłosowanie.
-# NEUTRAL (INTROWERTYCY)
-## ARSONIST (Podpalacz)
-Co jakiś czas może wylać kubeł diesla na daną osobę, jeśli uzbiera minimum 3 takie osoby to może je podpalić, a oni natychmiast umrą.
-## AMNESIAC (Amnezjak)
-Rola bez celu, jego zadaniem jest znaleźć trupa i przejąć jego rolę.
-## EXECUTIOTER (Rzeźnik)
-Na początku gry dostaje cel, jego zadaniem jest **wygłosować** tą osobę podczas spotkania. Jeśli jego target umrze to zostaje Błaznem
-## JESTER (Błazen)
-Jego celem jest **wygłosować** samego siebie ze spotkania
-## WEREWOLF (Wilk)
-Podczas gry może dostać wściekliznę. Podczas wścieklizny może zabijać innych graczy oraz ma wyzję zabójcy.
-## THE GLITCH (Ust3rk4)
-Może zabijać graczy, dodatkowo może zamienić się w dowolnego gracza na ograniczony czas, oraz zhackować gracza, tzn. nie będzie on mógł robić żadnych zadań ani zgłaszać ciał.
-# IMPOSTOR (ZABÓJCY)
-## CAMOUFLAGER (Kamuflażysta)
-Może co jakiś czas spowodować że każdy jest czarny.
-## BLACKMAILER (SZANTAŻYSTA)
-Może wyciszyć daną osobę ze spotkania, będzie mogła jedynie oddać głos.
-## MORPHLING (Podszywacz)
-Na początku pobiera próbkę gracza, i następnie do końca rundy moze się w niego przemienić.
-## SWOOPER (Widmo)
-Może stać się niewidzialny.
-## UNDERTAKER (Grabiarz)
-Może przenosić ciała np. w niewidzialne miejsce.
-## JANITOR (Sprzątaczka)
-Może czyścić ciała.
-## MINER (Górnik)
-Może tworzyć własne venty.
-## BOMBER (Bombardier)
-Raz na jakiś czas wysadza atomówki.
-## TRAITOR (Zdrajca)
-Jeśli jest więcej jak 5 graczy a wszyscy zabójcy umarli to losowy wspólnik zostaje zdrajcą. Jego zadaniem jest pomścić zabójców
-
-# MODY
-## BAIT (Wabik)
-Po jego śmierci zabójca od razu zgłasza jego ciało
-## LOVERS (Zakochana para)
-Nie widzą swoich ról ale mają dostęp do grupowego czatu, ich celem jest przeżycie razem. Jeśli jeden zakochany zginie, drugi ginie natychmiast.
-## TIEBREAKER (Decydent)
-Jeśli na spotkaniu nastąpi remis, to on może podjąć skutek spotkania.
-## SLEUTH (Mędrzec)
-Widzi rolę każdego martwego którego zgłosił
-## TORCH (Wizjoner)
-Widzi wizją zabójcy
-## GIANT (Bulerman)
-Jest duży i wolny
-## BUTTON BARRY (Przenośny przycisk)
-Ma przy sobie podręczny przycisk
-## UNDERDOG (Pupilek)
-Ma mniejszy cooldown, jeśli jego partner zginie, będzie miał cooldown mniejszy o połowę.
-
-
+| Among Us - Version| Mod Version | Link | Alternative Link | Alternative Link 2 |
+|----------|-------------|-----------------|---------------|-------------|
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.7 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.7/Syzyfowy.Town.Of.Us.v7.2.7.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.7/Syzyfowy.Town.Of.Us.v7.2.7.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.7/Syzyfowy.Town.Of.Us.v7.2.7.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.6 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.6/Syzyfowy.Town.Of.Us.v7.2.6.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.6/Syzyfowy.Town.Of.Us.v7.2.6.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.6/Syzyfowy.Town.Of.Us.v7.2.6.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.5 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.5/Syzyfowy.Town.Of.Us.v7.2.5.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.5/Syzyfowy.Town.Of.Us.v7.2.5.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.5/Syzyfowy.Town.Of.Us.v7.2.5.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.4 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.4/Syzyfowy.Town.Of.Us.v7.2.4.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.4/Syzyfowy.Town.Of.Us.v7.2.4.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.4/Syzyfowy.Town.Of.Us.v7.2.4.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.3 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.3/Syzyfowy.Town.Of.Us.v7.2.3.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.3/Syzyfowy.Town.Of.Us.v7.2.3.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.3/Syzyfowy.Town.Of.Us.v7.2.3.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.2 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.2/Syzyfowy.Town.Of.Us.v7.2.2.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.2/Syzyfowy.Town.Of.Us.v7.2.2.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.2/Syzyfowy.Town.Of.Us.v7.2.2.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.1 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.1/Syzyfowy.Town.Of.Us.v7.2.1.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.1/Syzyfowy.Town.Of.Us.v7.2.1.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.1/Syzyfowy.Town.Of.Us.v7.2.1.x64.zip) |
+| 2026.3.31 (v17.3) && 2026.6.5 (v17.4) | v7.2.0 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.0/Syzyfowy.Town.Of.Us.v7.2.0.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.0/Syzyfowy.Town.Of.Us.v7.2.0.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.2.0/Syzyfowy.Town.Of.Us.v7.2.0.x64.zip) |
+| 2025.9.9 (v17) && 2025.10.14 (v17.0.1) && 2025.11.18 (v17.1) | v7.1.0 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.c432.Desktop.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.1.0/Syzyfowy.Town.Of.Us.7.1.0.x64.zip) |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v7.0.3 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-Experimental.c226.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-E.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.3-Experimental/Syzyfowy.Town.Of.Us.7.0.3-E.x64.zip) |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v7.0.2 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1390364531167068250/Syzyfowy_Town_Of_Us_7.0.2_c211.dll?ex=6af68e1f&is=6af53c9f&hm=45155fc8968784ca4eb68b0b419c9fad1f7c3e449596fd087cf955e41e88ad65&) | | |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v7.0.2-Experimental | [Download DLL - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1390339991418179725/Syzyfowy_Town_Of_Us_7.0.2-Experimental_c209.dll?ex=6af72005&is=6af5ce85&hm=3da3c1751e93569acd32cd8ccf367960d3338ab42380aaf662ee3c0022d0b246&) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.2-Experimental/Syzyfowy.Town.Of.Us.7.0.2-E.x32.Fixed.zip) | |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v7.0.1 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1389998324286885908/Syzyfowy_Town_Of_Us_7.0.1_c201.dll?ex=6af73351&is=6af5e1d1&hm=d59141f834b532b35632ab99a35f3ed1f86b23ba0d8a1c55a8df330ab68e8a99&) | | |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v7.0.0 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.0/Syzyfowy.Town.Of.Us.7.0.0.c180.dll) | [Download ZIP x32](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.0/Syzyfowy.Town.Of.Us.7.0.0.x32.zip) | [Download ZIP x64](https://github.com/LimeShep/Town-Of-Us/releases/download/v7.0.0/Syzyfowy.Town.Of.Us.7.0.0.x64.zip) |
+| 2025.5.20 (v16.0.5) && 2025.6.10 (v16.1) | v6.4.6 | [Download DLL - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1379163482368245853/Syzyfowy_Town_Of_Us_6.4.6.dll?ex=6af6acd5&is=6af55b55&hm=00428211c063606ba0d402244c5bc6746480b35cc8faffa7ed968e416b7bb572&) | [Download ZIP x32 - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1379163482703925278/Syzyfowy_Town_Of_Us_6.4.6_x32.zip?ex=6af6acd5&is=6af55b55&hm=8c7390afe5d3ff2d0db6aa5f7970876f054d7fb0058e1d823b4b97662e64ba32&) | [Download ZIP x64 - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1379163483094126772/Syzyfowy_Town_Of_Us_6.4.6_x64.zip?ex=6af6acd5&is=6af55b55&hm=fd40558cd70524bebc3100892d0a66e9cd4f0b7ae306b465e538e093fd272b1c&) |
+| 2025.3.25 (v16) && 2025.3.31 (v16.0.2) | v6.4.5 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.5/Syzyfowy.Town.Of.Us.6.4.5.dll) | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.5/Syzyfowy.ToU.6.4.5.zip) | |
+| 2025.3.25 (v16) && 2025.3.31 (v16.0.2) | v6.4.4 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1368983082559864832/Syzyfowy_Town_Of_Us_6.4.4.dll?ex=6af68d99&is=6af53c19&hm=c4c371a3a8e24237507dc8cd160a032705cd332e63711de1de39390bccf2baa0&) | | |
+| 2025.3.25 (v16) && 2025.3.31 (v16.0.2) | v6.4.3 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.3/Syzyfowy.Town.Of.Us.6.4.3.dll) | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.3/Syzyfowy.ToU.6.4.3.zip) | |
+| 2025.3.25 (v16) && 2025.3.31 (v16.0.2) | v6.4.2 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.2/Syzyfowy.Town.Of.Us.6.4.2.dll) | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.2/Syzyfowy.ToU.6.4.2.zip) | |
+| 2025.3.25 && 2025.3.31 | v6.4.2 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.2/Syzyfowy.Town.Of.Us.6.4.2.dll) | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.2/Syzyfowy.ToU.6.4.2.zip) | |
+| 2024.11.26 **and above** | v6.4.1 | [Download DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.1/Syzyfowy.Town.Of.Us.6.4.1.dll) | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.4.1/ToU.v6.4.1.zip) | |
+| 2024.11.26 **and above** | v6.4.0 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1364163504738799646/Syzyfowy_Town_Of_Us_6.4.0.dll?ex=6af6d144&is=6af57fc4&hm=695fa376223094f00dd31c98684465cd476f898f0dd7c2d4a827fa9d4d332a5d&) | | |
+| 2024.11.26 **and above** | v6.3.0 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1363986379385864262/Syzyfowy_Town_Of_Us_6.3.0.dll?ex=6af6d50e&is=6af5838e&hm=d9610e2d5e697619b9bf77f4d9441565c682e406afcfc33042dd8248d39e127e&) | | |
+| 2024.11.26 **and above** | v6.2.8 [DLL] | [Download](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.2.8/Syzyfowy.Town.Of.Us.6.2.8.dll) | | |
+| 2024.11.26 **and above** | v6.2.7 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1355514072833200168/Syzyfowy_Town_Of_Us_6.2.7.dll?ex=6af6fddb&is=6af5ac5b&hm=a108a0ba36aaa1370efd88109573919a2d2383d18d096cc5bb8356cc9adfc109&) | | |
+| 2024.11.26 **and above** | v6.2.6-FOREFIX [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1355291783386370068/Syzyfowy_Town_Of_Us_6.2.6_FOREFIX.dll?ex=6af6d795&is=6af58615&hm=77e1f991bbf7e8f28ee7e0a923e4057dd450f1cf9efcb00b943bb80ce33dc702&) | | |
+| 2024.11.26 **and above** | v6.2.6 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1355256246130835476/Syzyfowy_Town_Of_Us_6.2.6.dll?ex=6af6b67c&is=6af564fc&hm=6f88284ac0a9b39d114c1366d76a4ce26404924646f56da235956bf2f8a6a57e&) | | |
+| 2024.11.26 **and above** | v6.2.5 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1352698747129167872/Syzyfowy_Town_Of_Us_6.2.5.dll?ex=6af6a321&is=6af551a1&hm=2b444ba69ac70c351437ff464b05f435556e2437889b2bf713f4a75b62cf0805&) | | |
+| 2024.11.26 **and above** | v6.2.4 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1352339135096160346/Syzyfowy_Town_Of_Us_6.2.4.dll?ex=6af6a5b7&is=6af55437&hm=b3568aa6075664e5c36b2e9dca1a0f5cb5c670447b67f2570baed11ab775ace4&) | | |
+| 2024.11.26 **and above** | v6.2.3 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1351996775405191299/Syzyfowy_Town_Of_Us_6.2.3.dll?ex=6af6b85e&is=6af566de&hm=434d05817bc51b6e955fed71b01b8a59c5e652b20867627869f0c93c0ed265d9&) | | |
+| 2024.11.26 **and above** | v6.2.2 | [Download ZIP](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.2.2/TownOfUs6.2.2withALM.zip) | [Download TOUR Identification DLL](https://github.com/LimeShep/Town-Of-Us/releases/download/v6.2.2/Syzyfowy.TownOfUs.6.2.2.FakedVersionNumber.dll) | |
+| 2024.11.26 **and above** | v6.2.1 [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1351247814713413702/Syzyfowy_Town_Of_Us_6.2.1.dll?ex=6af6a1d7&is=6af55057&hm=2fb7bb2ad6630b5764334c4e67b92cc646f4fe2318909eb8725a895ecbbb8fcf&) | [Download TOUR Identification - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1351247815090634792/Syzyfowy_Town_Of_Us_6.2.1_Indentyfikujacy_sie_jako_5.2.1.dll?ex=6af6a1d8&is=6af55058&hm=5bb1cbef799a2fd822a40ef3d133c4ba7a2cfe51d7c196e2e60a53996b875d92&) | |
+| 2024.11.26 **and above** | v5.2.1-KillingOnly [DLL] | [Download - Discord](https://cdn.discordapp.com/attachments/1350468295152898129/1350468475314769930/Syzyfowy_Town_Of_Us_5.2.1.dll?ex=6af717c7&is=6af5c647&hm=78f4e960703e604b6eb3d04e0f8015378150a705a42187b4f1acc53f820661c5&) | | |
+| 2024.11.26 **and above** | v5.2.0.1 | [Download](https://github.com/LimeShep/Town-Of-Us-R/releases/download/v5.2.0.1/TownOfUs-L-5.2.0.1-CM.zip) | | |
+| 2024.11.26 **and above** | v5.1.2.2 | [Download](https://github.com/LimeShep/Town-Of-Us/releases/download/v5.1.2.2/TownOfUs-L-5.1.2.2-CM.7z) | | |
+| 2024.11.26 **and above** | v5.1.2.2-beta [DLL] | [Download](https://github.com/LimeShep/Town-Of-Us/releases/download/v5.1.2.2-beta/TownOfUs.5.1.2.2-beta.dll) | | |
+| 2024.11.26 **and above** | v5.1.2.1 | [Download](https://github.com/LimeShep/Town-Of-Us/releases/download/v5.1.2.1/TownOfUsL-5.1.2.1-incl.CM.7z) | | |
 
 <details>
-  <summary> Changelog </summary>
-  <details>
-  <summary> v5.2.0 </summary>
-  <ul> <li>Role Distribution Changed to Hybrid system between role lists and percentages (game modes removed as they can be set up through role lists)</li> </ul>
-  <ul> <li>New Role: Lookout</li> </ul>
-  <ul> <li>New Role: Scavenger</li> </ul>
-  <ul> <li>New Role: Deputy</li> </ul>
-  <ul> <li>New Modifier: Mini</li> </ul>
-  <ul> <li>New Modifier: Saboteur</li> </ul>
-  <ul> <li>New Setting: Vigilante can guess Impostor Modifiers</li> </ul>
-  <ul> <li>New Setting: Maximum Players Alive Where Blackmailed Can Vote</li> </ul>
-  <ul> <li>Bug Fix: Shy disconnecting breaking all hud cooldowns and visuals</li> </ul>
-  <ul> <li>Bug Fix: Role unreveal name position</li> </ul>
-  <ul> <li>Bug Fix: Ghost hat opacity</li> </ul>
-  <ul> <li>Bug Fix: Mayor reveal name position (vigi/doom/assassin)</li> </ul>
-  <ul> <li>Bug Fix: Assassinated players name positions (vigi/doom/assassin)</li> </ul>
-  <ul> <li>Several Doomsayer Fixes and UI changes</li> </ul>
-  <ul> <li>Doomsayer can now win by guessing every player they can physically guess as long as there are at least 2 people to guess (3 guesses to win if possible still)</li> </ul>
-  <ul> <li>Fixed (some?) Grenadier sync issues</li> </ul>
-  <ul> <li>If a Crewmate Lover has an evil teammate, their tasks no longer count towards task completion</li> </ul>
-  <ul> <li>Vigi/Doom/Assassin guess after voting setting removed, now can always guess after voting</li> </ul>
-  <ul> <li>Politician/Imitator/Hypnotist buttons now can be used after voting</li> </ul>
-  <ul> <li>Investigator no longer sees true colours for morph/mimic/swoop/camo</li> </ul>
-  <ul> <li>Investigator no longer see footprints when hypnotised</li> </ul>
-  <ul> <li>Imitator can imitate all Crewmate roles no matter if they can use them or not</li> </ul>
-  <ul> <li>Warden no longer has a cooldown and can instantly use Fortify like Medic can Shield</li> </ul>
-  <ul> <li>Juggernaut is no longer a 'Hidden Role'</li> </ul>
-  <ul> <li>Settings slots can be renamed, courtesy of @AlchlcDvl</li> </ul>
-  <ul> <li>Added chat commands, you can now type /r or /role for your current role info or /m or /modifier for your modifier, for specific roles type /ROLENAME (as long as you get the first few letters correct it will return the role you want)</li> </ul>
-  </details>
-  <details>
-  <summary> v5.1.2 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2024.10.29</li> </ul>
-  <ul> <li>Minor Bug Fixes</li> </ul>
-  <ul> <li>Added Retribution back to Hunter as a setting</li> </ul>
-  </details>
-  <details>
-  <summary> v5.1.1 </summary>
-  <ul> <li>Hotfix Versioning Issue</li> </ul>
-  </details>
-  <details>
-  <summary> v5.1.0 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2024.9.4</li> </ul>
-  <ul> <li>New Role: Hypnotist</li> </ul>
-  <ul> <li>New Role: Jailor</li> </ul>
-  <ul> <li>New Role: Soul Collector</li> </ul>
-  <ul> <li>New Role: Warden</li> </ul>
-  <ul> <li>New Modifier: Shy</li> </ul>
-  <ul> <li>New Modifier: Sixth Sense</li> </ul>
-  <ul> <li>Reworked Aurial</li> </ul>
-  <ul> <li>Reworked Detective, courtesy of @fariparedes</li> </ul>
-  <ul> <li>Reworked Mayor into Politician, idea based off of @fariparedes</li> </ul>
-  <ul> <li>Reworked Doomsayer</li> </ul>
-  <ul> <li>Reworked Glitch's Hack Ability</li> </ul>
-  <ul> <li>Hunter suspicious activity now triggered by all button abilities</li> </ul>
-  <ul> <li>Removed Retribution from Hunter</li> </ul>
-  <ul> <li>New Setting: Crew Killers Continue Game</li> </ul>
-  <ul> <li>New Setting: Kill Anyone During Camouflaged Comms</li> </ul>
-  <ul> <li>New Setting: Impostor Lover Can Kill Teammate</li> </ul>
-  <ul> <li>New Bomber Setting: All Impostors See Bomb</li> </ul>
-  <ul> <li>Sheriff Kill Settings Merged to Neutral Evil and Neutral Killing</li> </ul>
-  <ul> <li>Lovers can no longer accidentally kill each other</li> </ul>
-  <ul> <li>Venting is disabled when 2 people are left alive</li> </ul>
-  <ul> <li>A lot of bug fixes</li> </ul>
-  </details>
-  <details>
-  <summary> v5.0.4 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2024.3.5</li> </ul>
-  <ul> <li>Added ghosts ignore tasks option</li> </ul>
-  <ul> <li>Hide vanilla roles in hudstring and its tab, courtesy of @whichtwix</li> </ul>
-  <ul> <li>April fools options, courtesy of @whichtwix</li> </ul>
-  <ul> <li>Vampire Remains Vampire When Remembered, courtesy of @Loons-Loons/@Loonie-Toons</li> </ul>
-  <ul> <li>Hats system standardised to Unity Addressables</li> </ul>
-  <ul> <li>New Role: Hunter, courtesy of @fariparedes</li> </ul>
-  <ul> <li>Modified updater, courtesy of @whichtwix</li> </ul>
-  </details>
-  <details>
-  <summary> v5.0.3 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2023.11.28</li> </ul>
-  <ul> <li>Role gen system repaired, courtesy of @AlchlcDvl</li> </ul>
-  <ul> <li>Role color is now used for interaction highlights</li> </ul>
-  <ul> <li>Changes to intro role colors, courtesy of @Loonie-Toons</li> </ul>
-  <ul> <li>Custom keybinds for interactions - integration to among us keybinds, courtesy of @whichtwix</li> </ul>
-  <ul> <li>Added a tiny discord rich presence line</li> </ul>
-  <ul> <li>Disperse added back to Submerged and Airship</li> </ul>
-  <ul> <li>Multiple revived people from altruist appear on imposters arrows, rather than just the latest, courtesy of @whichtwix</li> </ul>
-  <ul> <li>Ping tracker reduced in size</li> </ul>
-  <ul> <li>Host is now shown in the ping tracker whilst in the lobby</li> </ul>
-  <ul> <li>Shows host in top left of lobby meetings</li> </ul>
-  <ul> <li>-- Soon to come: Full rewrite.</li> </ul>
-  </details>
-  <details>
-  <summary> v5.0.2 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2023.7.12</li> </ul>
-  <ul> <li>New Setting: Detective can detect last killer</li> </ul>
-  <ul> <li>New Setting: Neutral Evil Win Ends Game</li> </ul>
-  <ul> <li>New Settings: Neutral Evils can kill players on victory</li> </ul>
-  </details>
-  <details>
-  <summary> v5.0.1 </summary>
-  <ul> <li>Bug Fix: Airship Ladders work again</li> </ul>
-  </details>
-  <details>
-  <summary> v5.0.0 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2023.6.13</li> </ul>
-  <ul> <li>New Role: Doomsayer</li> </ul>
-  <ul> <li>New Role: Vampire</li> </ul>
-  <ul> <li>New Role: Vampire Hunter</li> </ul>
-  <ul> <li>New Role: Prosecutor</li> </ul>
-  <ul> <li>New Role: Warlock</li> </ul>
-  <ul> <li>New Role: Oracle</li> </ul>
-  <ul> <li>New Role: Venerer</li> </ul>
-  <ul> <li>New Role: Aurial</li> </ul>
-  <ul> <li>Reworked Detective</li> </ul>
-  <ul> <li>Reworked Mayor</li> </ul>
-  <ul> <li>New Modifier: Frosty</li> </ul>
-  <ul> <li>New Modifier: Aftermath</li> </ul>
-  <ul> <li>Removed Blind</li> </ul>
-  <ul> <li>Neutral Non-Killing settings split into Neutral Benign and Neutral Evil</li> </ul>
-  <ul> <li>New Setting: First round shield for first death in prior game</li> </ul>
-  <ul> <li>New Setting: Guardian Angel target evil percentage</li> </ul>
-  <ul> <li>Removed Settings for disabling name plates and level numbers</li> </ul>
-  <ul> <li>Guardian Angel targets can now be a Neutral Killer</li> </ul>
-  <ul> <li>Bug Fix: Plaguebearer no longer turns into Pestilence early</li> </ul>
-  <ul> <li>Added a new version of Snitch to Cultist</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.6 </summary>
-  <ul> <li>Bug Fixes: Reverted alot of the changes from the last few patches...</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.5 </summary>
-  <ul> <li>Bug Fix: Exile Functions now work when someone disconnects right after being assassinated</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.4 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2023.3.28</li> </ul>
-  <ul> <li>Haunter/Phantom/Traitor spawn adjustments</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.3 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2023.2.28</li> </ul>
-  <ul> <li>New Setting: Who can see dead players on admin (under Spy)</li> </ul>
-  <ul> <li>Bug Fix: Transporter and Glitch get everyone alive on their transport/mimic menus</li> </ul>
-  <ul> <li>Bug Fix: Undertaker can no longer drag bodies to unreportable positions</li> </ul>
-  <ul> <li>Bug Fix: Players can no longer infinitely vent in Hide & Seek</li> </ul>
-  <ul> <li>Bug Fix: Swapper swap bugs... all of them... I think</li> </ul>
-  <ul> <li>Optimisation: As Imitator you no longer need to deselect someone to select another player</li> </ul>
-  <ul> <li>Medic Shields and Guardian Angel Protects now stop a Bomb detonation and Arsonist ignites</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.2 </summary>
-  <ul> <li>Bug Fix: Cultist no longer doesn't automatically set the Impostors to 1 for the game mode</li> </ul>
-  <ul> <li>Bug Fix: Dead people no longer interfere with how many people die to a bomb</li> </ul>
-  <ul> <li>Added a new Examine Report to Detective</li> </ul>
-  <ul> <li>Engineer Fix Per Round/Game changed to Uses throughout the game</li> </ul>
-  <ul> <li>Made Medic & Trapper imitatable for the Imitator</li> </ul>
-  <ul> <li>Added indications so the dead can see who the Guardian Angel and Executioner targets are</li> </ul>
-  <ul> <li>Removed option for Snitch to be hidden on Game Start</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.1 </summary>
-  <ul> <li>Fixed the Kill Button not working in Hide & Seek</li> </ul>
-  </details>
-  <details>
-  <summary> v4.0.0 </summary>
-  <ul> <li>Compatibility with the new Among Us version v2022.12.14</li> </ul>
-  <ul> <li>New Role: Imitator (Replacing Time Lord)</li> </ul>
-  <ul> <li>New Role: Bomber (Poisoner rework)</li> </ul>
-  <ul> <li>New Game Mode: Cultist</li> </ul>
-  <ul> <li>New Game Mode Roles: Necromancer & Whisperer as well as Crewmate/Impostor variants of already existing roles</li> </ul>
-  <ul> <li>New Setting: Enable Hidden Roles</li> </ul>
-  <ul> <li>New Settings for hidden roles</li> </ul>
-  <ul> <li>New Setting: Undertaker Drag Speed</li> </ul>
-  <ul> <li>Bug Fix: Executioner/Guardian Angel turned Amnesiac/Jester/Survivor no longer have red text after changing role</li> </ul>
-  <ul> <li>Amnesiac remembering a role no longer makes their task list swap with the player they remembered</li> </ul>
-  <ul> <li>Bug Fix: Amnesiac no longer sees themself with the remembered players' modifier</li> </ul>
-  <ul> <li>Bug Fix: Amnesiac no longer loses tasks if the person they remembered from disconnects or vice versa</li> </ul>
-  <ul> <li>Bug Fix: Underdog kill timer is now in sync with normal kill cooldowns</li> </ul>
-  <ul> <li>Bug Fix: Underdog now has the correct kill cooldown on game start</li> </ul>
-  <ul> <li>Bug Fix: Underdog now can have a kill cooldown below 10secs</li> </ul>
-  <ul> <li>Bug Fix: Miner's mines are no longer invisible in certain places</li> </ul>
-  <ul> <li>Bug Fix: Undertaker no longer can make a body become invisible in certain places</li> </ul>
-  <ul> <li>Bug Fix: Neutral Killers now get correct cooldowns when attacking a vesting Survivor or a Guardian Angel shield</li> </ul>
-  <ul> <li>Adjusted the Trapper's trap & Grenadier's flash radius so they scale correctly</li> </ul>
-  </details>
-  <details>
-  <summary> v3.4.0 </summary>
-  <ul> <li>New Role: Escapist</li> </ul>
-  <ul> <li>New Modifier: Radar</li> </ul>
-  <ul> <li>New Modifier: Disperser</li> </ul>
-  <ul> <li>New Modifier: Multitasker</li> </ul>
-  <ul> <li>New Modifier: Double Shot</li> </ul>
-  <ul> <li>New Settings: Arsonist/Jester has Impostor Vision</li> </ul>
-  <ul> <li>New Setting: Arsonist Ignite Cooldown removed when they're the final killer</li> </ul>
-  <ul> <li>Reporting bodies now spreads the Plaguebearer's infection</li> </ul>
-  <ul> <li>Changed Underdog from a role to a modifier</li> </ul>
-  <ul> <li>Changed Blind to a Crewmate Modifier</li> </ul>
-  </details>
-  <details>
-  <summary> v3.3.2 </summary>
-  <ul> <li>New Setting: Snitch doesn't see Traitor</li> </ul>
-  <ul> <li>New Settings: Neutral Killing Roles can assassinate</li> </ul>
-  <ul> <li>Bug Fix: People no longer show as Phantom/Haunter when they're not</li> </ul>
-  </details>
-  <details>
-  <summary> v3.3.1 </summary>
-  <ul> <li>Bug Fix: The game no longer occasionally freezes after a meeting</li> </ul>
-  </details>
-  <details>
-  <summary> v3.3.0 </summary>
-  <ul> <li>New Game Mode: All Any</li> </ul>
-  <ul> <li>New Game Mode: Killers Only</li> </ul>
-  <ul> <li>New Settings for Random Maps</li> </ul>
-  <ul> <li>New Settings for Automatically adjusting settings depending on the map</li> </ul>
-  <ul> <li>New Settings for Better Polus (and some adjustments were added as well)</li> </ul>
-  <ul> <li>Split Settings Menu into 5 different menus (however settings are still loaded from the main one)</li> </ul>
-  <ul> <li>Added 2 more Settings slots (bringing the total to 5)</li> </ul>
-  <ul> <li>Bug Fix: Sheriff can no longer get the report button through walls</li> </ul>
-  <ul> <li>Bug Fix: Starting Impostor Kill Cooldown is now always set to the right amount</li> </ul>
-  <ul> <li>Bug Fix: Amnesiac remembering Traitor no longer makes another Traitor spawn</li> </ul>
-  <ul> <li>Bug Fix: Underdog now gets the correct cooldown when there is more then 1 Impostor</li> </ul>
-  <ul> <li>Bug Fix: An Impostor killing a Diseased player will now get the correct cooldown</li> </ul>
-  <ul> <li>Bug Fix: The only person who will know they have a GA is the GA target (if target knows they have a GA)</li> </ul>
-  <ul> <li>Bug Fix: Revived players from Poisoner kills no longer instantly die at the start of the next meeting</li> </ul>
-  </details>
-  <details>
-  <summary> v3.2.0 </summary>
-  <ul> <li>Compatability with the new Among Us version thanks to MyDragonBreath</li> </ul>
-  <ul> <li>New Role: Plaguebearer/Pestilence</li> </ul>
-  <ul> <li>New Role: Werewolf</li> </ul>
-  <ul> <li>New Role: Trapper</li> </ul>
-  <ul> <li>New Role: Detective</li> </ul>
-  <ul> <li>New Modifier: Blind (replacing Drunk)</li> </ul>
-  <ul> <li>Arsonist Rework: Douse and Ignite are on the same cooldown, however to ignite they must be standing next to one of their douses</li> </ul>
-  <ul> <li>New Settings: Vigilante/Assassin can guess lovers</li> </ul>
-  <ul> <li>New Setting: Traitor does not swap colours for Seer</li> </ul>
-  <ul> <li>New Settings: Sheriff can shoot Werewolf/Plaguebearer</li> </ul>
-  <ul> <li>New Settings: Min and Max Neutral Killing/Non-Killing Roles</li> </ul>
-  <ul> <li>Setting Change: Traitor does not spawn if Glitch is alive to Traitor does not spawn if Neutral Killing is alive</li> </ul>
-  <ul> <li>Survivor can now win with neutral killing roles and can get a Survivor only win</li> </ul>
-  <ul> <li>Tasks can now be set above the maximum default values</li> </ul>
-  <ul> <li>Transporter can now die to a Veteran on alert if they transport the Veteran</li> </ul>
-  <ul> <li>Bug Fix: Impostors on high ping can no longer kill multiple players</li> </ul>
-  <ul> <li>Bug Fix: Poisoned players now die before a meeting and not during a meeting</li> </ul>
-  <ul> <li>Bug Fix: Glitch and Poisoner can no longer kill/poison in vents</li> </ul>
-  <ul> <li>Bug Fix: Underdog now gets the correct cooldown when killing a diseased player</li> </ul>
-  <ul> <li>Bug Fix: Phantom/Haunter now appear in the correct places</li> </ul>
-  <ul> <li>Bug Fix: The Blackmailer now sees the correct colour name of their teammates depending on if they are blackmailed or not</li> </ul>
-  <ul> <li>Bug Fix: Lag is no longer caused when attempting to repick the Traitor</li> </ul>
-  </details>
-  <details>
-  <summary> v3.1.0 </summary>
-  <ul> <li>Submerged Compatibility mostly thanks to MyDragonBreath</li> </ul>
-  <ul> <li>New Setting: Assassins can guess Crewmate Modifiers</li> </ul>
-  <ul> <li>New Setting: Assassins and Vigilante can guess after voting</li> </ul>
-  <ul> <li>New Settings: Guardian Angel knows their target's role and Guardian Angel's target knows they have a Guardian Angel</li> </ul>
-  <ul> <li>New Settings: Bait minimum and maximum delay</li> </ul>
-  <ul> <li>New Setting: Diseased Kill Multiplier</li> </ul>
-  <ul> <li>New Setting: Flash Speed</li> </ul>
-  <ul> <li>New Setting: Giant Speed</li> </ul>
-  <ul> <li>New Setting: Disable meeting skip button</li> </ul>
-  <ul> <li>Bug Fix: Kill buttons should have the correct text and sprite now</li> </ul>
-  <ul> <li>Bug Fix: Glitch kills no longer bypass Survivor Vests and GA Protects</li> </ul>
-  <ul> <li>Lighter and Darker indicators for Medic</li> </ul>
-  </details>
-  <details>
-  <summary> v3.0.1 </summary>
-  <ul> <li>Bug Fix: All the flashes on screen now work again</li> </ul>
-  <ul> <li>Bug Fix: Amnesiac turned Sheriff/Glitch/Impostor now has a kill button again</li> </ul>
-  <ul> <li>Bug Fix: The kill button now has the word 'Kill' on it again</li> </ul>
-  <ul> <li>Bug Fix: The Blackmailer's blackmail button will now not always show active even when not near someone</li> </ul>
-  <ul> <li>Blackmailer now only has an initial cooldown, meaning the cooldown doesn't reset after a use now</li> </ul>
-  </details>
-  <details>
-  <summary> v3.0.0 </summary>
-  <ul> <li>New Role: Medium</li> </ul>
-  <ul> <li>New Role: Survivor</li> </ul>
-  <ul> <li>New Role: Guardian Angel</li> </ul>
-  <ul> <li>New Role: Blackmailer</li> </ul>
-  <ul> <li>New Role: Mystic</li> </ul>
-  <ul> <li>Camouflager removed</li> </ul>
-  <ul> <li>New Settings for Vigilante to kill each type of Neutral role</li> </ul>
-  <ul> <li>New Settings for Assassins to kill each type of Neutral role</li> </ul>
-  <ul> <li>Bug Fix: Executioner will always get a target unless there is no feasible target</li> </ul>
-  <ul> <li>Bug Fix: Executioner will always win when their target is voted out</li> </ul>
-  <ul> <li>The future Phantom, Haunter and Traitor will change depending on the current circumstances</li> </ul>
-  <ul> <li>Bug Fix: Abilities can no longer be used while loading into a game</li> </ul>
-  <ul> <li>Added an option to cycle backwards for Assassins and Vigilante</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.5 </summary>
-  <ul> <li>Fixed Amnesiac remembering Poisoner interaction</li> </ul>
-  <ul> <li>Fixed Button Barry not working during sabotages</li> </ul>
-  <ul> <li>Fixed Poisoner interactions against Medic shields and Veteran alerts</li> </ul>
-  <ul> <li>Transporting now works a little differently</li> </ul>
-  <ul> <li>If a player is transported when they are in a position out of bounds while on something like a ladder, it rejects the transport</li> </ul>
-  <ul> <li>Glitch and Transporter can now be lovers</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.4 </summary>
-  <ul> <li>Fixed Transporter bugging out after transporting a dead body</li> </ul>
-  <ul> <li>Reduced Tracker arrow lag</li> </ul>
-  <ul> <li>Fixed bug with Swapper where you wouldn't appear as dead after being assassinated with your swap targets already selected</li> </ul>
-  <ul> <li>Fixed Medic shield not protecting the target from impostors if the Shield Breaks option is off</li> </ul>
-  <ul> <li>Fixed Medic reports saying the wrong color if the body's killer was morphed</li> </ul>
-  <ul> <li>Fixed Investigator showing a morphed player's footprints as the color of the player they were morphed into</li> </ul>
-  <ul> <li>Ghosts no longer briefly appear after a player dies</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.3 </summary>
-  <ul> <li>Fixed the bug where games don't end (Sorry about that)</li> </ul>
-  <ul> <li>Fixed Bait not causing a self-report sometimes</li> </ul>
-  <ul> <li>Fixed Amnesiac turned Impostor not being able to kill</li> </ul>
-  <ul> <li>Fixed Traitor not being able to kill</li> </ul>
-  <ul> <li>Fixed Impostors not being able to kill a player revived by an Altruist</li> </ul>
-  <ul> <li>Fixed Flash and Giant not appearing to move at the correct speed for other players</li> </ul>
-  <ul> <li>Changed Giant and Flash colors</li> </ul>
-  <ul> <li>Split Classic Nameplates setting into Disable Level Icon and Disable Background Cosmetics</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.2 </summary>
-  <ul> <li>Fixed End Game Tracker Bug</li> </ul>
-  <ul> <li>Fixed Snitch Arrows</li> </ul>
-  <ul> <li>Added Olive Colour</li> </ul>
-  <ul> <li>Dead bodies are now removed after meetings</li> </ul>
-  <ul> <li>Added an option for Amnesiac Arrows</li> </ul>
-  <ul> <li>Fixed the issue where if a player is transported as they jump in a vent they are freezed in place</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.1 </summary>
-  <ul> <li>Fixed Poisoner killing Bait after another report resulting in a duplicated meeting</li> </ul>
-  <ul> <li>Fixed the issue where the Snitch spawning as Crewmate would see their name gold</li> </ul>
-  <ul> <li>Fixed Amnesiac remembering Transporter becoming an Impostor</li> </ul>
-  <ul> <li>Fixed Tracker Arrows</li> </ul>
-  </details>
-  <details>
-  <summary> v2.6.0 </summary>
-  <ul> <li>Fixed killing the Bait instantly banning everyone</li> </ul>
-  <ul> <li>Fixed Tracker lag</li> </ul>
-  <ul> <li>Seer adjustments</li> </ul>
-  <ul> <li>Settings for task tracking</li> </ul>
-  <ul> <li>Added a flash radius setting for Grenadier</li> </ul>
-  <ul> <li>New Role: Traitor</li> </ul>
-  <ul> <li>New Role: Transporter</li> </ul>
-  <ul> <li>New Modifier: Sleuth</li> </ul>
-  <ul> <li>Fixed Snitch/Haunter meetings when someone disconnects</li> </ul>
-  <ul> <li>Fixed Amnesiac/Snitch and Amnesiac/Mayor interactions</li> </ul>
-  <ul> <li>Jester can vent Setting</li> </ul>
-  <ul> <li>Made Modifiers disable upon death</li> </ul>
-  <ul> <li>Made anything that affects the colour of names disable upon death</li> </ul>
-  </details>
-  <details>
-  <summary> v2.5.1 </summary>
-  <ul> <li>Fixed Amnesiac/Impostor Interaction</li> </ul>
-  </details>
-  <details>
-  <summary> v2.5.0 </summary>
-  <ul> <li>Changed Lovers to a Modifier</li> </ul>
-  <ul> <li>Added Loving Impostor Percentage Setting</li> </ul>
-  <ul> <li>Added Neutral Lover Setting</li> </ul>
-  <ul> <li>Changed Assassin from a Role to a Default Ability</li> </ul>
-  <ul> <li>New Role: Amnesiac (replacing Shifter)</li> </ul>
-  <ul> <li>New Role: Veteran</li> </ul>
-  <ul> <li>New Role: Poisoner</li> </ul>
-  <ul> <li>New Role: Tracker</li> </ul>
-  <ul> <li>New Modifier: Bait</li> </ul>
-  <ul> <li>Renamed Retributionist to Vigilante</li> </ul>
-  <ul> <li>End Game Summary Added</li> </ul>
-  <ul> <li>In Game Task Tracking Added</li> </ul>
-  </details>
-  <details>
-  <summary> v2.4.2 </summary>
-  <ul> <li>New Hats</li> </ul>
-  <ul> <li>Bug Fix for Mayor Abstain Button</li> </ul>
-  <ul> <li>Readded the Missing Modstamp</li> </ul>
-  </details>
-  <details>
-  <summary> v2.4.1 </summary>
-  <ul> <li>Support for the new version of Among Us on v2021.12.15</li> </ul>
-  </details>
-  <details>
-  <summary> v2.4.0 </summary>
-  <ul> <li>Support for the new version of Among Us on v2021.11.9.5</li> </ul>
-  </details>
-  <details>
-  <summary> v2.3.4 </summary>
-  <ul> <li>Reverted the change made to Mayor as it had an unintended concequence for Assassin and Retributionist</li> </ul>
-  </details>
-  <details>
-  <summary> v2.3.3 </summary>
-  <ul> <li>Added the remaining hats with credits from ToU v2.2.1-t</li> </ul>
-  <ul> <li>Added some new hats from Pigoletto</li> </ul>
-  <ul> <li>Removed Acron’s hats as he requested their removal</li> </ul>
-  <ul> <li>Bug Fix: Lovers no longer win if the other disconnects</li> </ul>
-  <ul> <li>Bug Fix: Mayor votes no longer double on a disconnect</li> </ul>
-  <ul> <li>Bug Fix: When Shifter shifts with Arsonist, the douse also shifts now</li> </ul>
-  <ul> <li>Bug Fix: Shifter can now ignite after shifting with the Arsonist</li> </ul>
-  <ul> <li>Bug Fix: Impostors no longer see their teammate’s name go pink at the end of the meeting if their teammate is a Loving Impostor</li> </ul>
-  <ul> <li>Bug Fix: Investigator no longer lags the player into oblivion</li> </ul>
-  <ul> <li>Bug Fix: The game no longer infinitely tries to distribute crewmate modifiers when there are more modifiers than crewmates</li> </ul>
-  <ul> <li>Bug Fix: Shield now breaks when Medic disconnects</li> </ul>
-  </details>
-  <details>
-  <summary> v2.3.2 </summary>
-  <ul> <li>Bug Fix: Sheriff no longer instantly ends the game and bans the host for hacking</li> </ul>
-  <ul> <li>Bug Fix: Retributionist/Mayor interaction</li> </ul>
-  <ul> <li>Bug Fix: Executioner always gets a target now</li> </ul>
-  <ul> <li>Executioner can not have Lovers, Swapper, Mayor or Retributionist as their target</li> </ul>
-  <ul> <li>Made it so dead Impostors don’t see Haunter arrows</li> </ul>
-  <ul> <li>Made it so if Haunter reveals Neutral roles, all Neutral roles are alerted when Haunter is nearly finished tasks</li> </ul>
-  <ul> <li>Removed alert for Phantom</li> </ul>
-  <ul> <li>All hats with credits from v2.2.1-t have been added</li> </ul>
-  <ul> <li>Removed the settings about when Phantom/Haunter can be clicked and replaced them with ‘tasks remaining when they can be clicked’</li> </ul>
-  <ul> <li>Removed the settings for Phantom/Haunter to have less tasks</li> </ul>
-  <ul> <li>Changed kill cooldown bonus for Underdog from 2.5-10secs to 2.5-30secs</li> </ul>
-  </details>
-  <details>
-  <summary> v2.3.1 </summary>
-  <ul> <li>Removed Modded Handshake as that was causing the host to crash</li> </ul>
-  <ul> <li>Minor Bug Fixes</li> </ul>
-  </details>
-  <details>
-  <summary> v2.3.0 </summary>
-  <ul> <li>New Role: Retributionist (Assassin Crewmate)</li> </ul>
-  <ul> <li>New Role: Haunter (basically the Phantom but a Crewmate, once tasks are finished Impostors are revealed)</li> </ul>
-  <ul> <li>New Role: Grenadier (blinds Crewmates with flashbangs)</li> </ul>
-  <ul> <li>Added the remaining missing hats from v2.0.4 and prior</li> </ul>
-  <ul> <li>Glitch cooldowns adjusted to be the same as other roles</li> </ul>
-  <ul> <li>Made Swapper able to get Button Barry Modifier</li> </ul>
-  <ul> <li>Button Barry vision no longer reduced after Button Barry ability was used</li> </ul>
-  <ul> <li>Standardised starting cooldowns to not be decreased (for round start only) for all roles</li> </ul>
-  <ul> <li>Added alert for when Phantom is nearly finished</li> </ul>
-  <ul> <li>Glitch does not get notification for Snitch unless Snitch sees neutral roles</li> </ul>
-  <ul> <li>Made it so Impostors know when Snitch is done all tasks</li> </ul>
-  <ul> <li>Reworked how Phantom is set because of Haunter addition</li> </ul>
-  <ul> <li>Gray colour changed to ‘Darker’ for Medic reports</li> </ul>
-  <ul> <li>Made the Seer unable to see through the disguises of Morphling and Glitch</li> </ul>
-  <ul> <li>Split shifter into two settings, who can Shifter shift on and what shifted becomes</li> </ul>
-  <ul> <li>Setting for Sheriff can kill Executioner</li> </ul>
-  <ul> <li>Setting for Morphling, Swooper, Undertaker and Glitch to vent</li> </ul>
-  <ul> <li>Setting for Undertaker to vent while dragging a body</li> </ul>
-  <ul> <li>Setting for Mayor, Swapper, Jester, Executioner and Arsonist to not be able to button</li> </ul>
-  <ul> <li>Setting for Executioner becomes Shifter on target death</li> </ul>
-  <ul> <li>Setting for Phantom to do less tasks</li> </ul>
-  <ul> <li>Setting for Assassin to assassinate Snitch via ‘Crewmate’ guess</li> </ul>
-  <ul> <li>Underdog changes: Setting to choose kill cooldown bonus</li> </ul>
-  <ul> <li>Setting for Underdog to not have increased kill cooldown when 2+ imps</li> </ul>
-  <ul> <li>Settings for the Phantom to not be clickable before and after alert</li> </ul>
-  <ul> <li>Setting for Shifter to win with Crewmates</li> </ul>
-  <ul> <li>Setting for starting cooldowns on game start for all roles (a general setting)</li> </ul>
-  <ul> <li>Setting for when Snitch is revealed</li> </ul>
-  <ul> <li>Settings for clicking Phantom, one for before alert and the other for after alert</li> </ul>
-  <ul> <li>Setting for Snitch to not see Impostor names mid-meeting</li> </ul>
-  <ul> <li>Time Lord rewind time decreased from 3-15secs to 2-5secs</li> </ul>
-  <ul> <li>Time Lord cooldown increased from 10-40secs to 10-60secs</li> </ul>
-  <ul> <li>The maximum number of kills an Assassin can do during a meeting increased from 1-5 to 1-15</li> </ul>
-  <ul> <li>Bug Fix: Host no longer sees Undertaker dragging a body after they dropped it</li> </ul>
-  <ul> <li>Bug Fix: Host now has correct cooldowns on game start</li> </ul>
-  <ul> <li>Bug Fix: Investigator footprint interval fixed (lag not entirely fixed)</li> </ul>
-  <ul> <li>Bug Fix: Fixed the issue where Torch/Diseased were not given to anyone</li> </ul>
-  <ul> <li>Bug Fix: Made it so the Phantom only has to upload data and not download it</li> </ul>
-  <ul> <li>Bug Fix: Phantom no longer spawns in the admin vent</li> </ul>
-  </details>
-  <details>
-  <summary> v2.2.1 </summary>
-  <ul> <li>Fix for the credits removed in v2.0.3 </li> </ul>
-  </details>
-  <details>
-  <summary> v2.2.0 </summary>
-  <ul> <li> Compatibility for v2021.6.30 </li> </ul>
-  <ul> <li> Role percentages now change by 10%, or 5% if you hold shift </li> </ul>
-  <ul> <li> New Drag/Drop Buttons for the Undertaker </li> </ul>
-  <ul> <li> New Button Image for the Button Barry </li> </ul>
-  <ul> <li> Phantom can't switch between vents </li> </ul>
-  <ul> <li> Increased Max Cooldown for the Shifter to 60s </li> </ul>
-  <ul> <li> Swapper can no longer get the Button Barry Modifier </li> </ul>
-  <ul> <li> Glitch can no longer get the Button Barry Modifier </li> </ul>
-  <ul> <li> Mayor votes are refunded if the player disconnects </li> </ul>
-  <ul> <li> Mayor votes are refunded if the player is killed by the assassin </li> </ul>
-  <ul> <li> Handshake refactor </li> </ul>
-  <ul> <li> Fix for the Crashing Issues </li> </ul>
-  <ul> <li> Fix for the Interaction Shifter/Giant </li> </ul>
-  <ul> <li> Fix for the Interaction Shifter/Engineer </li> </ul>    
-  <ul> <li> Fix for the Interaction Glitch/Jester </li> </ul>
-  <ul> <li> Fix for the Interaction Morphling/Giant </li> </ul>
-  <ul> <li> Fix for the Altruist Body Issues </li> </ul>
-  <ul> <li> Fix for the Assassin DC Issues </li> </ul>
-  <ul> <li> Fix for the Executioner Spawn Issues </li> </ul>
-  <ul> <li> Fix for the Phantom Vent Spawn Issues </li> </ul>    
-  <ul> <li> Fix for the Phantom Walking Through Walls Issues </li> </ul>
-  <ul> <li> Fix for the Phantom Doors Issues </li> </ul>
-  <ul> <li> Fix for the Phantom Tasks Issues </li> </ul>
-  <ul> <li> Fix for the Swooper Invisible Issues </li> </ul>    
-  <ul> <li> Fix for the Time Lord Flashing Ability Issues </li> </ul>
-  <ul> <li> Fix for the Time Lord Rewind Vent Issues </li> </ul>
-  <ul> <li> Fix for the Undertaker Dragging Issues </li> </ul>    
-  <ul> <li> Fix for the Underdog Cooldown Issues </li> </ul>
-  <ul> <li> Fix for the Giant Modifier Size Issues </li> </ul>
-  <ul> <li> Fix for the State Of Dead/DC Bodies In Meeting Issues </li> </ul>   
-  <ul> <li> Fix for the Voting Visual Issues </li> </ul>      
-  <ul> <li> Minor enhancements and bug fixes </li> </ul>
- </details>
-  <details>
-  <summary> v2.1.4 </summary>
-  <ul> <li> New Role (Phantom, Undertaker, Underdog) </li> </ul>
-  <ul> <li> Custom Color </li> </ul>
-  <ul> <li> Hats </li> </ul>
-  <ul> <li> Fix for launching issues </li> </ul>
-  <ul> <li> Fix for the Voting issues </li> </ul>
-  <ul> <li> Fix for the disconnect issue</li> </ul>
-  <ul> <li> Fix for the username placement </li> </ul>
-  <ul> <li> Fix for the Medic  </li> </ul>
-  <ul> <li> Fix for the Spy </li> </ul>
-  <ul> <li> Fix for the Mayor </li> </ul>
-  <ul> <li> Fix for the Arsonist </li> </ul>
-  <ul> <li> Fix for the Assassin </li> </ul>
-  <ul> <li> Fix for the Phantom </li> </ul>
-  <ul> <li> Modded Handshake </li> </ul>
-  <ul> <li> Child is removed </li> </ul>
-  <ul> <li> Minor enhancements and bug fixes </li> </ul>
- </details>
- <details>
-  <summary> v2.1.3 </summary>
-  <ul> <li> Fix the launch issue </li> </ul>
-  <ul> <li> Fix for the swooper role </li> </ul>
-  <ul> <li> Fix for the janitor role </li> </ul>
-  <ul> <li> Minor enhancements and bug fixes </li> </ul>
- </details>
- <details>
-  <summary> v2.1.2 </summary>
-  <ul> <li> Crucial bug fixes </li> </ul>
- </details>
- <details>
-  <summary> v2.1.1 </summary>
-  <ul> <li> 2021.6.15 support, Epic Games compatibility and Assassin Role </li> </ul>
- </details>
-  <details>
-  <summary> v2.0.4 </summary>
-  <ul> <li> Crucial bug fixes </li> </ul>
- </details>
- <details>
-  <summary> v2.0.3 </summary>
-  <ul> <li> 2021.5.10s support </li> </ul>
- </details>
- <details>
-  <summary> v2.0.2 </summary>
-  <ul> <li> 2021.4.14s support and temporary auth fixes </li> </ul>
- </details>
- <details>
-  <summary> v2.0.1 </summary>
-  <ul> <li> 2021.4.12s support </li> </ul>
- </details>
- <details>
-  <summary> v2.0.0 </summary>
-  <ul>
-   <li> Airship support! </li>
-   <li> New role - Altruist </li>
-   <li> New modifiers - Giant & Button Barry </li>
-   <li> Airship comms fix built-in </li>
-   <li> Bug fixes with Lovers, Time Lord etc. </li>
-   <li> New hats based on streamers! </li>
-   <li> Investigator cannot spawn on airship due to too much lag with handling footprints </li>
-  </ul>
- </details>
-  
- <details>
-  <summary> v1.2.0 </summary>
-  <ul>
-    <li> New roles (see above)</a>
-    <li> New modifiers (see above)</li>
-    <li> Exporting and Importing game settings which sync between versions 1.2.0 and future versions</li>
-    <li> Disconnect fix </li>
-    <li> Mayor additions - Abstain button, Option for Mayor's extra votes to be anonymous </li>
-    <li> Option for dead to see the roles of everyone </li>
-    <li> Custom colours now work! </li>
-  </ul>
- </details>
- <details>
-  <summary> v1.1.0 </summary>
-  <ul>
-    <li> New roles (see above)</a>
-    <li> New modifiers (see above)</li>
-    <li> The Engineer has been changed to the <a href="https://github.com/NotHunter101/ExtraRolesAmongUs">ExtraRoles</a> version </li>
-    <li> Backend overhaul! This will make it easier to add new roles </li>
-    <li> New Button Art! </li>
-    <li> Maps and Impostor Count can be changed from the Lobby! </li>
-    <li> Shadows for the Custom Colours </li>
-    <li> Fixes </li>
-    <ul>
-      <li> The Jester and The Shifter unable to fix Sabotages </li>
-      <li> The Time Lord's Rewind not auto-force closing tasks </li>
-      <li> The Q button not working for Sheriff </li>
-      <li> The Shifter's Shift looking too much like a Kill </li>
-      <li> Changing colours would render you weirdly green in normal Among Us </li>
-    </ul>
-  </ul>
-  </details>
+  <summary>Old Town Of Us Reactivated Versions</summary>
 
+  | Among Us - Version| Mod Version | Link |
+  |----------|-------------|-----------------|
+  | 2024.10.29s & 2024.10.29e | v5.1.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.2/ToU.v5.1.2.zip) |
+  | 2024.9.4s & 2024.9.4e | v5.1.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.1/ToU.v5.1.1.zip) |
+  | 2024.9.4s & 2024.9.4e | v5.1.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.1.0/ToU.v5.1.0.zip) |
+  | 2024.3.5s & 2024.3.5e | v5.0.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.4/ToU.v5.0.4.zip) |
+  | 2023.11.28s & 2023.11.28e | v5.0.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.3/ToU.v5.0.3.zip) |
+  | 2023.7.12s & 2023.7.12e | v5.0.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.2/ToU.v5.0.2.zip) |
+  | 2023.6.13s & 2023.6.13e | v5.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.1/ToU.v5.0.1.zip) |
+  | 2023.6.13s & 2023.6.13e | v5.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v5.0.0/ToU.v5.0.0.zip) |
+  | 2023.3.28s & 2023.3.28e | v4.0.6 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.6/ToU.v4.0.6.zip) |
+  | 2023.3.28s & 2023.3.28e | v4.0.5 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.5/ToU.v4.0.5.zip) |
+  | 2023.3.28s & 2023.3.28e | v4.0.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.4/ToU.v4.0.4.zip) |
+  | 2023.2.28s & 2023.2.28e | v4.0.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.3/ToU.v4.0.3.zip) |
+  | 2022.12.14s & 2022.12.14e | v4.0.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.2/ToU.v4.0.2.zip) |
+  | 2022.12.14s & 2022.12.14e | v4.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.1/ToU.v4.0.1.zip) |
+  | 2022.12.14s & 2022.12.14e | v4.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v4.0.0/ToU.v4.0.0.zip) |
+  | 2022.10.25s & 2022.10.25e | v3.4.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.4.0/ToU.v3.4.0.zip) |
+  | 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.2/ToU.v3.3.2.zip) |
+  | 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.1/ToU.v3.3.1.zip) |
+  | 2022.8.24s & 2022.8.24e & 2022.9.20s & 2022.9.20e | v3.3.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.3.0/ToU.v3.3.0.zip) |
+  | 2022.6.21s & 2022.6.21e & 2022.7.12s & 2022.7.12e | v3.2.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.2.0/ToU.v3.2.0.zip) |
+  | 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.1.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.1.0/ToU.v3.1.0.zip) |
+  | 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.0.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.0.1/ToU.v3.0.1.zip) |
+  | 2022.3.29s & 2022.3.29e & 2022.4.19e | v3.0.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v3.0.0/ToU.v3.0.0.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.5 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.5/ToU.v2.6.5.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.4/ToU.v2.6.4.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.4/ToU.v2.6.4-2021.6.30.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.3/ToU.v2.6.3.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.3/ToU.v2.6.3-2021.6.30.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.2/ToU.v2.6.2.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.2/ToU.v2.6.2-2021.6.30.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.1/ToU.v2.6.1.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.1/ToU.v2.6.1.Old.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.6.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.0/ToU.v2.6.0.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.6.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.6.0/ToU.v2.6.0.Old.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.5.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.1/ToU.v2.5.1.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.5.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.0/ToU.v2.5.0.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.5.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.5.0/ToU.v2.5.0.Old.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.4.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.2/ToU.v2.4.2.zip) |
+  | 2021.12.15s & 2021.12.15e Until 2022.2.24s & 2022.2.24e | v2.4.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.1/ToU.v2.4.1.zip) |
+  | 2021.11.9.5s & 2021.11.9.5e | v2.4.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.4.0/ToU.v2.4.0.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.4 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.4/ToU.v2.3.4.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.3 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.3/ToU.v2.3.3.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.2 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.2/ToU.v2.3.2.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.1 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.1/ToU.v2.3.1.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.3.0 | [Download](https://github.com/eDonnes124/Town-Of-Us/releases/download/v2.3.0/ToU.v2.3.0.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.2.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.2.1/TOU_221.zip) |
+  | 2021.6.30s & 2021.6.30e & 2021.7.20e | v2.2.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.2.0/TOU_220.zip) |
+  | 2021.6.15s & 2021.6.15e | v2.1.4 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.4/TOU_214.zip) |
+  | 2021.6.15s & 2021.6.15e | v2.1.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.3/TownOfUs213_1.zip) |
+  | 2021.6.15s & 2021.6.15e | v2.1.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.2/TownOfUs212_1.zip) |
+  | 2021.6.15s & 2021.6.15e | v2.1.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.1.1/TownOfUs211_1.zip) |
+  | 2021.5.10s | v2.0.4 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.4/TownOfUs-v2.0.4.zip) |
+  | 2021.5.10s | v2.0.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.3/TownOfUs-v2.0.3.zip) |
+  | 2021.4.12s & 2021.4.14s | v2.0.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.2/TownOfUs-v2.0.2.zip) |
+  | 2021.4.12s | v2.0.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.1/TownOfUs-v2.0.1.zip) |
+  | 2021.3.31.3s | v2.0.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v2.0.0/TownOfUs-v2.0.0.zip) |
+  | 2021.3.5s | v1.2.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.2.0/TownOfUs-v1.2.0.zip) |
+  | 2021.3.5s | v1.1.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.1.0/TownOfUs-v1.1.0-2021.3.5s.zip) |
+  | 2020.12.19s | v1.1.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.1.0/TownOfUs-v1.1.0-2020.12.9s.zip) |
+  | 2020.12.19s | v1.0.3 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.3/TownOfUs-v1.0.3.zip) |
+  | 2020.12.19s | v1.0.2 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.2/TownOfUs-v1.0.2.zip) |
+  | 2020.12.19s | v1.0.1 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.1/TownOfUs-v1.0.1.zip) |
+  | 2020.12.19s | v1.0.0 | [Download](https://github.com/polusgg/Town-Of-Us/releases/download/v1.0.0/TownOfUs-v1.0.0.zip) |
 
-  <details>
-  <summary> v1.0.3 </summary>
-  <p> Fixes: </p>
-  <ul>
-    <li> Engineer being able to Fix every sabotage </li>
-    <li> The Investigator being able to revive people voted out (and instead made it an option) </li>
-    <li> Footprints not appearing if a person walks over old footprints </li>
-    <li> Graphical glitch where Jester and Lovers simultaneously win </li>
-    <li> Players spawning back into positions from the last game when time is rewound right at the beginning of a new game </li>
-    <li> Graphical Bug of Time Lord's name not being blue in Meetings </li>
-    <li> Fixed Medbay Scan not working for custom colours </li>
-  </ul>
-  </details>
-
-  <details>
-  <summary> v1.0.2 </summary>
-  <p> Fixes: </p>
-  <ul>
-    <li>  The Swapper being unable to vote </li>
-    Swapper unable to vote
-    <li> Mayor Vote Bank ending up negative </li>
-    <li> Anonymous Voting not working when Mayor is in a game </li>
-    <li> Chats not working in the lobby </li>
-    <li> Sheriff desync (I think) </li>
-    <li> Buttons being able to be used during meetings </li>
-  </ul>
-  <hr>
-  </details>
-
-  <details>
-  <summary> v1.0.1 </summary>
-  <p> Fixes errors of not being able to launch. </p>
-  </details>
 </details>
-
 
 -----------------------
 # Installation
