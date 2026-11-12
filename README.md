@@ -3,7 +3,10 @@
 ## Grafiki by Oliweiro, Draft Image by Forfit
 
 ![LOGO](./Images/ikonka_syzyf_smaller.png)
-![Roles](./Images/Roles.png)
+![CrewRoles](./Images/RolesCrew.png)
+![NeutRoles](./Images/RolesNeut.png)
+![ImpRoles](./Images/RolesImp.png)
+![Mods](./Images/Mods.png)
 
 Mod do amonga który dodaje wiele ciekawych ról i modyfikatorów
 
