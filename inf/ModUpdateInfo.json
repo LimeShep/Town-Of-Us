@@ -17,8 +17,8 @@
         {
             "MinModVersionRange": "7.3.0-beta0",
             "MaxModVersionRange": "7.3.0-beta99",
-            "MinAUVersionRange": "2026.6.5",
-            "MaxAUVersionRange": "2026.6.5",
+            "MinAUVersionRange": "2026.9.29",
+            "MaxAUVersionRange": "2026.9.29",
             "AllowedChannels": "release"
         }
     ]
